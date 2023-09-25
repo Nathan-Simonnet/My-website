@@ -72,31 +72,6 @@ window.addEventListener('scroll', (e) => {
 // Translation 
 // ========================
 
-// console.log(
-//     // function translatePage(language) {
-
-//     //     const pageContent = document.documentElement.innerHTML;
-//     //     const apiKey = 'pdct.1.1.20230918T174040Z.24d6959369025e66.a55620b84404182f5163d04617fd4c7b013fc50b';
-
-
-//     //     const apiUrl = `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${apiKey}&text=${encodeURIComponent(pageContent)}&lang=${language}&format=html`;
-
-//     //     fetch(apiUrl, {
-//     //         method: "GET"
-//     //     })
-//     //         .then(response => response.json())
-//     //         .then(data => {
-//     //             const translatedContent = data;
-
-//     //             // Mettez à jour le contenu du document HTML avec la traduction
-//     //             document.documentElement.innerHTML = translatedContent;
-//     //         })
-//     //         .catch(error => {
-//     //             console.error("Erreur lors de la traduction :", error);
-//     //         });
-//     // }
-//     "hey")
-
 const translatePage = function (id) {
     const projectAnchor = document.getElementById('project-anchor');
     const technosAnchor = document.getElementById('technos-anchor');
