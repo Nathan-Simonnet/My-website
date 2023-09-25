@@ -13,6 +13,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    border: 2px solid red;
 }
 
 html {
@@ -268,6 +270,8 @@ section {
 }
 
 .contact-span {
+
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,6 +293,16 @@ section {
 
 .contact-span:active {
     transform: scale(0.9);
+}
+
+.contact-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 #welcome-section span {
@@ -370,6 +384,16 @@ section {
 
 #about-me_section span {
     margin-top: 1em;
+}
+
+#about-me_section a {
+    /* display: block;
+    justify-content: left;
+    align-items: center;
+    border: 2px solid red;
+    height: 3em;
+    width: 8em; */
+
 }
 
 /* ============CONTACT============== */

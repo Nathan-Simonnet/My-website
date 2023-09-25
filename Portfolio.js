@@ -1,8 +1,8 @@
 const header = document.querySelector('header');
-const theH1 = document.querySelector('h1');
 const aHovered = document.querySelectorAll('nav li a');
 const lineSpan = document.querySelectorAll('.after');
 const flags = document.querySelectorAll('.flag-container');
+const mailSpan = document.getElementById('mail-span');
 
 lineSpan.forEach((span, index) => {
     const uniqueIndex = "lineSpan" + (index + 1)
@@ -159,3 +159,16 @@ flags.forEach((flag) => {
         }
     });
 });
+
+// =======================
+// Contact me
+// =======================
+
+mailSpan.addEventListener('click', (span) => {
+    navigator.clipboard.writeText(span.target.textContent)
+    span.target.textContent = "copié!"
+    setTimeout(() => {
+        span.target.textContent = "nathan.simonnet@gmail.com"
+    }, 2000)
+});
+
