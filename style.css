@@ -1,0 +1,527 @@
+@font-face {
+    font-family: "Jost-light";
+    src: url(portfolio-doc/Jost/static/Jost-Light.ttf);
+}
+
+:root {
+    --bordeaux: rgb(163, 21, 47);
+    --gris: grey;
+    --wheat: rgb(225, 209, 179);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: "Jost-light", 'trebuchet MS';
+    background: url(/portfolio-doc/black-desk.jpg) center/cover fixed;
+
+    /* color: rgb(218, 217, 217); */
+    color: rgb(225, 209, 179);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* overflow-X: hidden; */
+}
+
+hr {
+    height: 2px;
+    width: 100%;
+    border-color: var(--bordeaux);
+}
+
+h1 {
+    position: relative;
+    display: inline-block;
+    margin: 1em 0 1em 0;
+    height: 20%;
+    font-size: 2.6em;
+    /* font-size: 250px; */
+}
+
+@keyframes h1AfterAnimation {
+    0% {
+        width: 2%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+.title-container {
+    position: relative;
+    width: 100%;
+}
+
+.after {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    content: "";
+    height: 3px;
+    width: 1%;
+    background: var(--bordeaux);
+    /* animation: h1AfterAnimation 2s ease-out 0.3s forwards; */
+}
+
+/* h1::after {
+    position: absolute;
+    bottom: -15%;
+    left: 0%;
+    content: "";
+    height: 2px;
+    width: 20%;
+    background: var(--bordeaux);
+    animation: h1AfterAnimation 3s ease-out 0.3s forwards;
+} */
+
+a {
+    text-decoration: none;
+    color: var(--wheat);
+    transition: 0.1s;
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--wheat);
+    transition: 0.1s;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    color: #fff;
+    height: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 9;
+
+    background: "none";
+    top: 0;
+}
+
+.scroll-zero {
+    background: none;
+    top: 0;
+}
+
+.scrolled-up {
+    top: 0;
+    background: var(--bordeaux);
+}
+
+.scrolled-down {
+    top: -100%;
+    background: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#flags-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 1em;
+}
+
+#flags-container div {
+    margin-right: 1em;
+}
+
+.flag-container.actual-language {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+div.actual-language::after {
+    position: absolute;
+    content: "";
+    background: linear-gradient(90deg, red, rgb(244, 133, 133));
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+}
+
+.flag-container img {
+    min-width: 60px;
+    min-height: 60px;
+    transition: 0.1s;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flag-container img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+    padding: 2px;
+    margin: 2px;
+    margin-right: 1em;
+    transition: 0.1s;
+
+    font-size: 1.8em;
+}
+
+/* nav li a:hover {
+    color: black;
+    text-shadow: 0 0 5px rgb(100, 0, 0);
+} */
+
+nav li a:hover {
+    color: var(--bordeaux);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgb(5, 5, 5);
+}
+
+nav li a.scrolled-up {
+    color: var(--wheat);
+}
+
+nav li a.scrolled-up:hover {
+    color: black;
+    text-shadow: 0 0 5px rgba(214, 210, 210, 0.413);
+    font-weight: bold;
+}
+
+/* =========WELCOME=========== */
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.container {
+    width: 100%;
+}
+
+#welcome-section {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+}
+
+#welcome-section h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    transition: 0.1s;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* #welcome-section h1::after {
+    display: none;
+} */
+
+#welcome-section p {
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    color: rgb(234, 23, 62);
+    transition: 0.1s;
+}
+
+.contact-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2em;
+    background: rgb(163, 21, 47);
+    height: 3em;
+    width: 8em;
+
+
+    transition: 0.1s;
+}
+
+.contact-span:hover {
+    cursor: pointer;
+    border: 1px solid rgb(163, 21, 47);
+    background: none;
+}
+
+.contact-span:active {
+    transform: scale(0.9);
+}
+
+#welcome-section span {
+    margin-top: 2em;
+}
+
+/* ===========PROJECTS============== */
+
+.card {
+    background: rgba(0, 0, 0, 0.754)
+        /* backdrop-filter: blur(1px); */
+
+}
+
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-container figure {
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    margin: 12px 12px;
+
+    width: 300px;
+    height: 380px;
+}
+
+#project-container figcaption {
+    padding: 2px;
+    font-size: 1.4em;
+}
+
+#project-container figure img {
+    border-radius: 12px;
+    width: 280px;
+    height: 300px;
+}
+
+/* ===========TECHNOS============= */
+
+#technos-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#technos-div div {
+    width: 9em;
+    height: 9em;
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==============PROFIL================= */
+#about-me_section {
+    justify-content: center;
+    align-items: baseline;
+}
+
+#about-me_section img {
+    width: 260px;
+    height: 310px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 16px 3px #6261614a;
+}
+
+#about-me_section p {
+    font-size: 1.6em;
+}
+
+#about-me_section span {
+    margin-top: 1em;
+}
+
+/* ============CONTACT============== */
+
+#contact-section {
+    min-height: 0;
+}
+
+#mail-span {
+    width: 14em;
+}
+
+/* ==========FOOTER============= */
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    margin: 0.5em 1em;
+}
+
+footer a:hover {
+    transform: scale(1.2);
+}
+
+
+/* ============media-querries================== */
+@media (max-width:1000px) {
+
+    nav li {
+        font-size: 1.4em;
+    }
+
+}
+
+
+
+@media (max-width:700px) {
+
+    nav li {
+        font-size: 1em;
+    }
+
+    .flag-container img {
+        min-width: 40px;
+        min-height: 40px;
+
+    }
+}
+
+@media (max-width:530px) {
+
+    h1 {
+        font-size: 2.6em;
+    }
+
+    header {
+        position: relative;
+        min-height: 30vh;
+        max-height: 100vh;
+    }
+
+    #flags-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+        top: 5%;
+        left: 5%;
+
+    }
+
+    .flag-container {
+        margin-bottom: 1em;
+    }
+
+    ul {
+        right: 0;
+        top: 0;
+        position: absolute;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        margin: 1em;
+        font-size: 0.8em;
+    }
+
+    .scroll-zero {
+        background: none;
+        top: 0;
+    }
+
+    .scrolled-up {
+        background: none;
+        top: 0;
+    }
+
+    .scrolled-down {
+        background: none;
+        top: 0;
+    }
+
+    section {
+        min-height: 0;
+    }
+
+    img {
+        transform: scale(0.8);
+    }
+
+    #project-container div {
+        margin: 0;
+        padding: 0;
+    }
+
+    #project-container div img {
+        width: 160px;
+        height: 200px;
+    }
+
+    #technos-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #technos-div div {
+        width: auto;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-me_section img {
+        height: 300px;
+        width: 250px;
+    }
+
+    #mail-span {
+        min-width: 12em;
+    }
+}

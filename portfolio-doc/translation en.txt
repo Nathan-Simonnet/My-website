@@ -1,0 +1,42 @@
+My projects
+
+My main technos
+
+About me
+
+Contact
+
+Web developer
+
+Contact me
+
+My projects
+
+Portfolio, made with love
+
+Displaying a user database
+
+Yoga routine
+
+Password generator
+
+Recipe generator
+
+Quiz
+
+Text animation
+
+My main technologies
+
+About me
+
+Former lifeguard, I have been practicing programming since 2021.
+
+HTML/CSS, then javascript to make my pages more dynamic, more recently react to go even further...
+
+What started as a hobby, has now become a passion, pushing me to continually train myself continuously
+
+The goal now, full stack! To be continued...
+
+My CV
+Contact me

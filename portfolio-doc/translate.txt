@@ -1,0 +1,40 @@
+Projets
+Technos
+À propos de moi
+
+Contact
+
+Developpeur web
+
+Me contacter
+
+Mes projets
+
+Portefolio fait avec amour
+
+Affichage d'une database d'utilisateurs
+
+Yoga routine
+
+Générateur de mot de passe
+
+Générateur de recettes
+
+Quizz
+
+Animation de texte
+
+Mes Technos principales
+
+À propos de moi
+
+Ancien maître nageur, je m'exerce à la programmation depuis 2021.
+
+HTML/CSS, puis javascript pour rendre mes pages plus dynamiques, plus récément react pour aller encore plus loin...
+
+Ce qui à commencé comme une occupation, est maintenant devenu une passion, me poussant à me former continuelement
+
+L'objectif maintenant, full stack! A suivre...
+
+Mon CV
+Me contacter
