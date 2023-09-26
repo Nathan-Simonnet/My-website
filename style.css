@@ -343,6 +343,13 @@ section {
     border-radius: 12px;
     width: 280px;
     height: 300px;
+    translate: 500px;
+    opacity: 0;
+}
+
+#project-container figure img.deblurtransition {
+    opacity: 1;
+    translate: 0;
 }
 
 /* ===========TECHNOS============= */

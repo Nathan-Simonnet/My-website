@@ -3,12 +3,19 @@ const aHovered = document.querySelectorAll('nav li a');
 const lineSpan = document.querySelectorAll('.after');
 const flags = document.querySelectorAll('.flag-container');
 const mailSpan = document.getElementById('mail-span');
+const figureImg = document.querySelectorAll('figure>img');
 
 lineSpan.forEach((span, index) => {
     const uniqueIndex = "lineSpan" + (index + 1)
     span.setAttribute('id', uniqueIndex)
     console.log(span, span.id)
 });
+
+// figureImg.forEach((img, index) => {
+//     const uniqueIndex = "figureImg" + (index + 1);
+//     img.setAttribute('id', uniqueIndex);
+//     console.log(img, img.id);
+// });
 
 // ===================
 // nav anim 
@@ -47,6 +54,8 @@ window.addEventListener('scroll', (e) => {
 // h1 anim
 // ========================
 
+let playOnce = true;
+
 window.addEventListener('scroll', (e) => {
 
     let magicScrollValue = ((window.scrollY + innerHeight) / document.body.offsetHeight);
@@ -55,6 +64,21 @@ window.addEventListener('scroll', (e) => {
     const pointer = function (index) {
         const pointed = document.getElementById('lineSpan' + index);
         pointed.style.animation = "h1AfterAnimation 2s ease-out 0.3s forwards"
+    }
+
+    if (magicScrollValue > 0.10 && playOnce) {
+
+        if (playOnce) {
+            let index = 1;
+            figureImg.forEach((img) => {
+                img.style.transition = index + "s"
+                index += 0.6;
+                img.classList.add('deblurtransition')
+                console.log(img)
+                playOnce = false;
+            });
+        }
+
     }
 
     if (magicScrollValue > 0.90) {
