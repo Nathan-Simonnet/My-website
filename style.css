@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 2px solid red;
 }
 
 html {
@@ -270,7 +271,6 @@ section {
 
 .contact-span {
 
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,7 +299,6 @@ section {
     justify-content: center;
     align-items: center;
 
-    position: absolute;
     width: 100%;
     height: 100%;
 }
