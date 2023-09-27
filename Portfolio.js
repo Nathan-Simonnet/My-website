@@ -234,7 +234,7 @@ const translatePage = function (id) {
         }, 200)
         contactSpan.textContent = "Me contacter"
 
-        projectsH1.textContent = `My projects`
+        projectsH1.textContent = `Mes projets`
         portefolioCaption.textContent = "Portfolio fait avec amour"
         dbCaption.textContent = "Affichage d'une database d'utilisateurs"
         yogaCaption.textContent = "Yoga routine"
