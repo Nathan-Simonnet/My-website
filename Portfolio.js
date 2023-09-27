@@ -4,12 +4,23 @@ const lineSpan = document.querySelectorAll('.after');
 const flags = document.querySelectorAll('.flag-container');
 const mailSpan = document.getElementById('mail-span');
 const figureImg = document.querySelectorAll('figure>img');
+const technosDiv = document.querySelectorAll('.techno-div');
 
 lineSpan.forEach((span, index) => {
     const uniqueIndex = "lineSpan" + (index + 1)
     span.setAttribute('id', uniqueIndex)
-    console.log(span, span.id)
+    // console.log(span, span.id)
 });
+
+let technoIndex = 0;
+technosDiv.forEach((technos, index) => {
+    const uniqueIndex = "techno" + (index + 1)
+    technos.setAttribute('id', uniqueIndex)
+    technoIndex++;
+    // console.log(technos, technos.id)
+    // console.log(technoIndex)
+});
+
 
 // figureImg.forEach((img, index) => {
 //     const uniqueIndex = "figureImg" + (index + 1);
@@ -20,6 +31,7 @@ lineSpan.forEach((span, index) => {
 // ===================
 // nav anim 
 // ===================
+
 let lastScroll = 0;
 window.addEventListener('scroll', (e) => {
     if (scrollY == 0) {
@@ -56,6 +68,66 @@ window.addEventListener('scroll', (e) => {
 
 let playOnce = true;
 
+// const technosFlipper = function (techno) {
+//     setTimeout(() => {
+
+//         const randyTheRando = Math.ceil(Math.random() * technoIndex);
+//         console.log(randyTheRando)
+//         const temp = document.getElementById('techno' + randyTheRando);
+//         temp.classList.add("scrolledTransition");
+
+//         setTimeout(() => {
+//             temp.classList.remove("scrolledTransition");
+//             technosFlipper();
+//         }, 3000)
+//     }, 3000)
+// }
+// technosFlipper();
+
+const technosAnimation = function (e) {
+
+    let arrayTechnos = [];
+
+    const technosShuffler = function () {
+
+        for (let i = 1; i < technoIndex + 1; i++) {
+            arrayTechnos.push(i);
+        }
+        console.log(arrayTechnos)
+        for (let i = 0; i < 100; i++) {
+            const randyTheRando2 = Math.floor(Math.random() * technoIndex);
+            const randyTheRando3 = Math.floor(Math.random() * technoIndex);
+            [arrayTechnos[randyTheRando2], arrayTechnos[randyTheRando3]] = [arrayTechnos[randyTheRando3], arrayTechnos[randyTheRando2]];
+        }
+        console.log(arrayTechnos)
+    }
+
+    technosShuffler();
+
+    let arrayIndex = 0;
+    const technosFlipper = function (techno) {
+
+        setTimeout(() => {
+            const temp = document.getElementById('techno' + arrayTechnos[arrayIndex]);
+            temp.classList.add("scrolledTransition");
+
+            setTimeout(() => {
+                temp.classList.remove("scrolledTransition");
+                arrayIndex++;
+
+                if (arrayIndex == arrayTechnos.length) {
+                    arrayIndex = 0
+                }
+                technosFlipper();
+            }, 3000)
+        }, 1000)
+
+    }
+    technosFlipper();
+}
+
+technosAnimation();
+
 window.addEventListener('scroll', (e) => {
 
     let magicScrollValue = ((window.scrollY + innerHeight) / document.body.offsetHeight);
@@ -72,13 +144,12 @@ window.addEventListener('scroll', (e) => {
             let index = 1;
             figureImg.forEach((img) => {
                 img.style.transition = index + "s"
-                index += 0.6;
-                img.classList.add('deblurtransition')
-                console.log(img)
+                index += 0.2;
+                img.classList.add('scrolledTransition')
+                // console.log(img)
                 playOnce = false;
             });
         }
-
     }
 
     if (magicScrollValue > 0.90) {

@@ -33,7 +33,7 @@ body {
     align-items: center;
     flex-direction: column;
 
-    /* overflow-X: hidden; */
+    overflow-X: hidden;
 }
 
 hr {
@@ -222,6 +222,7 @@ nav li a.scrolled-up:hover {
 
 section {
     width: 100%;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 
@@ -347,27 +348,41 @@ section {
     opacity: 0;
 }
 
-#project-container figure img.deblurtransition {
+#project-container figure img.scrolledTransition {
     opacity: 1;
     translate: 0;
 }
 
 /* ===========TECHNOS============= */
 
-#technos-div {
+#technos-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
-#technos-div div {
+#technos-container div {
     width: 9em;
     height: 9em;
     margin: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes animRandomTechno {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+div.scrolledTransition {
+    animation: animRandomTechno 1.6s ease-in-out 0.3s forwards;
 }
 
 /* ==============PROFIL================= */
@@ -519,14 +534,14 @@ footer a:hover {
         height: 200px;
     }
 
-    #technos-div {
+    #technos-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
     }
 
-    #technos-div div {
+    #technos-container div {
         width: auto;
         height: auto;
         margin: auto;
