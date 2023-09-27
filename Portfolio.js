@@ -307,7 +307,12 @@ flags.forEach((flag) => {
 
 mailSpan.addEventListener('click', (span) => {
     navigator.clipboard.writeText(span.target.textContent)
-    span.target.textContent = "copié!"
+    if (lang == "fr") {
+
+        span.target.textContent = "copié!"
+    } else {
+        span.target.textContent = "copy!"
+    }
     setTimeout(() => {
         span.target.textContent = "nathan.simonnet@gmail.com"
     }, 2000)
