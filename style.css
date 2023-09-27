@@ -257,16 +257,54 @@ section {
 
 }
 
-/* #welcome-section h1::after {
-    display: none;
-} */
-
 #welcome-section p {
+    position: relative;
     padding: 0;
     margin: 0;
     font-size: 2em;
-    color: rgb(234, 23, 62);
+    font-weight: bold;
+    color: rgb(201, 12, 46);
     transition: 0.1s;
+    min-height: 1.6em;
+    margin-bottom: 2em;
+}
+
+#arrow-span {
+    color: var(--bordeaux);
+}
+
+@keyframes horizontalBarSpanAnim {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#dev-web-p::after {
+    color: var(--wheat);
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: var(--bordeaux);
+    border-radius: 4px;
+
+    bottom: 0%;
+    right: -4px;
+    animation: horizontalBarSpanAnim 0.5s ease-in-out infinite;
+}
+
+.contact-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 4px solid green; */
+    height: 3em;
+    width: 8em;
+
 }
 
 .contact-span {
@@ -294,18 +332,9 @@ section {
     transform: scale(0.9);
 }
 
-.contact-a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-}
-
-#welcome-section span {
+/* #welcome-section span {
     margin-top: 2em;
-}
+} */
 
 /* ===========PROJECTS============== */
 
@@ -401,7 +430,7 @@ div.scrolledTransition {
     font-size: 1.6em;
 }
 
-#about-me_section span {
+#about-me_section a {
     margin-top: 1em;
 }
 
@@ -412,8 +441,9 @@ div.scrolledTransition {
     min-height: 0;
 }
 
-#mail-span {
-    width: 14em;
+#contact-section a,
+#contact-section span {
+    width: 16em;
 }
 
 /* ==========FOOTER============= */

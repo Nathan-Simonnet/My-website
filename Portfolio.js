@@ -1,3 +1,6 @@
+let lang = "fr";
+let devWebForArray = "";
+
 const header = document.querySelector('header');
 const aHovered = document.querySelectorAll('nav li a');
 const lineSpan = document.querySelectorAll('.after');
@@ -5,6 +8,41 @@ const flags = document.querySelectorAll('.flag-container');
 const mailSpan = document.getElementById('mail-span');
 const figureImg = document.querySelectorAll('figure>img');
 const technosDiv = document.querySelectorAll('.techno-div');
+const devWebP = document.getElementById('dev-web-p');
+
+const createSpan = function (content) {
+    const letter = document.createElement("span");
+    devWebP.appendChild(letter);
+    letter.textContent = content
+}
+
+let letterIndex = 0;
+let stopIt = false;
+const letterMaker = function () {
+
+    if (lang == "fr") {
+        devWebForArray = "Développeur web";
+    } else {
+        devWebForArray = "Web developer";
+    }
+
+    arrayLangSplited = [...devWebForArray]
+
+    setTimeout(() => {
+        createSpan(arrayLangSplited[letterIndex])
+        letterIndex++;
+        if (letterIndex == arrayLangSplited.length || stopIt) {
+            return
+        } else {
+            letterMaker();
+        }
+    }, 120);
+}
+
+setTimeout(() => {
+    letterMaker();
+}, 1000);
+
 
 lineSpan.forEach((span, index) => {
     const uniqueIndex = "lineSpan" + (index + 1)
@@ -21,12 +59,6 @@ technosDiv.forEach((technos, index) => {
     // console.log(technoIndex)
 });
 
-
-// figureImg.forEach((img, index) => {
-//     const uniqueIndex = "figureImg" + (index + 1);
-//     img.setAttribute('id', uniqueIndex);
-//     console.log(img, img.id);
-// });
 
 // ===================
 // nav anim 
@@ -47,9 +79,7 @@ window.addEventListener('scroll', (e) => {
         header.classList.add("scrolled-up")
         header.classList.remove("scrolled-down")
         header.classList.remove("scroll-zero")
-        // aHovered.forEach((a) => {
-        //     a.classList.remove("scrolled-up")
-        //     });
+
     } else {
         header.classList.add("scrolled-down")
         header.classList.remove("scrolled-up")
@@ -93,13 +123,13 @@ const technosAnimation = function (e) {
         for (let i = 1; i < technoIndex + 1; i++) {
             arrayTechnos.push(i);
         }
-        console.log(arrayTechnos)
+        // console.log(arrayTechnos)
         for (let i = 0; i < 100; i++) {
             const randyTheRando2 = Math.floor(Math.random() * technoIndex);
             const randyTheRando3 = Math.floor(Math.random() * technoIndex);
             [arrayTechnos[randyTheRando2], arrayTechnos[randyTheRando3]] = [arrayTechnos[randyTheRando3], arrayTechnos[randyTheRando2]];
         }
-        console.log(arrayTechnos)
+        // console.log(arrayTechnos)
     }
 
     technosShuffler();
@@ -192,11 +222,16 @@ const translatePage = function (id) {
     const contactH1 = document.getElementById('contact-h1');
 
     if (id == "fra") {
+        lang = "fr";
         projectAnchor.textContent = "Projets"
         technosAnchor.textContent = "Technos"
         aboutMeAnchor.textContent = "À propos de moi"
         contactAnchor.textContent = "Contact"
-        devWeb.textContent = "Developpeur web"
+        setTimeout(() => {
+            devWeb.textContent = ""
+            letterIndex = 0;
+            letterMaker();
+        }, 200)
         contactSpan.textContent = "Me contacter"
 
         projectsH1.textContent = `My projects`
@@ -216,11 +251,18 @@ const translatePage = function (id) {
         CVSpan.textContent = "Mon CV"
         contactH1.textContent = `Me contacter`
     } else {
+        lang = "en";
         projectAnchor.textContent = "Projects"
         technosAnchor.textContent = "Technos"
         aboutMeAnchor.textContent = "About me"
         contactAnchor.textContent = "Contact"
-        devWeb.textContent = "Web developer"
+        setTimeout(() => {
+
+            devWeb.textContent = "";
+            letterIndex = 0;
+            letterMaker();
+
+        }, 200)
         contactSpan.textContent = "Contact me"
 
         projectsH1.textContent = `My projects`
@@ -244,6 +286,10 @@ const translatePage = function (id) {
 
 flags.forEach((flag) => {
     flag.addEventListener('click', (e) => {
+        stopIt = true;
+        setTimeout(() => {
+            stopIt = false;
+        }, 10)
         if (flag.classList.contains("actual-language")) {
         } else {
             flags.forEach((e) => {
