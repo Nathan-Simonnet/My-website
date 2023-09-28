@@ -338,7 +338,7 @@ section {
 
 /* ===========PROJECTS============== */
 
-.card {
+.chantier span .card {
     background: rgba(0, 0, 0, 0.754)
         /* backdrop-filter: blur(1px); */
 
