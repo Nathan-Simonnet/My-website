@@ -300,17 +300,18 @@ section {
     justify-content: center;
     align-items: center;
 
+    cursor: pointer;
+
     font-size: 1em;
     background: linear-gradient(135deg, rgba(160, 10, 37, 0.695), rgba(160, 10, 37, 0.364));
+    border: 1px solid rgba(163, 21, 47, 0.422);
     /* height: 2.6em;
     width: 7em; */
-
-
-    transition: 0.1s;
+    transition: 0.3s;
 }
 
 .contact-span:hover {
-    cursor: pointer;
+
     border: 1px solid rgb(163, 21, 47);
     background: none;
 }
@@ -385,6 +386,33 @@ section {
     /* border: 2px solid green; */
 }
 
+
+/* @keyframes exit {
+
+    0% {
+        translate: 0;
+
+    }
+
+    100% {
+        translate: -500px;
+    }
+}
+
+
+#technos-container::before {
+    content: "Cliquez en maintenant le curseur enfoncé";
+    position: absolute;
+    background: rgba(128, 128, 128, 0.186);
+    top: -5%;
+    left: 0%;
+    font-size: 1.4em;
+
+    transition: 0.3s;
+
+    animation: exit 1s ease-out 4s forwards;
+} */
+
 #technos-container * {}
 
 .technos-and-p-container {
@@ -423,6 +451,8 @@ section {
     cursor: grab;
 }
 
+
+
 /* img-techno {} */
 
 @keyframes animRandomTechno {
@@ -441,24 +471,23 @@ section {
 
 .technos-and-p-container p {
     transition: 0.3s;
-    text-align: justify;
+    /* text-align: justify; */
     display: none;
 }
 
-.technos-and-p-container:hover {
-    /* justify-content: start; */
-    /* width: 20em;
-    height: 20em; */
-    /* animation: animTechnosContainer 0.001s linear forwards; */
+.technos-and-p-container:active {
+    justify-content: start;
+    width: 20em;
+    height: 20em;
+    animation: animTechnosContainer 0.001s linear forwards;
 }
 
-/* .technos-and-p-container:hover p {
+.technos-and-p-container:active p {
     z-index: 2;
     display: block;
-    background: black;
-    width: 20em;
-    height: 10em;
-} */
+    background: rgba(0, 0, 0, 0.481);
+}
+
 
 .transform-scale {
     transform: scale(0.1);
