@@ -350,6 +350,11 @@ section {
 
     width: 300px;
     height: 380px;
+
+    translate: 1000px;
+    opacity: 0;
+
+    cursor: pointer;
 }
 
 #project-container figcaption {
@@ -361,11 +366,9 @@ section {
     border-radius: 12px;
     width: 280px;
     height: 300px;
-    translate: 500px;
-    opacity: 0;
 }
 
-#project-container figure img.scrolledTransition {
+#project-container figure.scrolledTransition {
     opacity: 1;
     translate: 0;
 }
@@ -374,19 +377,53 @@ section {
 
 #technos-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    /* border: 2px solid green; */
 }
 
-#technos-container div {
+#technos-container * {}
+
+.technos-and-p-container {
+    position: relative;
+    width: 9em;
+    height: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    cursor: grab;
+
+    transition: 0.3s;
+}
+
+/* .technos-and-p-container::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.679);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    transition: 0.3s;
+    z-index: 2;
+} */
+
+.techno-container {
     width: 9em;
     height: 9em;
     margin: 12px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: grab;
 }
+
+/* img-techno {} */
 
 @keyframes animRandomTechno {
     0% {
@@ -398,9 +435,40 @@ section {
     }
 }
 
-div.scrolledTransition {
+.techno-container.scrolledTransition {
     animation: animRandomTechno 1.6s ease-in-out 0.3s forwards;
 }
+
+.technos-and-p-container p {
+    transition: 0.3s;
+    text-align: justify;
+    display: none;
+}
+
+.technos-and-p-container:hover {
+    /* justify-content: start; */
+    /* width: 20em;
+    height: 20em; */
+    /* animation: animTechnosContainer 0.001s linear forwards; */
+}
+
+/* .technos-and-p-container:hover p {
+    z-index: 2;
+    display: block;
+    background: black;
+    width: 20em;
+    height: 10em;
+} */
+
+.transform-scale {
+    transform: scale(0.1);
+}
+
+/* .technos-and-p-container:hover::before {
+    width: 20em;
+    height: 20em;
+} */
+
 
 /* ==============PROFIL================= */
 #about-me_section {
@@ -412,7 +480,6 @@ div.scrolledTransition {
 #about-me_section div,
 p {
     margin-bottom: 1em;
-    /* border: 2px solid red; */
 }
 
 #about-me_section img {
@@ -493,28 +560,29 @@ footer a:hover {
     nav>div {
         margin: 1em;
     }
-
-    .flag-container img {
-        min-width: 40px;
-        min-height: 40px;
-
-    }
 }
 
 @media (max-width:530px) {
 
-    .scroll-zero {
-        background: none;
+    nav li {
+        font-size: 1.2em;
+    }
+
+    header.scroll-zero {
+        background: linear-gradient(rgb(135, 9, 32), rgba(135, 9, 32, 0.537));
+        ;
         top: 0;
     }
 
-    .scrolled-up {
-        background: none;
+    header.scrolled-up {
+        background: linear-gradient(rgb(135, 9, 32), rgba(135, 9, 32, 0.537));
+        ;
         top: 0;
     }
 
-    .scrolled-down {
-        background: none;
+    header.scrolled-down {
+        background: linear-gradient(rgb(135, 9, 32), rgba(135, 9, 32, 0.537));
+        ;
         top: 0;
     }
 
@@ -531,34 +599,13 @@ footer a:hover {
         padding: 0;
     }
 
-    #project-container div img {
+    .project-img {
         width: 160px;
         height: 200px;
-    }
-
-    #technos-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    #technos-container div {
-        width: auto;
-        height: auto;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
     }
 
     #about-me_section img {
         height: 300px;
         width: 250px;
-    }
-
-    #mail-span {
-        min-width: 12em;
     }
 }

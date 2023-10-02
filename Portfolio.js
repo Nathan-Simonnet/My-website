@@ -6,9 +6,13 @@ const aHovered = document.querySelectorAll('nav li a');
 const lineSpan = document.querySelectorAll('.after');
 const flags = document.querySelectorAll('.flag-container');
 const mailSpan = document.getElementById('mail-span');
-const figureImg = document.querySelectorAll('figure>img');
-const technosDiv = document.querySelectorAll('.techno-div');
+const projectFigure = document.querySelectorAll('.project-figure');
+const projectImg = document.querySelectorAll('.project-img');
+const technoContainer = document.querySelectorAll('.techno-container');
+const imgTechno = document.querySelectorAll('.img-techno');
 const devWebP = document.getElementById('dev-web-p');
+const technosContainer = document.getElementById('technos-container');
+const technosAndPContainer = document.querySelectorAll('.technos-and-p-container');
 
 const createSpan = function (content) {
     const letter = document.createElement("span");
@@ -51,7 +55,7 @@ lineSpan.forEach((span, index) => {
 });
 
 let technoIndex = 0;
-technosDiv.forEach((technos, index) => {
+technoContainer.forEach((technos, index) => {
     const uniqueIndex = "techno" + (index + 1)
     technos.setAttribute('id', uniqueIndex)
     technoIndex++;
@@ -93,7 +97,7 @@ window.addEventListener('scroll', (e) => {
 });
 
 // ========================
-// h1 anim
+// h1 anim + projet anim
 // ========================
 
 let playOnce = true;
@@ -172,11 +176,11 @@ window.addEventListener('scroll', (e) => {
 
         if (playOnce) {
             let index = 1;
-            figureImg.forEach((img) => {
-                img.style.transition = index + "s"
+            projectFigure.forEach((figure) => {
+                figure.style.transition = index + "s"
                 index += 0.2;
-                img.classList.add('scrolledTransition')
-                // console.log(img)
+                figure.classList.add('scrolledTransition')
+                // console.log(figure)
                 playOnce = false;
             });
         }
@@ -191,6 +195,44 @@ window.addEventListener('scroll', (e) => {
     } else if (magicScrollValue > 0.10) {
         pointer(1);
     }
+});
+
+// ========================
+// Technos Displayer
+// ========================
+
+// technosAndPContainer.forEach((techno) => {
+//     techno.addEventListener('mouseover', (event) => {
+//         techno.style.border = "2px solid red"
+
+//         technosAndPContainer.forEach((otherTechnos) => {
+//             if (otherTechnos != techno) {
+//                 otherTechnos.classList.add('transform-scale')
+//             }
+//         });
+//     });
+
+//     techno.addEventListener('mouseout', (event) => {
+//         techno.style.border = "none"
+
+//         technosAndPContainer.forEach((otherTechnos) => {
+//             if (otherTechnos != techno) {
+//                 otherTechnos.classList.remove('transform-scale')
+//             }
+//         });
+//     });
+
+// });
+
+
+// ========================
+// Projet displayer
+// ========================
+
+projectImg.forEach((projet) => {
+    projet.addEventListener('click', (event) => {
+        event.target.classList.add('clicked')
+    });
 });
 
 // ========================
