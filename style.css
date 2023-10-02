@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
     /* border: 2px solid red; */
 }
 
@@ -48,7 +49,7 @@ h1 {
     display: inline-block;
     margin: 1em 0 1em 0;
     height: 20%;
-    font-size: 2.6em;
+    font-size: 2.4em;
     /* font-size: 250px; */
 }
 
@@ -58,7 +59,7 @@ h1 {
     }
 
     100% {
-        width: 60%;
+        width: 100%;
     }
 }
 
@@ -77,17 +78,6 @@ h1 {
     background: var(--bordeaux);
     /* animation: h1AfterAnimation 2s ease-out 0.3s forwards; */
 }
-
-/* h1::after {
-    position: absolute;
-    bottom: -15%;
-    left: 0%;
-    content: "";
-    height: 2px;
-    width: 20%;
-    background: var(--bordeaux);
-    animation: h1AfterAnimation 3s ease-out 0.3s forwards;
-} */
 
 a {
     text-decoration: none;
@@ -124,7 +114,10 @@ header {
 
 .scrolled-up {
     top: 0;
-    background: var(--bordeaux);
+}
+
+header.scrolled-up {
+    background: linear-gradient(rgb(135, 9, 32), rgba(135, 9, 32, 0.537));
 }
 
 .scrolled-down {
@@ -167,8 +160,8 @@ div.actual-language::after {
 }
 
 .flag-container img {
-    min-width: 60px;
-    min-height: 60px;
+    width: 50px;
+    height: 50px;
     transition: 0.1s;
     padding: 4px;
     display: flex;
@@ -195,18 +188,14 @@ nav li {
     margin-right: 1em;
     transition: 0.1s;
 
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
-
-/* nav li a:hover {
-    color: black;
-    text-shadow: 0 0 5px rgb(100, 0, 0);
-} */
 
 nav li a:hover {
     color: var(--bordeaux);
+    /* font-size: 1.1em; */
     font-weight: bold;
-    text-shadow: 0 0 5px rgb(5, 5, 5);
+    text-shadow: 0 0 5px rgba(5, 5, 5, 0.53);
 }
 
 nav li a.scrolled-up {
@@ -249,6 +238,7 @@ section {
     justify-content: center;
     align-items: center;
 
+    font-size: 2.4em;
     text-align: center;
     transition: 0.1s;
     height: auto;
@@ -261,16 +251,13 @@ section {
     position: relative;
     padding: 0;
     margin: 0;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
-    color: rgb(201, 12, 46);
+    color: rgb(167, 10, 39);
+    text-shadow: 0 0 5px rgba(5, 5, 5, 0.688);
     transition: 0.1s;
     min-height: 1.6em;
     margin-bottom: 2em;
-}
-
-#arrow-span {
-    color: var(--bordeaux);
 }
 
 @keyframes horizontalBarSpanAnim {
@@ -313,10 +300,10 @@ section {
     justify-content: center;
     align-items: center;
 
-    font-size: 1.2em;
-    background: rgb(163, 21, 47);
-    height: 3em;
-    width: 8em;
+    font-size: 1em;
+    background: linear-gradient(135deg, rgba(160, 10, 37, 0.695), rgba(160, 10, 37, 0.364));
+    /* height: 2.6em;
+    width: 7em; */
 
 
     transition: 0.1s;
@@ -332,13 +319,15 @@ section {
     transform: scale(0.9);
 }
 
-/* #welcome-section span {
-    margin-top: 2em;
-} */
+#welcome-section span {
+    height: 2.6em;
+    width: 7em;
+}
 
 /* ===========PROJECTS============== */
 
-.chantier span .card {
+
+.card {
     background: rgba(0, 0, 0, 0.754)
         /* backdrop-filter: blur(1px); */
 
@@ -415,8 +404,15 @@ div.scrolledTransition {
 
 /* ==============PROFIL================= */
 #about-me_section {
+    display: flex;
     justify-content: center;
     align-items: baseline;
+}
+
+#about-me_section div,
+p {
+    margin-bottom: 1em;
+    /* border: 2px solid red; */
 }
 
 #about-me_section img {
@@ -427,23 +423,35 @@ div.scrolledTransition {
 }
 
 #about-me_section p {
-    font-size: 1.6em;
+    font-size: 1.4em;
 }
 
 #about-me_section a {
     margin-top: 1em;
 }
 
+#CV-container {
+    margin-top: 4em;
+}
+
+#CV-span {
+    height: 3em;
+    width: 8em;
+}
+
 
 /* ============CONTACT============== */
 
 #contact-section {
-    min-height: 0;
+    min-height: 16em;
 }
 
-#contact-section a,
-#contact-section span {
+
+#mail-span,
+#mail-a {
     width: 16em;
+    height: 3em;
+
 }
 
 /* ==========FOOTER============= */
@@ -467,20 +475,23 @@ footer a:hover {
 
 
 /* ============media-querries================== */
-@media (max-width:1000px) {
-
-    nav li {
-        font-size: 1.4em;
-    }
-
-}
-
-
 
 @media (max-width:700px) {
 
-    nav li {
-        font-size: 1em;
+    header {
+        height: 9em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    nav ul,
+    nav>div {
+        margin: 1em;
     }
 
     .flag-container img {
@@ -491,44 +502,6 @@ footer a:hover {
 }
 
 @media (max-width:530px) {
-
-    h1 {
-        font-size: 2.6em;
-    }
-
-    header {
-        position: relative;
-        min-height: 30vh;
-        max-height: 100vh;
-    }
-
-    #flags-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        flex-direction: column;
-        top: 5%;
-        left: 5%;
-
-    }
-
-    .flag-container {
-        margin-bottom: 1em;
-    }
-
-    ul {
-        right: 0;
-        top: 0;
-        position: absolute;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    nav li {
-        margin: 1em;
-        font-size: 0.8em;
-    }
 
     .scroll-zero {
         background: none;

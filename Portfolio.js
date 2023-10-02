@@ -318,3 +318,8 @@ mailSpan.addEventListener('click', (span) => {
     }, 2000)
 });
 
+// class Projects  {
+// constructor(){
+// this.=;
+// }
+// }
