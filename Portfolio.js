@@ -220,11 +220,16 @@ technosAndPContainer.forEach((techno) => {
 // Projet displayer
 // ========================
 
+const projectDisplayer = function (title, img, text) {
+    document.body.createElement("span");
+}
+
+
 projectImg.forEach((projet) => {
     projet.addEventListener('click', (event) => {
         event.target.classList.add('clicked')
     });
-});
+})
 
 // ========================
 // Translation 
