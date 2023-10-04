@@ -13,6 +13,7 @@ const imgTechno = document.querySelectorAll('.img-techno');
 const devWebP = document.getElementById('dev-web-p');
 const technosContainer = document.getElementById('technos-container');
 const technosAndPContainer = document.querySelectorAll('.technos-and-p-container');
+const spanInfosTechnos = document.getElementById('span-infos-technos');
 
 const createSpan = function (content) {
     const letter = document.createElement("span");
@@ -190,7 +191,7 @@ window.addEventListener('scroll', (e) => {
         pointer(4);
     } else if (magicScrollValue > 0.70) {
         pointer(3);
-    } else if (magicScrollValue > 0.50) {
+    } else if (magicScrollValue > 0.60) {
         pointer(2);
     } else if (magicScrollValue > 0.10) {
         pointer(1);
@@ -201,28 +202,18 @@ window.addEventListener('scroll', (e) => {
 // Technos Displayer
 // ========================
 
-// technosAndPContainer.forEach((techno) => {
-//     techno.addEventListener('mouseover', (event) => {
-//         techno.style.border = "2px solid red"
+document.getElementById('technos-section').addEventListener('mouseover', (e) => {
+    spanInfosTechnos.classList.add('shiningAnim')
+});
+document.getElementById('technos-section').addEventListener('mouseout', (e) => {
+    spanInfosTechnos.classList.remove('shiningAnim')
+});
 
-//         technosAndPContainer.forEach((otherTechnos) => {
-//             if (otherTechnos != techno) {
-//                 otherTechnos.classList.add('transform-scale')
-//             }
-//         });
-//     });
-
-//     techno.addEventListener('mouseout', (event) => {
-//         techno.style.border = "none"
-
-//         technosAndPContainer.forEach((otherTechnos) => {
-//             if (otherTechnos != techno) {
-//                 otherTechnos.classList.remove('transform-scale')
-//             }
-//         });
-//     });
-
-// });
+technosAndPContainer.forEach((techno) => {
+    techno.addEventListener('mousedown', (event) => {
+        spanInfosTechnos.style.display = "none"
+    });
+});
 
 
 // ========================
@@ -265,6 +256,9 @@ const translatePage = function (id) {
 
     if (id == "fra") {
         lang = "fr";
+
+        document.querySelector('.chantier>p').textContent = "Plus de fonctionnalités à venir..."
+
         projectAnchor.textContent = "Projets"
         technosAnchor.textContent = "Technos"
         aboutMeAnchor.textContent = "À propos de moi"
@@ -274,26 +268,30 @@ const translatePage = function (id) {
             letterIndex = 0;
             letterMaker();
         }, 200)
-        contactSpan.textContent = "Me contacter"
+        contactSpan.textContent = "Me contacter";
 
-        projectsH1.textContent = `Mes projets`
-        portefolioCaption.textContent = "Portfolio fait avec amour"
-        dbCaption.textContent = "Affichage d'une database d'utilisateurs"
-        yogaCaption.textContent = "Yoga routine"
-        passwordCaption.textContent = "Générateur de mot de passe"
-        mealCaption.textContent = "Générateur de recettes"
-        quizzCaption.textContent = "Quizz"
-        textAnimCaption.textContent = "Animation de texte"
-        technosH1.textContent = `Mes technos`
-        aboutmeH1.textContent = `A propos de moi`
-        profilP1.textContent = "Ancien maître nageur, je m'exerce à la programmation depuis 2021"
-        profilP2.textContent = "HTML/CSS, puis javascript pour rendre mes pages plus dynamiques, plus récément react pour aller encore plus loin..."
-        profilP3.textContent = "Ce qui à commencé comme une occupation, est maintenant devenu une passion, me poussant à me former continuelement"
-        profilP4.textContent = "L'objectif maintenant, full stack! A suivre..."
-        CVSpan.textContent = "Mon CV"
-        contactH1.textContent = `Me contacter`
+        projectsH1.textContent = `Mes projets`;
+        portefolioCaption.textContent = "Portfolio fait avec amour";
+        dbCaption.textContent = "Affichage d'une database d'utilisateurs";
+        yogaCaption.textContent = "Yoga routine";
+        passwordCaption.textContent = "Générateur de mot de passe";
+        mealCaption.textContent = "Générateur de recettes";
+        quizzCaption.textContent = "Quizz";
+        textAnimCaption.textContent = "Animation de texte";
+        technosH1.textContent = `Mes technos`;
+        spanInfosTechnos.textContent = "Cliquez et maintenez enfoncé pour plus d'informations";
+        aboutmeH1.textContent = `A propos de moi`;
+        profilP1.textContent = "Ancien maître nageur, je m'exerce à la programmation depuis 2021.";
+        profilP2.textContent = "HTML/CSS, puis javascript pour rendre mes pages plus dynamiques, plus récément react pour aller encore plus loin...";
+        profilP3.textContent = "Ce qui à commencé comme une occupation, est maintenant devenu une passion, me poussant à me former continuelement.";
+        profilP4.textContent = "L'objectif maintenant, full stack! A suivre...";
+        CVSpan.textContent = "Mon CV";
+        contactH1.textContent = `Me contacter`;
     } else {
         lang = "en";
+
+        document.querySelector('.chantier>p').textContent = "More features to come..."
+
         projectAnchor.textContent = "Projects"
         technosAnchor.textContent = "Technos"
         aboutMeAnchor.textContent = "About me"
@@ -305,30 +303,32 @@ const translatePage = function (id) {
             letterMaker();
 
         }, 200)
-        contactSpan.textContent = "Contact me"
+        contactSpan.textContent = "Contact me";
 
-        projectsH1.textContent = `My projects`
-        portefolioCaption.textContent = "Portfolio, made with love"
-        dbCaption.textContent = "Displaying a user database"
-        yogaCaption.textContent = "Yoga routine"
-        passwordCaption.textContent = "Password generator"
-        mealCaption.textContent = "Recipe generator"
-        quizzCaption.textContent = "Quizz app"
-        textAnimCaption.textContent = "Text animation"
-        technosH1.textContent = `My main techos`
-        aboutmeH1.textContent = `About me`
-        profilP1.textContent = "Former lifeguard, I have been practicing programming since 2021."
-        profilP2.textContent = "HTML/CSS, then javascript to make my pages more responsive and dynamic, more recently react to go even further..."
-        profilP3.textContent = "What started as a hobby, has now become a passion, pushing me to continually train myself continuously."
-        profilP4.textContent = "The goal now, full stack! To be continued..."
-        CVSpan.textContent = "My CV"
-        contactH1.textContent = `Contact me`
+        projectsH1.textContent = `My projects`;
+        portefolioCaption.textContent = "Portfolio, made with love";
+        dbCaption.textContent = "Displaying a user database";
+        yogaCaption.textContent = "Yoga routine";
+        passwordCaption.textContent = "Password generator";
+        mealCaption.textContent = "Recipe generator";
+        quizzCaption.textContent = "Quizz app";
+        textAnimCaption.textContent = "Text animation";
+        technosH1.textContent = `My main techos`;
+        spanInfosTechnos.textContent = "Click and hold for more informations";
+        aboutmeH1.textContent = `About me`;
+        profilP1.textContent = "Former lifeguard, I have been practicing programming since 2021.";
+        profilP2.textContent = "HTML/CSS, then javascript to make my pages more responsive and dynamic, more recently react to go even further...";
+        profilP3.textContent = "What started as a hobby, has now become a passion, pushing me to continually train myself continuously.";
+        profilP4.textContent = "The goal now, full stack! To be continued...";
+        CVSpan.textContent = "My CV";
+        contactH1.textContent = `Contact me`;
     }
 }
 
 flags.forEach((flag) => {
     flag.addEventListener('click', (e) => {
         stopIt = true;
+        spanInfosTechnos.style.display = "block"
         setTimeout(() => {
             stopIt = false;
         }, 10)

@@ -375,6 +375,226 @@ section {
 }
 
 /* ===========TECHNOS============= */
+#technos-title-container {
+    margin-bottom: 2em;
+}
+
+/* @keyframes shiningAnimLeftToRight {
+    0% {
+        background: linear-gradient(45deg, red 0%, black 20%);
+    }
+
+    10% {
+        background: linear-gradient(45deg, black 10%, red 20%, black 30%);
+    }
+
+    20% {
+        background: linear-gradient(45deg, black 20%, red 30%, black 40%);
+    }
+
+    30% {
+        background: linear-gradient(45deg, black 30%, red 40%, black 50%);
+    }
+
+    40% {
+        background: linear-gradient(45deg, black 40%, red 50%, black 60%);
+    }
+
+    50% {
+        background: linear-gradient(45deg, black 50%, red 60%, black 70%);
+    }
+
+    60% {
+        background: linear-gradient(45deg, black 60%, red 70%, black 80%);
+    }
+
+    70% {
+        background: linear-gradient(45deg, black 70%, red 80%, black 90%);
+    }
+
+    80% {
+        background: linear-gradient(45deg, black 80%, red 90%, black 100%);
+    }
+
+    90% {
+        background: linear-gradient(45deg, black 90%, red 100%);
+    }
+
+    100% {
+        background: linear-gradient(45deg, black 100%);
+    }
+
+}
+
+@keyframes shiningAnimRightToLeft {
+    0% {
+        background: linear-gradient(90deg, black 90%, red 100%);
+    }
+
+    10% {
+        background: linear-gradient(90deg, black 80%, red 90%, black 100%);
+    }
+
+    20% {
+        background: linear-gradient(90deg, black 70%, red 80%, black 90%);
+    }
+
+    30% {
+        background: linear-gradient(90deg, black 60%, red 70%, black 80%);
+    }
+
+    40% {
+        background: linear-gradient(90deg, black 50%, red 60%, black 70%);
+    }
+
+    50% {
+        background: linear-gradient(90deg, black 40%, red 50%, black 60%);
+    }
+
+    60% {
+        background: linear-gradient(90deg, black 30%, red 40%, black 50%);
+    }
+
+    70% {
+        background: linear-gradient(45deg, black 20%, red 30%, black 40%);
+    }
+
+    80% {
+        background: linear-gradient(45deg, black 10%, red 20%, black 30%);
+    }
+
+    90% {
+        background: linear-gradient(45deg, red 0%, black 20%);
+
+    }
+
+    100% {
+        background: linear-gradient(45deg, black 100%);
+    }
+
+} */
+
+@keyframes shiningAnim {
+    0% {
+        background: linear-gradient(45deg, red 0%, black 20%);
+    }
+
+    4% {
+        background: linear-gradient(45deg, black 10%, red 20%, black 30%);
+    }
+
+    8% {
+        background: linear-gradient(45deg, black 20%, red 30%, black 40%);
+    }
+
+    12% {
+        background: linear-gradient(45deg, black 30%, red 40%, black 50%);
+    }
+
+    16% {
+        background: linear-gradient(45deg, black 40%, red 50%, black 60%);
+    }
+
+    20% {
+        background: linear-gradient(45deg, black 50%, red 60%, black 70%);
+    }
+
+    24% {
+        background: linear-gradient(45deg, black 60%, red 70%, black 80%);
+    }
+
+    28% {
+        background: linear-gradient(45deg, black 70%, red 80%, black 90%);
+    }
+
+    32% {
+        background: linear-gradient(45deg, black 80%, red 90%, black 100%);
+    }
+
+    36% {
+        background: linear-gradient(45deg, black 90%, red 100%);
+    }
+
+    42% {
+        background: black
+    }
+
+    56% {
+        background: black
+    }
+
+    60% {
+        background: linear-gradient(90deg, black 90%, red 100%);
+    }
+
+    64% {
+        background: linear-gradient(90deg, black 80%, red 90%, black 100%);
+    }
+
+    68% {
+        background: linear-gradient(90deg, black 70%, red 80%, black 90%);
+    }
+
+    72% {
+        background: linear-gradient(90deg, black 60%, red 70%, black 80%);
+    }
+
+    76% {
+        background: linear-gradient(90deg, black 50%, red 60%, black 70%);
+    }
+
+    80% {
+        background: linear-gradient(90deg, black 40%, red 50%, black 60%);
+    }
+
+    84% {
+        background: linear-gradient(90deg, black 30%, red 40%, black 50%);
+    }
+
+    88% {
+        background: linear-gradient(90deg, black 20%, red 30%, black 40%);
+    }
+
+    92% {
+        background: linear-gradient(90deg, black 10%, red 20%, black 30%);
+    }
+
+    96% {
+        background: linear-gradient(90deg, red 0%, black 20%);
+    }
+
+    100% {
+        background: black;
+    }
+
+}
+
+/* @keyframes animTechnosInfos {
+    from {
+        font-size: 0;
+        color: black;
+        background: none;
+    }
+
+    to {
+        font-size: 1.4em;
+        color: white;
+        background: rgba(0, 0, 0, 0.574);
+    }
+} */
+
+
+#span-infos-technos {
+    font-size: 1.4em;
+    display: block;
+    background: rgba(0, 0, 0, 0.533);
+    position: absolute;
+    top: -1em;
+    left: 0%;
+    border-radius: 15px;
+    /* animation: animTechnosInfos 1.5s linear forwards; */
+    /* animation: shiningAnim 1s ease-in-out 1s forwards; */
+}
 
 #technos-container {
     display: flex;
@@ -383,37 +603,11 @@ section {
     justify-content: space-around;
     align-items: center;
     position: relative;
-    /* border: 2px solid green; */
 }
 
-
-/* @keyframes exit {
-
-    0% {
-        translate: 0;
-
-    }
-
-    100% {
-        translate: -500px;
-    }
+.shiningAnim {
+    animation: shiningAnim 0.8s ease-in-out forwards;
 }
-
-
-#technos-container::before {
-    content: "Cliquez en maintenant le curseur enfoncé";
-    position: absolute;
-    background: rgba(128, 128, 128, 0.186);
-    top: -5%;
-    left: 0%;
-    font-size: 1.4em;
-
-    transition: 0.3s;
-
-    animation: exit 1s ease-out 4s forwards;
-} */
-
-#technos-container * {}
 
 .technos-and-p-container {
     position: relative;
@@ -429,17 +623,6 @@ section {
     transition: 0.3s;
 }
 
-/* .technos-and-p-container::before {
-    content: "";
-    background: rgba(0, 0, 0, 0.679);
-    position: absolute;
-    width: 20px;
-    height: 20px;
-
-    transition: 0.3s;
-    z-index: 2;
-} */
-
 .techno-container {
     width: 9em;
     height: 9em;
@@ -450,10 +633,6 @@ section {
     align-items: center;
     cursor: grab;
 }
-
-
-
-/* img-techno {} */
 
 @keyframes animRandomTechno {
     0% {
@@ -478,7 +657,7 @@ section {
 .technos-and-p-container:active {
     justify-content: start;
     width: 20em;
-    height: 20em;
+    height: 22em;
     animation: animTechnosContainer 0.001s linear forwards;
 }
 
@@ -588,6 +767,15 @@ footer a:hover {
     nav ul,
     nav>div {
         margin: 1em;
+    }
+
+    #technos-container {
+        margin-top: 2em;
+    }
+
+    #span-infos-technos {
+        top: -2em;
+        font-size: 1em;
     }
 }
 
