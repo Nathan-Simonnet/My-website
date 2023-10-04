@@ -476,95 +476,95 @@ section {
 
 @keyframes shiningAnim {
     0% {
-        background: linear-gradient(45deg, red 0%, black 20%);
+        background: linear-gradient(45deg, red 0%, rgba(0, 0, 0, 0.348) 20%);
     }
 
     4% {
-        background: linear-gradient(45deg, black 10%, red 20%, black 30%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 10%, red 20%, rgba(0, 0, 0, 0.348) 30%);
     }
 
     8% {
-        background: linear-gradient(45deg, black 20%, red 30%, black 40%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 20%, red 30%, rgba(0, 0, 0, 0.348) 40%);
     }
 
     12% {
-        background: linear-gradient(45deg, black 30%, red 40%, black 50%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 30%, red 40%, rgba(0, 0, 0, 0.348) 50%);
     }
 
     16% {
-        background: linear-gradient(45deg, black 40%, red 50%, black 60%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 40%, red 50%, rgba(0, 0, 0, 0.348) 60%);
     }
 
     20% {
-        background: linear-gradient(45deg, black 50%, red 60%, black 70%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 50%, red 60%, rgba(0, 0, 0, 0.348) 70%);
     }
 
     24% {
-        background: linear-gradient(45deg, black 60%, red 70%, black 80%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 60%, red 70%, rgba(0, 0, 0, 0.348) 80%);
     }
 
     28% {
-        background: linear-gradient(45deg, black 70%, red 80%, black 90%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 70%, red 80%, rgba(0, 0, 0, 0.348) 90%);
     }
 
     32% {
-        background: linear-gradient(45deg, black 80%, red 90%, black 100%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 80%, red 90%, rgba(0, 0, 0, 0.348) 100%);
     }
 
     36% {
-        background: linear-gradient(45deg, black 90%, red 100%);
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 90%, red 100%);
     }
 
     42% {
-        background: black
+        background: rgba(0, 0, 0, 0.348)
     }
 
     56% {
-        background: black
+        background: rgba(0, 0, 0, 0.348)
     }
 
     60% {
-        background: linear-gradient(90deg, black 90%, red 100%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 90%, red 100%);
     }
 
     64% {
-        background: linear-gradient(90deg, black 80%, red 90%, black 100%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 80%, red 90%, rgba(0, 0, 0, 0.348) 100%);
     }
 
     68% {
-        background: linear-gradient(90deg, black 70%, red 80%, black 90%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 70%, red 80%, rgba(0, 0, 0, 0.348) 90%);
     }
 
     72% {
-        background: linear-gradient(90deg, black 60%, red 70%, black 80%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 60%, red 70%, rgba(0, 0, 0, 0.348) 80%);
     }
 
     76% {
-        background: linear-gradient(90deg, black 50%, red 60%, black 70%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 50%, red 60%, rgba(0, 0, 0, 0.348) 70%);
     }
 
     80% {
-        background: linear-gradient(90deg, black 40%, red 50%, black 60%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 40%, red 50%, rgba(0, 0, 0, 0.348) 60%);
     }
 
     84% {
-        background: linear-gradient(90deg, black 30%, red 40%, black 50%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 30%, red 40%, rgba(0, 0, 0, 0.348) 50%);
     }
 
     88% {
-        background: linear-gradient(90deg, black 20%, red 30%, black 40%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 20%, red 30%, rgba(0, 0, 0, 0.348) 40%);
     }
 
     92% {
-        background: linear-gradient(90deg, black 10%, red 20%, black 30%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.348) 10%, red 20%, rgba(0, 0, 0, 0.348) 30%);
     }
 
     96% {
-        background: linear-gradient(90deg, red 0%, black 20%);
+        background: linear-gradient(90deg, red 0%, rgba(0, 0, 0, 0.348) 20%);
     }
 
     100% {
-        background: black;
+        background: rgba(0, 0, 0, 0.348);
     }
 
 }
@@ -587,7 +587,7 @@ section {
 #span-infos-technos {
     font-size: 1.4em;
     display: block;
-    background: rgba(0, 0, 0, 0.533);
+    background: rgba(0, 0, 0, 0.348);
     position: absolute;
     top: -1em;
     left: 0%;
