@@ -8,11 +8,11 @@ const flags = document.querySelectorAll('.flag-container');
 const mailSpan = document.getElementById('mail-span');
 const projectFigure = document.querySelectorAll('.project-figure');
 const projectImg = document.querySelectorAll('.project-img');
-const technoContainer = document.querySelectorAll('.techno-container');
 const imgTechno = document.querySelectorAll('.img-techno');
 const devWebP = document.getElementById('dev-web-p');
 const technosContainer = document.getElementById('technos-container');
-const technosAndPContainer = document.querySelectorAll('.technos-and-p-container');
+const technoContainer = document.querySelectorAll('.techno-container');
+const technoAndPContainer = document.querySelectorAll('.techno-and-p-container');
 const spanInfosTechnos = document.getElementById('span-infos-technos');
 
 const createSpan = function (content) {
@@ -128,13 +128,11 @@ const technosAnimation = function (e) {
         for (let i = 1; i < technoIndex + 1; i++) {
             arrayTechnos.push(i);
         }
-        // console.log(arrayTechnos)
         for (let i = 0; i < 100; i++) {
             const randyTheRando2 = Math.floor(Math.random() * technoIndex);
             const randyTheRando3 = Math.floor(Math.random() * technoIndex);
             [arrayTechnos[randyTheRando2], arrayTechnos[randyTheRando3]] = [arrayTechnos[randyTheRando3], arrayTechnos[randyTheRando2]];
         }
-        // console.log(arrayTechnos)
     }
 
     technosShuffler();
@@ -198,23 +196,6 @@ window.addEventListener('scroll', (e) => {
     }
 });
 
-// ========================
-// Technos Displayer
-// ========================
-
-document.getElementById('technos-section').addEventListener('mouseover', (e) => {
-    spanInfosTechnos.classList.add('shiningAnim')
-});
-document.getElementById('technos-section').addEventListener('mouseout', (e) => {
-    spanInfosTechnos.classList.remove('shiningAnim')
-});
-
-technosAndPContainer.forEach((techno) => {
-    techno.addEventListener('mousedown', (event) => {
-        spanInfosTechnos.style.display = "none"
-    });
-});
-
 
 // ========================
 // Projet displayer
@@ -230,6 +211,24 @@ projectImg.forEach((projet) => {
         event.target.classList.add('clicked')
     });
 })
+
+// ========================
+// Technos Displayer
+// ========================
+
+document.getElementById('technos-section').addEventListener('mouseover', (e) => {
+    spanInfosTechnos.classList.add('shiningAnim')
+});
+document.getElementById('technos-section').addEventListener('mouseout', (e) => {
+    spanInfosTechnos.classList.remove('shiningAnim')
+});
+
+technoAndPContainer.forEach((techno) => {
+    techno.addEventListener('mousedown', (event) => {
+        spanInfosTechnos.style.display = "none";
+    });
+});
+
 
 // ========================
 // Translation 
@@ -285,6 +284,49 @@ const translatePage = function (id) {
         textAnimCaption.textContent = "Animation de texte";
         technosH1.textContent = `Mes technos`;
         spanInfosTechnos.textContent = "Cliquez et maintenez enfoncé pour plus d'informations";
+
+        document.getElementById('p-CSS').innerHTML = `
+                    <p>Une pratique régulière de plus de 4h par semaines depuis 2021</p>
+                    <p>Et plus de 60h de formations en HTML / CSS via différents médias</p>
+                    <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI, et plus récemment
+                        SASS
+                    </p>
+                    <p>Enfin concernant HTML, l'apprentissage des outils et méthodes de référenceent</p>
+        `
+        document.getElementById('p-JS').innerHTML = `
+        <p>Une pratique régulière de plus de 8h par semaines depuis 2022</p>
+                    <p>Plus de 40H de formations, plus des cours d'algorithmie</p>
+                    <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les projets plus
+                        hauts
+                    </p>
+        `
+        document.getElementById('p-REACT').innerHTML = `
+        <p>React = the next step!</p>
+                    <p>Une première formation d'une dizaine d'heures passé il y a quelques mois, dans l'esprit de
+                        vouloir allez encore plus loin</p>
+                    <p>Autant que possible, je continuera mon apprentissage avec React, toujours pour la même raison,
+                        des projets qui me tiennent à cœur</p>
+        `
+        document.getElementById('p-TS').innerHTML = `
+        <p>J'ai eu l'occasion de pratiquer typescript pendant ma formation "principale" en javascript il y a
+                        quelques mois</p>
+                    <p>Encore un outil intéressant... Encore une corde à mon arc</p>
+                    <p>Des projets sont encore en cours afin de progresser sur son utilisation, restez connectez !</p>
+                
+        `
+        document.getElementById('p-PHP').innerHTML = `
+        <p>Plus de 12H de formations à l'heure actuelle depuis 2023</p>
+                    <p>Pour commencer à mettre un pied dans le back-end</p>
+                    <p>Le chemin sera long, mais il faut ce qu'il faut, et je suis prêt!</p>
+        `
+        document.getElementById('p-MYSQL').innerHTML = `
+        <p>La suite logique de PHP est MySql, et nous y voilà</p>
+                    <p>Je suis divers tutoriels en parallèle de PHP, afin d'aller, petit à petit, encore plus loin</p>
+                    <p>D'abord, j'ai un désir de comprendre, puis de tester, puis d'optimiser, voilà le tronc commun a
+                        tout
+                        ces langages</p>
+        `
+
         aboutmeH1.textContent = `A propos de moi`;
         profilP1.textContent = "Ancien maître nageur, je m'exerce à la programmation depuis 2021.";
         profilP2.textContent = "HTML/CSS, puis javascript pour rendre mes pages plus dynamiques, plus récément react pour aller encore plus loin...";
@@ -320,6 +362,40 @@ const translatePage = function (id) {
         textAnimCaption.textContent = "Text animation";
         technosH1.textContent = `My main techos`;
         spanInfosTechnos.textContent = "Click and hold for more informations";
+
+        document.getElementById('p-CSS').innerHTML = `
+        <p>Regular practice of over 4 hours per week since 2021</p>
+        <p>Over 60 hours of training in HTML / CSS through various media</p>
+        <p>This practice is accompanied by everything related to UX / UI design, and more recently, SASS</p>
+        <p>Regarding HTML, learning the tools and methods of SEO </p>
+        `
+        document.getElementById('p-JS').innerHTML = `
+        <p>Regular practice of over 8 hours per week since 2022</p>
+<p>Over 40 hours of training, plus algorithmics courses</p>
+<p>JavaScript is my current favorite language, and it's used in all the projects mentioned above</p>
+        `
+        document.getElementById('p-REACT').innerHTML = `
+        <p>React = the next step!</p>
+<p>A first training of about ten hours completed a few months ago, with the intention of going even further</p>
+<p>As much as possible, I will continue my learning journey with React, all for the same reason - projects that are close to my heart</p>
+        `
+        document.getElementById('p-TS').innerHTML = `
+        <p>I had the opportunity to practice TypeScript during my "main" training in JavaScript a few months ago</p>
+<p>Yet another interesting tool... Another string to my bow</p>
+<p>Projects are still ongoing to improve my usage of it, stay tuned!</p>
+        `
+        document.getElementById('p-PHP').innerHTML = `
+        <p>Over 12 hours of training up to the current time since 2023</p>
+        <p>To begin stepping into the back-end</p>
+        <p>The journey will be long, but it takes what it takes, and I'm ready!</p>
+        `
+        document.getElementById('p-MYSQL').innerHTML = `
+        <p>The next step after PHP is MySQL, and here we are</p>
+        <p>I am exploring various tutorials alongside PHP to gradually delve deeper</p>
+        <p>First, there's a desire to understand, then to test, and finally to optimize; that's the common thread among all these languages</p>
+        `
+
+
         aboutmeH1.textContent = `About me`;
         profilP1.textContent = "Former lifeguard, I have been practicing programming since 2021.";
         profilP2.textContent = "HTML/CSS, then javascript to make my pages more responsive and dynamic, more recently react to go even further...";

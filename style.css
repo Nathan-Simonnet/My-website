@@ -379,101 +379,6 @@ section {
     margin-bottom: 2em;
 }
 
-/* @keyframes shiningAnimLeftToRight {
-    0% {
-        background: linear-gradient(45deg, red 0%, black 20%);
-    }
-
-    10% {
-        background: linear-gradient(45deg, black 10%, red 20%, black 30%);
-    }
-
-    20% {
-        background: linear-gradient(45deg, black 20%, red 30%, black 40%);
-    }
-
-    30% {
-        background: linear-gradient(45deg, black 30%, red 40%, black 50%);
-    }
-
-    40% {
-        background: linear-gradient(45deg, black 40%, red 50%, black 60%);
-    }
-
-    50% {
-        background: linear-gradient(45deg, black 50%, red 60%, black 70%);
-    }
-
-    60% {
-        background: linear-gradient(45deg, black 60%, red 70%, black 80%);
-    }
-
-    70% {
-        background: linear-gradient(45deg, black 70%, red 80%, black 90%);
-    }
-
-    80% {
-        background: linear-gradient(45deg, black 80%, red 90%, black 100%);
-    }
-
-    90% {
-        background: linear-gradient(45deg, black 90%, red 100%);
-    }
-
-    100% {
-        background: linear-gradient(45deg, black 100%);
-    }
-
-}
-
-@keyframes shiningAnimRightToLeft {
-    0% {
-        background: linear-gradient(90deg, black 90%, red 100%);
-    }
-
-    10% {
-        background: linear-gradient(90deg, black 80%, red 90%, black 100%);
-    }
-
-    20% {
-        background: linear-gradient(90deg, black 70%, red 80%, black 90%);
-    }
-
-    30% {
-        background: linear-gradient(90deg, black 60%, red 70%, black 80%);
-    }
-
-    40% {
-        background: linear-gradient(90deg, black 50%, red 60%, black 70%);
-    }
-
-    50% {
-        background: linear-gradient(90deg, black 40%, red 50%, black 60%);
-    }
-
-    60% {
-        background: linear-gradient(90deg, black 30%, red 40%, black 50%);
-    }
-
-    70% {
-        background: linear-gradient(45deg, black 20%, red 30%, black 40%);
-    }
-
-    80% {
-        background: linear-gradient(45deg, black 10%, red 20%, black 30%);
-    }
-
-    90% {
-        background: linear-gradient(45deg, red 0%, black 20%);
-
-    }
-
-    100% {
-        background: linear-gradient(45deg, black 100%);
-    }
-
-} */
-
 @keyframes shiningAnim {
     0% {
         background: linear-gradient(45deg, red 0%, rgba(0, 0, 0, 0.348) 20%);
@@ -515,7 +420,7 @@ section {
         background: linear-gradient(45deg, rgba(0, 0, 0, 0.348) 90%, red 100%);
     }
 
-    42% {
+    40% {
         background: rgba(0, 0, 0, 0.348)
     }
 
@@ -569,20 +474,6 @@ section {
 
 }
 
-/* @keyframes animTechnosInfos {
-    from {
-        font-size: 0;
-        color: black;
-        background: none;
-    }
-
-    to {
-        font-size: 1.4em;
-        color: white;
-        background: rgba(0, 0, 0, 0.574);
-    }
-} */
-
 
 #span-infos-technos {
     font-size: 1.4em;
@@ -592,8 +483,14 @@ section {
     top: -1em;
     left: 0%;
     border-radius: 15px;
-    /* animation: animTechnosInfos 1.5s linear forwards; */
-    /* animation: shiningAnim 1s ease-in-out 1s forwards; */
+}
+
+.shiningAnim {
+    animation: shiningAnim 0.8s ease-in-out forwards;
+}
+
+#technos-container * {
+    /* border: 2px solid red; */
 }
 
 #technos-container {
@@ -605,11 +502,11 @@ section {
     position: relative;
 }
 
-.shiningAnim {
-    animation: shiningAnim 0.8s ease-in-out forwards;
-}
+/* .techno-container img {
+    width: auto;
+} */
 
-.technos-and-p-container {
+.techno-and-p-container {
     position: relative;
     width: 9em;
     height: 9em;
@@ -617,21 +514,20 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* border: 4px solid green; */
 
     cursor: grab;
 
     transition: 0.3s;
 }
 
+
 .techno-container {
-    width: 9em;
-    height: 9em;
     margin: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: grab;
 }
 
 @keyframes animRandomTechno {
@@ -644,39 +540,29 @@ section {
     }
 }
 
+
 .techno-container.scrolledTransition {
     animation: animRandomTechno 1.6s ease-in-out 0.3s forwards;
 }
 
-.technos-and-p-container p {
+.techno-and-p-container p {
     transition: 0.3s;
-    /* text-align: justify; */
     display: none;
 }
 
-.technos-and-p-container:active {
+.techno-and-p-container:active {
     justify-content: start;
     width: 20em;
     height: 22em;
-    animation: animTechnosContainer 0.001s linear forwards;
 }
 
-.technos-and-p-container:active p {
+
+
+.techno-and-p-container:active p {
     z-index: 2;
     display: block;
     background: rgba(0, 0, 0, 0.481);
 }
-
-
-.transform-scale {
-    transform: scale(0.1);
-}
-
-/* .technos-and-p-container:hover::before {
-    width: 20em;
-    height: 20em;
-} */
-
 
 /* ==============PROFIL================= */
 #about-me_section {
