@@ -189,7 +189,7 @@ window.addEventListener('scroll', (e) => {
         pointer(4);
     } else if (magicScrollValue > 0.70) {
         pointer(3);
-    } else if (magicScrollValue > 0.60) {
+    } else if (magicScrollValue > 0.50) {
         pointer(2);
     } else if (magicScrollValue > 0.10) {
         pointer(1);
