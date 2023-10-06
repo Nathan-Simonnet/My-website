@@ -327,15 +327,12 @@ section {
 
 /* ===========PROJECTS============== */
 
-
 .card {
     background: rgba(0, 0, 0, 0.754)
-        /* backdrop-filter: blur(1px); */
-
 }
 
 #projects-container {
-    min-height: 50vh;
+    /* min-height: 100vh; */
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -344,13 +341,15 @@ section {
 }
 
 
-#projects-container * {
-
-    /* border: 2px solid red; */
+.project-figure-and-p-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
 }
 
-figure {
-    position: relative;
+.project-figure-and-p-container figure {
     text-align: center;
     display: flex;
     justify-content: flex-end;
@@ -367,19 +366,28 @@ figure {
     cursor: pointer;
 }
 
-figure figcaption {
+.project-figure-and-p-container figcaption {
     padding: 2px;
+    font-weight: bold;
     font-size: 1.4em;
 }
 
-figure img {
+.project-figure-and-p-container img {
     border-radius: 12px;
     width: 280px;
     height: 300px;
 }
 
-figure p {
-    margin-left: 12px;
+.project-p-container {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.project-figure-and-p-container p {
+    margin: 12px;
+    font-weight: bold;
     display: none;
 }
 
@@ -388,22 +396,26 @@ figure.scrolledTransition {
     translate: 0;
 }
 
-figure.project-clicked {
-    width: 80%;
+.project-figure-and-p-container.project-clicked {
+    width: 100%;
+    height: 80%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-end;
     flex-direction: row;
+    background: rgba(0, 0, 0, 0.626);
+    backdrop-filter: blur(12px);
 }
 
-figure.project-clicked::after {
-    /* content: "\2716"; */
-    content: "\21BB";
+.project-figure-and-p-container.project-clicked figure::after {
+    content: "\2716";
+    /* content: "\21BB"; */
     transform: rotateX(180deg);
 
     font-size: 2em;
     position: absolute;
     background: rgba(0, 0, 0, 0.788);
+    border-radius: 10px;
     top: 0%;
     left: 0%;
     padding: 8px;
@@ -415,19 +427,22 @@ figure.project-clicked::after {
     align-items: center;
 }
 
-figure.project-clicked figcaption {
+.project-figure-and-p-container.project-clicked figcaption {
     display: none;
 }
 
-figure.project-clicked p {
+.project-figure-and-p-container.project-clicked p {
     display: flex;
 }
 
-figure.other-projects {
+.project-figure-and-p-container.other-projects {
     display: none;
+    pointer-events: none;
 }
 
-
+#bubble-popper-link:hover {
+    text-decoration: underline;
+}
 
 /* ===========TECHNOS============= */
 
@@ -553,7 +568,7 @@ figure.other-projects {
     align-items: center;
     position: relative;
 
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 .techno-and-p-container {
@@ -565,9 +580,8 @@ figure.other-projects {
     align-items: center;
     flex-direction: column;
 
-    cursor: alias;
+    cursor: pointer;
 
-    transition: 0.3s;
 }
 
 .techno-container {
@@ -737,6 +751,12 @@ footer img {
         top: -2em;
         font-size: 1em;
     }
+
+    .project-figure-and-p-container.project-clicked {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width:530px) {
@@ -767,22 +787,22 @@ footer img {
         min-height: 0;
     }
 
-    img {
+    /* img {
         transform: scale(0.8);
-    }
+    } */
 
     #project-container div {
         margin: 0;
         padding: 0;
     }
 
-    .project-img {
+    figure.project-clicked img {
         width: 160px;
         height: 200px;
     }
 
-    #about-me_section img {
+    /* #about-me_section img {
         height: 300px;
         width: 250px;
-    }
+    } */
 }

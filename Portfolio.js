@@ -6,6 +6,9 @@ const aHovered = document.querySelectorAll('nav li a');
 const lineSpan = document.querySelectorAll('.after');
 const flags = document.querySelectorAll('.flag-container');
 const mailSpan = document.getElementById('mail-span');
+
+const projectFigureAndPContainer = document.querySelectorAll('.project-figure-and-p-container');
+
 const projectFigure = document.querySelectorAll('.project-figure');
 const projectImg = document.querySelectorAll('.project-img');
 const imgTechno = document.querySelectorAll('.img-techno');
@@ -179,6 +182,13 @@ window.addEventListener('scroll', (e) => {
                 figure.classList.add('scrolledTransition')
                 // console.log(figure)
                 playOnce = false;
+
+                setTimeout(() => {
+                    projectFigure.forEach((fig) => {
+                        fig.style.transition = "none"
+                    })
+
+                }, 2400);
             });
         }
     }
@@ -194,28 +204,24 @@ window.addEventListener('scroll', (e) => {
     }
 });
 
-
 // ========================
 // Projet displayer
 // ========================
 
-const projectDisplayer = function (title, img, text) {
+projectFigureAndPContainer.forEach((projectContainer) => {
+    projectContainer.addEventListener('click', () => {
+        projectContainer.classList.toggle("project-clicked");
 
-};
-
-
-projectFigure.forEach((project) => {
-    project.addEventListener('click', (e) => {
-        console.log(project.id, document.getElementById('projects-container'))
-        project.classList.toggle("project-clicked");
-        document.getElementById('projects-container').classList.toggle("clicked");
-        projectFigure.forEach((otherProjects) => {
-            if (project != otherProjects) {
-                otherProjects.classList.toggle('other-projects');
+        projectFigureAndPContainer.forEach((otherProjectContainer) => {
+            if (otherProjectContainer != projectContainer) {
+                otherProjectContainer.classList.toggle('other-projects')
             }
         });
+
+        projectContainer.scrollIntoView();
     });
 });
+
 // ========================
 // Technos Displayer
 // ========================
@@ -229,6 +235,9 @@ document.getElementById('technos-section').addEventListener('mouseout', (e) => {
 
 technoAndPContainer.forEach((techno) => {
     techno.addEventListener('click', () => {
+        // technoAndPContainer.forEach((tech) => {
+        //     tech.style.transition = "none"
+        // })
         document.getElementById('span-infos-technos').style.display = "none";
         techno.classList.toggle("techno-clicked");
         technosContainer.classList.toggle("techno-clicked");
@@ -250,11 +259,13 @@ const translatePage = function (id) {
     const contactSpan = document.getElementById('contact-span');
     const projectsH1 = document.getElementById('projects-h1');
     const portefolioCaption = document.getElementById('portfolio-caption');
+    const bubbleCaption = document.getElementById('bubble-caption');
     const dbCaption = document.getElementById('db-caption');
     const yogaCaption = document.getElementById('yoga-caption');
     const passwordCaption = document.getElementById('password-caption');
     const mealCaption = document.getElementById('meal-caption');
     const quizzCaption = document.getElementById('quizz-caption')
+    const formCaption = document.getElementById('form-caption');
     const technosH1 = document.getElementById('technos-h1');
     const aboutmeH1 = document.getElementById('about-me-h1');
     const profilP1 = document.getElementById('profil-p1');
@@ -282,11 +293,73 @@ const translatePage = function (id) {
 
         projectsH1.textContent = `Mes projets`;
         portefolioCaption.textContent = "Portfolio fait avec amour";
+        document.getElementById('portfolio-p-container').innerHTML = `
+        <p>Fait de A à Z par mes soins</p>
+                    <p>Ce portfolio n'en reste pas moins un projet qui me tient à cœur, et une des vitrines de mes
+                        compétences de front</p>
+                    <p>Les images ont toutes étaient compressés, un sitemap mise en place, validé par W3C... bref,
+                        je
+                        n'ai rien laissé au hasard</p>
+                    <p>Mais je reste ouvert à tout retours</p>
+        `;
+        bubbleCaption.textContent = "Bubble popper";
+        document.getElementById('bubble-p-container').innerHTML = `
+        <p>Un de mes tout premier projets, tout est dans le titre</p>
+                    <p>Élaboré en collaboration avec ma jeune sœur de 9 ans (attention, toutes critique négatives
+                        est
+                        donc à vos risques et périls !)</p>
+                    <p>Ce mini jeu a été créé entièrement en CSS/JS</p>
+                    <p>Gestion du DOM, timer, animations aléatoires, effets de particules... Pourquoi ne pas essayer
+                        ?
+                    </p>
+                    <p><a href="https://nathan-simonnet.github.io/" target="_blank" id="bubble-popper-link">Cliquez
+                            ici pour tester</a></p>
+        `;
         dbCaption.textContent = "Affichage d'une database d'utilisateurs";
+        document.getElementById('db-p-container').innerHTML = `
+        <p>Utilisation d'une API pour générer l'affichage d'une base de données d'utilisateurs fictifs
+                    </p>
+                    <p>Le résultat (bientôt en ligne) étant plusieurs cartes affiché de manière responsive</p>
+                    <p>Également la possibilité de trier et filtrer les utilisateurs par nom, âge et statut</p>
+        `;
         yogaCaption.textContent = "Yoga routine";
+        document.getElementById('yoga-p-container').innerHTML = `
+        <p>Un de mes projets préféré en POO</p>
+                    <p>Bientôt disponible en ligne, cette application permet de choisir différentes postures et
+                        différents temps d'execution</p>
+                    <p>Un fois la routine lancé, une nouvelle page apparait faisant défiler les images selon le
+                        temps
+                        désiré</p>
+                    <p>Et pour finir, un ecran de fin avec la possibilité de recommencer</p>
+        `;
         passwordCaption.textContent = "Générateur de mot de passe";
+        document.getElementById('password-p-container').innerHTML = `
+                    <p>Permet de générer un mot de passe selon différents critères</p>
+                    <p>La taille, et la contenance (minuscules, majuscules, nombre et ou symboles)</p>
+                    <p>Bonus: Le mot de passe est copié dans le presse papier en un clique</p>
+        `;
         mealCaption.textContent = "Générateur de recettes";
+        document.getElementById('meal-p-container').innerHTML = `
+        <p>Utilisant l'API de TheMealDB, affichage de recettes selon les ingrédients désiré</p>
+        <p>Affichés en plusieurs cartes, ordonnées et "responsive"</p>
+        `;
         quizzCaption.textContent = "Quizz";
+        document.getElementById('quizz-p-container').innerHTML = `
+        <p>Quizz sur Javascript affiché grâce à la POO</p>
+                    <p>Il suffira de modifier un fichier Json, afin de modifier ou rajouter des questions/réponses
+                    </p>
+                    <p>Bientôt uploadé sur Github</p>
+        `;
+        formCaption.textContent = "Form checking";
+        document.getElementById('form-p-container').innerHTML = `
+        <p>Un formulaire assez classique, exigeant certain paramètres avant validation</p>
+                    <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis
+                        aussitôt
+                        supprimées</p>
+                    <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de
+                        passe</p>
+        `;
+
         technosH1.textContent = `Mes technos`;
         spanInfosTechnos.textContent = "Cliquez et maintenez enfoncé pour plus d'informations";
 
@@ -359,11 +432,58 @@ const translatePage = function (id) {
 
         projectsH1.textContent = `My projects`;
         portefolioCaption.textContent = "Portfolio, made with love";
+        document.getElementById('portfolio-p-container').innerHTML = `
+        <p>Created from scratch by myself</p>
+<p>Nonetheless, this portfolio remains a project that is close to my heart and one of the showcases of my front-end skills</p>
+<p>All the images have been compressed, a sitemap has been set up, validated by W3C... in short, I have left nothing to chance</p>
+<p>But I am open to any feedback</p>
+        `;
+        bubbleCaption.textContent = "Bubble popper";
+
+        document.getElementById('bubble-p-container').innerHTML = `
+        <p>One of my very first projects, it's all in the title</p>
+<p>Developed in collaboration with my 9-year-old sister (please note, any negative criticism is therefore at your own risk!)</p>
+<p>This mini-game was created entirely in CSS/JS</p>
+<p>DOM manipulation, timer, random animations, particle effects... Why not give it a try?</p>
+<p><a href="https://nathan-simonnet.github.io/" target="_blank" id="bubble-popper-link">Click here to try it out</a></p>
+        `
         dbCaption.textContent = "Displaying a user database";
+        document.getElementById('db-p-container').innerHTML = `
+        <p>Using an API to generate the display of a fictional user database</p>
+<p>The result (coming online soon) being multiple cards displayed in a responsive manner</p>
+<p>Also, the ability to sort and filter users by name, age, and status</p>
+        `
         yogaCaption.textContent = "Yoga routine";
+        document.getElementById('yoga-p-container').innerHTML = `
+        <p>One of my favorite OOP projects</p>
+<p>Coming online soon, this application allows you to choose different poses and execution times</p>
+<p>Once the routine is started, a new page appears, scrolling through the images according to the desired time</p>
+<p>And finally, an end screen with the option to start over</p>
+        `;
         passwordCaption.textContent = "Password generator";
+        document.getElementById('password-p-container').innerHTML = `
+<p>Generate a password according to different parameters</p>
+<p>The length and composition (lowercase, uppercase, numbers, and/or symbols)</p>
+<p>Bonus: The password is copied to the clipboard with a single click</p>
+        `;
         mealCaption.textContent = "Recipe generator";
-        quizzCaption.textContent = "Quizz app";
+        document.getElementById('meal-p-container').innerHTML = `
+        <p>Using TheMealDB API, displaying recipes based on the desired ingredients</p>
+        <p>Displayed in multiple cards, sorted, and responsive</p>
+        `;
+        quizzCaption.textContent = "Quiz app";
+        document.getElementById('quizz-p-container').innerHTML = `
+        <p>JavaScript quiz displayed through OOP</p>
+<p>Simply modify a JSON file to edit or add questions/answers</p>
+<p>Coming soon on GitHub</p>
+                    `;
+
+        formCaption.textContent = "Form checking";
+        document.getElementById('form-p-container').innerHTML = `
+        <p>A fairly typical form, requiring certain parameters before validation</p>
+<p>If everything is validated, datas are sent through a simulated POST method, and immediately deleted</p>
+<p>Functions, regex, and some animations to quickly assess the "strength" of the password</p>
+        `;
         technosH1.textContent = `My main techos`;
         spanInfosTechnos.textContent = "Click and hold for more informations";
 
