@@ -60,8 +60,6 @@ technoContainer.forEach((technos, index) => {
     const uniqueIndex = "techno" + (index + 1)
     technos.setAttribute('id', uniqueIndex)
     technoIndex++;
-    // console.log(technos, technos.id)
-    // console.log(technoIndex)
 });
 
 
@@ -202,16 +200,22 @@ window.addEventListener('scroll', (e) => {
 // ========================
 
 const projectDisplayer = function (title, img, text) {
-    document.body.createElement("span");
-}
+
+};
 
 
-projectImg.forEach((projet) => {
-    projet.addEventListener('click', (event) => {
-        event.target.classList.add('clicked')
+projectFigure.forEach((project) => {
+    project.addEventListener('click', (e) => {
+        console.log(project.id, document.getElementById('projects-container'))
+        project.classList.toggle("project-clicked");
+        document.getElementById('projects-container').classList.toggle("clicked");
+        projectFigure.forEach((otherProjects) => {
+            if (project != otherProjects) {
+                otherProjects.classList.toggle('other-projects');
+            }
+        });
     });
-})
-
+});
 // ========================
 // Technos Displayer
 // ========================
@@ -224,10 +228,13 @@ document.getElementById('technos-section').addEventListener('mouseout', (e) => {
 });
 
 technoAndPContainer.forEach((techno) => {
-    techno.addEventListener('mousedown', (event) => {
-        spanInfosTechnos.style.display = "none";
+    techno.addEventListener('click', () => {
+        document.getElementById('span-infos-technos').style.display = "none";
+        techno.classList.toggle("techno-clicked");
+        technosContainer.classList.toggle("techno-clicked");
     });
 });
+
 
 
 // ========================
@@ -248,7 +255,6 @@ const translatePage = function (id) {
     const passwordCaption = document.getElementById('password-caption');
     const mealCaption = document.getElementById('meal-caption');
     const quizzCaption = document.getElementById('quizz-caption')
-    const textAnimCaption = document.getElementById('text-animation-caption')
     const technosH1 = document.getElementById('technos-h1');
     const aboutmeH1 = document.getElementById('about-me-h1');
     const profilP1 = document.getElementById('profil-p1');
@@ -281,7 +287,6 @@ const translatePage = function (id) {
         passwordCaption.textContent = "Générateur de mot de passe";
         mealCaption.textContent = "Générateur de recettes";
         quizzCaption.textContent = "Quizz";
-        textAnimCaption.textContent = "Animation de texte";
         technosH1.textContent = `Mes technos`;
         spanInfosTechnos.textContent = "Cliquez et maintenez enfoncé pour plus d'informations";
 
@@ -359,7 +364,6 @@ const translatePage = function (id) {
         passwordCaption.textContent = "Password generator";
         mealCaption.textContent = "Recipe generator";
         quizzCaption.textContent = "Quizz app";
-        textAnimCaption.textContent = "Text animation";
         technosH1.textContent = `My main techos`;
         spanInfosTechnos.textContent = "Click and hold for more informations";
 
@@ -394,8 +398,6 @@ const translatePage = function (id) {
         <p>I am exploring various tutorials alongside PHP to gradually delve deeper</p>
         <p>First, there's a desire to understand, then to test, and finally to optimize; that's the common thread among all these languages</p>
         `
-
-
         aboutmeH1.textContent = `About me`;
         profilP1.textContent = "Former lifeguard, I have been practicing programming since 2021.";
         profilP2.textContent = "HTML/CSS, then javascript to make my pages more responsive and dynamic, more recently react to go even further...";

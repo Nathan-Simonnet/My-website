@@ -334,14 +334,23 @@ section {
 
 }
 
-#project-container {
+#projects-container {
+    min-height: 50vh;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-#project-container figure {
+
+#projects-container * {
+
+    /* border: 2px solid red; */
+}
+
+figure {
+    position: relative;
     text-align: center;
     display: flex;
     justify-content: flex-end;
@@ -358,23 +367,70 @@ section {
     cursor: pointer;
 }
 
-#project-container figcaption {
+figure figcaption {
     padding: 2px;
     font-size: 1.4em;
 }
 
-#project-container figure img {
+figure img {
     border-radius: 12px;
     width: 280px;
     height: 300px;
 }
 
-#project-container figure.scrolledTransition {
+figure p {
+    margin-left: 12px;
+    display: none;
+}
+
+figure.scrolledTransition {
     opacity: 1;
     translate: 0;
 }
 
+figure.project-clicked {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+figure.project-clicked::after {
+    /* content: "\2716"; */
+    content: "\21BB";
+    transform: rotateX(180deg);
+
+    font-size: 2em;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.788);
+    top: 0%;
+    left: 0%;
+    padding: 8px;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure.project-clicked figcaption {
+    display: none;
+}
+
+figure.project-clicked p {
+    display: flex;
+}
+
+figure.other-projects {
+    display: none;
+}
+
+
+
 /* ===========TECHNOS============= */
+
 #technos-title-container {
     margin-bottom: 2em;
 }
@@ -474,7 +530,6 @@ section {
 
 }
 
-
 #span-infos-technos {
     font-size: 1.4em;
     display: block;
@@ -486,25 +541,20 @@ section {
 }
 
 .shiningAnim {
-    animation: shiningAnim 0.8s ease-in-out forwards;
-}
-
-#technos-container * {
-    /* border: 2px solid red; */
+    animation: shiningAnim 0.6s ease-in-out forwards;
 }
 
 #technos-container {
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     position: relative;
-}
 
-/* .techno-container img {
-    width: auto;
-} */
+    transition: 0.3s;
+}
 
 .techno-and-p-container {
     position: relative;
@@ -514,13 +564,11 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* border: 4px solid green; */
 
-    cursor: grab;
+    cursor: alias;
 
     transition: 0.3s;
 }
-
 
 .techno-container {
     margin: 12px;
@@ -540,7 +588,6 @@ section {
     }
 }
 
-
 .techno-container.scrolledTransition {
     animation: animRandomTechno 1.6s ease-in-out 0.3s forwards;
 }
@@ -550,20 +597,45 @@ section {
     display: none;
 }
 
-.techno-and-p-container:active {
+.techno-clicked {
     position: absolute;
     z-index: 2;
     justify-content: start;
     width: 100%;
     height: 22em;
-    background: rgba(0, 0, 0, 0.056);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.626);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
 }
 
-.techno-and-p-container:active p {
+.techno-and-p-container.techno-clicked p {
     z-index: 2;
     display: block;
-    background: rgba(0, 0, 0, 0.799);
+    background: rgba(0, 0, 0, 0.845);
+}
+
+.techno-and-p-container.techno-clicked::after {
+    content: "\2716";
+
+    font-size: 2em;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.788);
+    top: 0%;
+    left: 0%;
+    padding: 8px;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#technos-container.techno-clicked {
+    min-height: 50vh;
+
 }
 
 /* ==============PROFIL================= */
@@ -670,7 +742,7 @@ footer img {
 @media (max-width:530px) {
 
     nav li {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     header.scroll-zero {
