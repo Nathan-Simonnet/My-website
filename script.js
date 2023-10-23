@@ -1,6 +1,3 @@
-let lang = "fr";
-let devWebForArray = "";
-
 const header = document.querySelector('header');
 const aHovered = document.querySelectorAll('nav li a');
 const lineSpan = document.querySelectorAll('.after');
@@ -17,6 +14,11 @@ const technosContainer = document.getElementById('technos-container');
 const technoContainer = document.querySelectorAll('.techno-container');
 const technoAndPContainer = document.querySelectorAll('.techno-and-p-container');
 const spanInfosTechnos = document.getElementById('span-infos-technos');
+
+// ====================
+// Dev web animation
+// ====================
+let devWebForArray = "";
 
 const createSpan = function (content) {
     const letter = document.createElement("span");
@@ -51,26 +53,12 @@ setTimeout(() => {
     letterMaker();
 }, 1000);
 
-
-lineSpan.forEach((span, index) => {
-    const uniqueIndex = "lineSpan" + (index + 1)
-    span.setAttribute('id', uniqueIndex)
-    // console.log(span, span.id)
-});
-
-let technoIndex = 0;
-technoContainer.forEach((technos, index) => {
-    const uniqueIndex = "techno" + (index + 1)
-    technos.setAttribute('id', uniqueIndex)
-    technoIndex++;
-});
-
-
 // ===================
 // nav anim 
 // ===================
 
 let lastScroll = 0;
+
 window.addEventListener('scroll', (e) => {
     if (scrollY == 0) {
         header.classList.add("scroll-zero");
@@ -99,68 +87,14 @@ window.addEventListener('scroll', (e) => {
 });
 
 // ========================
-// h1 anim + projet anim
+// h1 anim 
 // ========================
+lineSpan.forEach((span, index) => {
+    const uniqueIndex = "lineSpan" + (index + 1)
+    span.setAttribute('id', uniqueIndex)
+});
 
 let playOnce = true;
-
-// const technosFlipper = function (techno) {
-//     setTimeout(() => {
-
-//         const randyTheRando = Math.ceil(Math.random() * technoIndex);
-//         console.log(randyTheRando)
-//         const temp = document.getElementById('techno' + randyTheRando);
-//         temp.classList.add("scrolledTransition");
-
-//         setTimeout(() => {
-//             temp.classList.remove("scrolledTransition");
-//             technosFlipper();
-//         }, 3000)
-//     }, 3000)
-// }
-// technosFlipper();
-
-const technosAnimation = function (e) {
-
-    let arrayTechnos = [];
-
-    const technosShuffler = function () {
-
-        for (let i = 1; i < technoIndex + 1; i++) {
-            arrayTechnos.push(i);
-        }
-        for (let i = 0; i < 100; i++) {
-            const randyTheRando2 = Math.floor(Math.random() * technoIndex);
-            const randyTheRando3 = Math.floor(Math.random() * technoIndex);
-            [arrayTechnos[randyTheRando2], arrayTechnos[randyTheRando3]] = [arrayTechnos[randyTheRando3], arrayTechnos[randyTheRando2]];
-        }
-    }
-
-    technosShuffler();
-
-    let arrayIndex = 0;
-    const technosFlipper = function (techno) {
-
-        setTimeout(() => {
-            const temp = document.getElementById('techno' + arrayTechnos[arrayIndex]);
-            temp.classList.add("scrolledTransition");
-
-            setTimeout(() => {
-                temp.classList.remove("scrolledTransition");
-                arrayIndex++;
-
-                if (arrayIndex == arrayTechnos.length) {
-                    arrayIndex = 0
-                }
-                technosFlipper();
-            }, 3000)
-        }, 1000)
-
-    }
-    technosFlipper();
-}
-
-technosAnimation();
 
 window.addEventListener('scroll', (e) => {
 
@@ -223,8 +157,63 @@ projectFigureAndPContainer.forEach((projectContainer) => {
 });
 
 // ========================
-// Technos Displayer
+// Technos 
 // ========================
+// ------------------------
+// Technos animation
+// ------------------------
+
+let technoIndex = 0;
+technoContainer.forEach((technos, index) => {
+    const uniqueIndex = "techno" + (index + 1)
+    technos.setAttribute('id', uniqueIndex)
+    technoIndex++;
+});
+
+const technosAnimation = function (e) {
+
+    let arrayTechnos = [];
+
+    const technosShuffler = function () {
+
+        for (let i = 1; i < technoIndex + 1; i++) {
+            arrayTechnos.push(i);
+        }
+        for (let i = 0; i < 100; i++) {
+            const randyTheRando2 = Math.floor(Math.random() * technoIndex);
+            const randyTheRando3 = Math.floor(Math.random() * technoIndex);
+            [arrayTechnos[randyTheRando2], arrayTechnos[randyTheRando3]] = [arrayTechnos[randyTheRando3], arrayTechnos[randyTheRando2]];
+        }
+    }
+
+    technosShuffler();
+
+    let arrayIndex = 0;
+    const technosFlipper = function (techno) {
+
+        setTimeout(() => {
+            const temporarySelector = document.getElementById('techno' + arrayTechnos[arrayIndex]);
+            temporarySelector.classList.add("scrolledTransition");
+
+            setTimeout(() => {
+                temporarySelector.classList.remove("scrolledTransition");
+                arrayIndex++;
+
+                if (arrayIndex == arrayTechnos.length) {
+                    arrayIndex = 0
+                }
+                technosFlipper();
+            }, 3000)
+        }, 1000)
+    }
+    technosFlipper();
+}
+
+technosAnimation();
+
+// ------------------------
+// Technos Displayer
+// ------------------------
 
 document.getElementById('technos-section').addEventListener('mouseover', (e) => {
     spanInfosTechnos.classList.add('shiningAnim')
@@ -244,11 +233,28 @@ technoAndPContainer.forEach((techno) => {
     });
 });
 
+// =======================
+// Contact me
+// =======================
 
+mailSpan.addEventListener('click', (span) => {
+    navigator.clipboard.writeText(span.target.textContent)
+    if (lang == "fr") {
+
+        span.target.textContent = "copié!"
+    } else {
+        span.target.textContent = "copy!"
+    }
+    setTimeout(() => {
+        span.target.textContent = "nathan.simonnet@gmail.com"
+    }, 2000)
+});
 
 // ========================
 // Translation 
 // ========================
+
+let lang = "fr";
 
 const translatePage = function (id) {
     const projectAnchor = document.getElementById('project-anchor');
@@ -546,25 +552,9 @@ flags.forEach((flag) => {
     });
 });
 
-// =======================
-// Contact me
-// =======================
-
-mailSpan.addEventListener('click', (span) => {
-    navigator.clipboard.writeText(span.target.textContent)
-    if (lang == "fr") {
-
-        span.target.textContent = "copié!"
-    } else {
-        span.target.textContent = "copy!"
-    }
-    setTimeout(() => {
-        span.target.textContent = "nathan.simonnet@gmail.com"
-    }, 2000)
-});
-
-// class Projects  {
-// constructor(){
-// this.=;
-// }
-// }
+// ======================
+// Scroll problem!!
+// ======================
+// window.addEventListener('load', () => {
+//     window.scrollTo(0, 0);
+// });
