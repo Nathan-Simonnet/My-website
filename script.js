@@ -361,7 +361,7 @@ const translatePage = function (id) {
         `;
 
         technosH1.textContent = `Mes technos`;
-        spanInfosTechnos.textContent = "Cliquez et maintenez enfoncé pour plus d'informations";
+        spanInfosTechnos.textContent = "Cliquez pour plus d'informations";
 
         document.getElementById('p-CSS').innerHTML = `
                     <p>Une pratique régulière de plus de 4h par semaines depuis 2021</p>
@@ -485,7 +485,7 @@ const translatePage = function (id) {
 <p>Functions, regex, and some animations to quickly assess the "strength" of the password</p>
         `;
         technosH1.textContent = `My main techos`;
-        spanInfosTechnos.textContent = "Click and hold for more informations";
+        spanInfosTechnos.textContent = "Click for more informations";
 
         document.getElementById('p-CSS').innerHTML = `
         <p>Regular practice of over 4 hours per week since 2021</p>
