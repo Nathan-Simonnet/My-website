@@ -428,9 +428,12 @@ h1 {
         align-items: center;
     }
 
-    & p {
-        display: flex;
+    & .project-p-container {
+        & p {
+            display: flex;
+        }
     }
+
 }
 
 .project-figure-and-p-container.other-projects {
