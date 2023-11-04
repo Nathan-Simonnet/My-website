@@ -14,7 +14,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-    /* border: 2px solid red; */
+    border: 2px solid red;
 }
 
 html {
@@ -568,8 +568,6 @@ h1 {
     justify-content: space-around;
     align-items: center;
     position: relative;
-
-    /* transition: 0.3s; */
 }
 
 .techno-and-p-container {
@@ -583,15 +581,16 @@ h1 {
 
     cursor: pointer;
 
+    & .techno-container {
+        margin: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.techno-container {
-    margin: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 @keyframes animRandomTechno {
     0% {
@@ -725,18 +724,22 @@ footer img {
 
     header {
         height: 9em;
-    }
 
-    nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-    }
+        & nav {
+            width: 100%;
+            display: flex;
 
-    nav ul,
-    nav>div {
-        margin: 1em;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            & div,
+            ul {
+                margin: 1em;
+                font-size: 0.9em;
+            }
+
+        }
     }
 
     #technos-container {
@@ -751,31 +754,23 @@ footer img {
     .project-figure-and-p-container.project-clicked {
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
     }
 }
 
 @media (max-width:530px) {
-
-    nav li {
-        font-size: 1em;
-    }
-
     header.scroll-zero {
         background: linear-gradient(rgb(135, 9, 32), rgba(135, 9, 32, 0.537));
-        ;
         top: 0;
     }
 
     header.scrolled-up {
         background: linear-gradient(rgb(135, 9, 32), rgba(135, 9, 32, 0.537));
-        ;
         top: 0;
     }
 
     header.scrolled-down {
         background: linear-gradient(rgb(135, 9, 32), rgba(135, 9, 32, 0.537));
-        ;
         top: 0;
     }
 
