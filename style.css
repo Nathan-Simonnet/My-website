@@ -719,6 +719,8 @@ footer {
 
     header {
         height: 120px;
+        padding-top: 40px;
+        border: 4px solid red;
 
         & nav {
             width: 100%;
@@ -728,8 +730,12 @@ footer {
             justify-content: flex-end;
             align-items: flex-end;
 
+            & div.flags-container {
+                margin-right: 20px;
+            }
+
             & ul {
-                margin: 1em;
+                margin: 1em 20px 1em 1em;
                 font-size: 0.9em;
             }
         }
@@ -753,7 +759,6 @@ footer {
 
 @media (max-width:530px) {
     header {
-        height: 100px;
         font-size: 0.8em;
     }
 
@@ -773,9 +778,9 @@ footer {
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:405px) {
 
-    header {
-        margin-right: 0.6em;
+    .li-anchor {
+        margin-right: 0.5em;
     }
 }
