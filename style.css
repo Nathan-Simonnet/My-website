@@ -713,7 +713,6 @@ footer {
     }
 }
 
-
 /* ============media-querries================== */
 
 @media (max-width:700px) {
@@ -733,7 +732,6 @@ footer {
                 margin: 1em;
                 font-size: 0.9em;
             }
-
         }
     }
 
@@ -772,5 +770,12 @@ footer {
     figure.project-clicked img {
         width: 160px;
         height: 200px;
+    }
+}
+
+@media (max-width:400px) {
+
+    header {
+        margin-right: 0.6em;
     }
 }
