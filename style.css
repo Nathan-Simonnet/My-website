@@ -659,11 +659,16 @@ h1 {
 
     & div.container {
 
+
         & img {
             width: 260px;
             height: 310px;
             border-radius: 10px;
             box-shadow: 2px 2px 16px 3px #6261614a;
+        }
+
+        & #bio-container {
+            margin-top: 1em;
         }
 
         & p {
@@ -760,7 +765,6 @@ footer {
     header {
         font-size: 0.8em;
     }
-
 
     section {
         min-height: 0;
