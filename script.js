@@ -262,7 +262,6 @@ const translatePage = function (id) {
     const aboutMeAnchor = document.getElementById('about-me-anchor');
     const contactAnchor = document.getElementById('contact-anchor');
     const devWeb = document.getElementById('dev-web-p');
-    const contactSpan = document.getElementById('contact-span');
     const projectsH1 = document.getElementById('projects-h1');
     const portefolioCaption = document.getElementById('portfolio-caption');
     const bubbleCaption = document.getElementById('bubble-caption');
@@ -295,7 +294,7 @@ const translatePage = function (id) {
             letterIndex = 0;
             letterMaker();
         }, 200)
-        contactSpan.textContent = "Me contacter";
+        contactH1.textContent = "Me contacter";
 
         projectsH1.textContent = `Mes projets`;
         portefolioCaption.textContent = "Portfolio fait avec amour";
@@ -370,46 +369,57 @@ const translatePage = function (id) {
         spanInfosTechnos.textContent = "Cliquez pour plus d'informations";
 
         document.getElementById('p-CSS').innerHTML = `
-                    <p>Une pratique régulière de plus de 4h par semaines depuis 2021</p>
-                    <p>Et plus de 60h de formations en HTML / CSS via différents médias</p>
-                    <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI, et plus récemment
-                        SASS
-                    </p>
-                    <p>Enfin concernant HTML, l'apprentissage des outils et méthodes de référenceent</p>
-        `
+        <p>Une pratique régulière de plus de 4h par semaines depuis 2022</p>
+        <p>Et plus de 40h de formations en HTML / CSS via différents médias</p>
+        <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI.
+        </p>
+        <p>Maintenant que je suis à l'aise avec CSS, je me plais à créer des projets en utilisant pleinement
+            différentes librairies (tailwind et Animate.CSS notament), rendant le code bien plus léger, et
+            l'exprience de programation plus fluide (des projets tout chauds sortis du fours arrivent...).
+        </p>
+        <p>Enfin concernant HTML, l'apprentissage des outils et méthodes de référencement via la sémantique,
+            et l'utilisation d'IA et applications tiers.</p>
+                    `
         document.getElementById('p-JS').innerHTML = `
-        <p>Une pratique régulière de plus de 8h par semaines depuis 2022</p>
-                    <p>Plus de 40H de formations, plus des cours d'algorithmie</p>
-                    <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les projets plus
-                        hauts
-                    </p>
+        <p>La pierre angualire du developpement web, pratique régulièrement depuis 2022</p>
+        <p>Plus de 30H de formations, plus des cours d'algorithmie, ainsi que des challenges variés.</p>
+        <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les projets plus
+            hauts (mais, React prends de plus en plus de place..).
+        </p>
+        <p>
+            Je pratique également typescript, ainsi que du JS en strict mode, afin de garantir une plus
+            grande stabilité et pereinitée des projets plus complexe a maintenir.
+        </p>
         `
         document.getElementById('p-REACT').innerHTML = `
         <p>React = the next step!</p>
-                    <p>Une première formation d'une dizaine d'heures passé il y a quelques mois, dans l'esprit de
-                        vouloir allez encore plus loin</p>
-                    <p>Autant que possible, je continuera mon apprentissage avec React, toujours pour la même raison,
-                        des projets qui me tiennent à cœur</p>
+        <p>12H de formations à mon actif</p>
+        <p>Plusieurs projets déjà élaborés (Ceasar cipher encryption, yoga routine,worldview...)</p>
+        <p>En plus de creer de nouveaux projets, je me plais a reprendre d'ancien projets, et les
+            remodeliser en utilisant React</p>
+        <p>N'en déplaise à Javascript, c'est mon nouvel amour... (parait-il que les algorithme de google
+            partagent mon avis) </p>
         `
         document.getElementById('p-TS').innerHTML = `
-        <p>J'ai eu l'occasion de pratiquer typescript pendant ma formation "principale" en javascript il y a
-                        quelques mois</p>
-                    <p>Encore un outil intéressant... Encore une corde à mon arc</p>
-                    <p>Des projets sont encore en cours afin de progresser sur son utilisation, restez connectez !</p>
-                
+        <p>Node JS, express, mongodb, mongoose... et bien d'autres librairies associés</p>
+        <p>Si le front est bien sure encore a perfectionner, il est normal de s'interesser au "back", afin
+            de mieux saisir les interactions entre les deux, et ainsi commencer dès maintenant a être plus
+            polyvalent</p>
+        <p>Des projets sont encore en cours afin de progresser sur l'utilisations des routes express, et la
+            gestion de base de données, restez connectez !</p>
         `
-        document.getElementById('p-PHP').innerHTML = `
-        <p>Plus de 12H de formations à l'heure actuelle depuis 2023</p>
-                    <p>Pour commencer à mettre un pied dans le back-end</p>
-                    <p>Le chemin sera long, mais il faut ce qu'il faut, et je suis prêt!</p>
-        `
-        document.getElementById('p-MYSQL').innerHTML = `
-        <p>La suite logique de PHP est MySql, et nous y voilà</p>
-                    <p>Je suis divers tutoriels en parallèle de PHP, afin d'aller, petit à petit, encore plus loin</p>
-                    <p>D'abord, j'ai un désir de comprendre, puis de tester, puis d'optimiser, voilà le tronc commun a
-                        tout
-                        ces langages</p>
-        `
+        // document.getElementById('p-PHP').innerHTML = `
+        // <p>Plus de 12H de formations à l'heure actuelle depuis 2023</p>
+        //             <p>Pour commencer à mettre un pied dans le back-end</p>
+        //             <p>Le chemin sera long, mais il faut ce qu'il faut, et je suis prêt!</p>
+        // `
+        // document.getElementById('p-MYSQL').innerHTML = `
+        // <p>La suite logique de PHP est MySql, et nous y voilà</p>
+        //             <p>Je suis divers tutoriels en parallèle de PHP, afin d'aller, petit à petit, encore plus loin</p>
+        //             <p>D'abord, j'ai un désir de comprendre, puis de tester, puis d'optimiser, voilà le tronc commun a
+        //                 tout
+        //                 ces langages</p>
+        // `
 
         aboutmeH1.textContent = `A propos de moi`;
         profilP1.textContent = "Ancien maître nageur, je m'exerce à la programmation depuis 2021.";
@@ -434,7 +444,7 @@ const translatePage = function (id) {
             letterMaker();
 
         }, 200)
-        contactSpan.textContent = "Contact me";
+        contactH1.textContent = "Contact me";
 
         projectsH1.textContent = `My projects`;
         portefolioCaption.textContent = "Portfolio, made with love";
@@ -494,36 +504,43 @@ const translatePage = function (id) {
         spanInfosTechnos.textContent = "Click for more informations";
 
         document.getElementById('p-CSS').innerHTML = `
-        <p>Regular practice of over 4 hours per week since 2021</p>
-        <p>Over 60 hours of training in HTML / CSS through various media</p>
-        <p>This practice is accompanied by everything related to UX / UI design, and more recently, SASS</p>
-        <p>Regarding HTML, learning the tools and methods of SEO </p>
+        <p>Regular practice of over 4 hours per week since 2022</p>
+<p>And over 40 hours of training in HTML / CSS through various media</p>
+<p>This practice is accompanied by everything surrounding UX / UI design.</p>
+<p>Now that I'm comfortable with CSS, I enjoy creating projects using various libraries (especially Tailwind and Animate.CSS), making the code much lighter, and the programming experience smoother (some fresh projects are coming out of the oven...)</p>
+<p>Finally, regarding HTML, learning tools and methods of referencing through semantics, and the use of AI</p>
+
         `
         document.getElementById('p-JS').innerHTML = `
-        <p>Regular practice of over 8 hours per week since 2022</p>
-<p>Over 40 hours of training, plus algorithmics courses</p>
-<p>JavaScript is my current favorite language, and it's used in all the projects mentioned above</p>
-        `
+        <p>The cornerstone of web development, regularly practiced since 2022</p>
+        <p>Over 30 hours of training, along with algorithm courses, and various challenges</p>
+        <p>Javascript is currently my favorite language, and used in all projects above (although, React is taking more and more space..)</p>
+        <p>
+            I also practice TypeScript, as well as JS in strict mode, to ensure greater stability and longevity of more complex projects to maintain.
+        </p>  `
         document.getElementById('p-REACT').innerHTML = `
         <p>React = the next step!</p>
-<p>A first training of about ten hours completed a few months ago, with the intention of going even further</p>
-<p>As much as possible, I will continue my learning journey with React, all for the same reason - projects that are close to my heart</p>
-        `
+        <p>12 hours of training under my belt</p>
+        <p>Several projects already developed (Ceasar cipher encryption, yoga routine, worldview...)</p>
+        <p>In addition to creating new projects, I enjoy revisiting old projects and remodeling them using React</p>
+        <p>Sorry, JavaScript, but React is my new love... (apparently Google's algorithms agree with me)</p>
+         `
         document.getElementById('p-TS').innerHTML = `
-        <p>I had the opportunity to practice TypeScript during my "main" training in JavaScript a few months ago</p>
-<p>Yet another interesting tool... Another string to my bow</p>
-<p>Projects are still ongoing to improve my usage of it, stay tuned!</p>
+        <p>Node.js, Express, MongoDB, Mongoose... and many other associated libraries</p>
+<p>While the front end still needs improvement, it's natural to take an interest in the "back end" in order to better understand the interactions between the two, and thus start becoming more versatile from now on</p>
+<p>Projects are still ongoing to improve the use of Express routes and database management, stay tuned!</p>
+
         `
-        document.getElementById('p-PHP').innerHTML = `
-        <p>Over 12 hours of training up to the current time since 2023</p>
-        <p>To begin stepping into the back-end</p>
-        <p>The journey will be long, but it takes what it takes, and I'm ready!</p>
-        `
-        document.getElementById('p-MYSQL').innerHTML = `
-        <p>The next step after PHP is MySQL, and here we are</p>
-        <p>I am exploring various tutorials alongside PHP to gradually delve deeper</p>
-        <p>First, there's a desire to understand, then to test, and finally to optimize; that's the common thread among all these languages</p>
-        `
+        // document.getElementById('p-PHP').innerHTML = `
+        // <p>Over 12 hours of training up to the current time since 2023</p>
+        // <p>To begin stepping into the back-end</p>
+        // <p>The journey will be long, but it takes what it takes, and I'm ready!</p>
+        // `
+        // document.getElementById('p-MYSQL').innerHTML = `
+        // <p>The next step after PHP is MySQL, and here we are</p>
+        // <p>I am exploring various tutorials alongside PHP to gradually delve deeper</p>
+        // <p>First, there's a desire to understand, then to test, and finally to optimize; that's the common thread among all these languages</p>
+        // `
         aboutmeH1.textContent = `About me`;
         profilP1.textContent = "Former lifeguard, I have been practicing programming since 2021.";
         profilP2.textContent = "HTML/CSS, then javascript to make my pages more responsive and dynamic, more recently react to go even further...";
