@@ -300,69 +300,78 @@ const translatePage = function (id) {
         portefolioCaption.textContent = "Portfolio fait avec amour";
         document.getElementById('portfolio-p-container').innerHTML = `
         <p>Fait de A à Z par mes soins</p>
-                    <p>Ce portfolio n'en reste pas moins un projet qui me tient à cœur, et une des vitrines de mes
-                        compétences de front</p>
-                    <p>Les images ont toutes étaient compressés, un sitemap mise en place, validé par W3C... bref,
-                        je
-                        n'ai rien laissé au hasard</p>
-                    <p>Mais je reste ouvert à tout retours</p>
+        <p>Très imparfait, lourd, et a refaire, évidement</p>
+        <p>Mais en attendant j'y ai mis du coeur et beaucoup de soins avec les outils qui m'été disponible
+            au moment de sa création (alors un peu dindulgence que diable!)</p>
+        <p>Les images ont toutes étaient compressés, un sitemap mise en place, validé par W3C... bref,
+            j'ai tenté de ne rien laissé au hasard</p>
+        <p>J'en déjà ai tiré beaucoups de leçons, et je reste ouvert à tout retours</p>
+    
         `;
         bubbleCaption.textContent = "Bubble popper";
         document.getElementById('bubble-p-container').innerHTML = `
         <p>Un de mes tout premier projets, tout est dans le titre</p>
                     <p>Élaboré en collaboration avec ma jeune sœur de 9 ans (attention, toutes critique négatives
-                        est
-                        donc à vos risques et périls !)</p>
+                        est donc à vos risques et périls !)</p>
                     <p>Ce mini jeu a été créé entièrement en CSS/JS</p>
-                    <p>Gestion du DOM, timer, animations aléatoires, effets de particules... Pourquoi ne pas essayer
-                        ?
+                    <p>Gestion du DOM, timer, animations aléatoires, effets de particules... Pourquoi ne pas essayer?
                     </p>
-                    <p><a href="https://nathan-simonnet.github.io/" target="_blank" id="bubble-popper-link">Cliquez
+                    <p class="click-to-test"><a href="https://nathan-simonnet.github.io/" target="_blank"
+                            id="bubble-popper-link">Cliquez
                             ici pour tester</a></p>
         `;
         dbCaption.textContent = "Affichage d'une database d'utilisateurs";
         document.getElementById('db-p-container').innerHTML = `
         <p>Utilisation d'une API pour générer l'affichage d'une base de données d'utilisateurs fictifs
                     </p>
-                    <p>Le résultat (bientôt en ligne) étant plusieurs cartes affiché de manière responsive</p>
+                    <p>Le résultat étant plusieurs cartes affiché de manière responsive</p>
                     <p>Également la possibilité de trier et filtrer les utilisateurs par nom, âge et statut</p>
-        `;
+                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/user-database-displayer/"
+                            target="_blank">Lien vers GitHub</a></p>
+                             `;
         yogaCaption.textContent = "Yoga routine";
         document.getElementById('yoga-p-container').innerHTML = `
-        <p>Un de mes projets préféré en POO</p>
-                    <p>Bientôt disponible en ligne, cette application permet de choisir différentes postures et
-                        différents temps d'execution</p>
-                    <p>Un fois la routine lancé, une nouvelle page apparait faisant défiler les images selon le
-                        temps
-                        désiré</p>
-                    <p>Et pour finir, un ecran de fin avec la possibilité de recommencer</p>
+        <p>Gestions de routes avec React</p>
+                    <p>Choix différentes postures et
+                        différents temps d'execution, local storage...</p>
+                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Yoga-routine_React/"
+                            target="_blank">Lien vers GitHub</a></p>
         `;
         passwordCaption.textContent = "Générateur de mot de passe";
         document.getElementById('password-p-container').innerHTML = `
-                    <p>Permet de générer un mot de passe selon différents critères</p>
-                    <p>La taille, et la contenance (minuscules, majuscules, nombre et ou symboles)</p>
-                    <p>Bonus: Le mot de passe est copié dans le presse papier en un clique</p>
+        <p>Un classique, mais éxécuté avec soins</p>
+        <p>Gestions des choix tant en CSS qu'en JS</p>
+        <p>Copié en un clique</p>
+        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Password-maker"
+                            target="_blank">Lien vers GitHub</a></p>
         `;
         mealCaption.textContent = "Générateur de recettes";
         document.getElementById('meal-p-container').innerHTML = `
         <p>Utilisant l'API de TheMealDB, affichage de recettes selon les ingrédients désiré</p>
         <p>Affichés en plusieurs cartes, ordonnées et "responsive"</p>
+        <p>Lightmode et darkmode disponible a tout moment</p>
+        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Fetch-my-meal/"
+                target="_blank">Lien vers GitHub</a></p>
         `;
         quizzCaption.textContent = "Quizz";
         document.getElementById('quizz-p-container').innerHTML = `
-        <p>Quizz sur Javascript affiché grâce à la POO</p>
+        <p>Quizz sur Javascript/React</p>
                     <p>Il suffira de modifier un fichier Json, afin de modifier ou rajouter des questions/réponses
                     </p>
-                    <p>Bientôt uploadé sur Github</p>
+                    <p>Gestion du score, et code couleur selon la réponse</p>
+                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/quizz-react-routes"
+                            target="_blank">Lien vers GitHub</a></p>
         `;
         formCaption.textContent = "Form checking";
         document.getElementById('form-p-container').innerHTML = `
         <p>Un formulaire assez classique, exigeant certain paramètres avant validation</p>
-                    <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis
+                    <p>Simulation de méthode POST 
                         aussitôt
-                        supprimées</p>
+                        supprimées si tout est validé</p>
                     <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de
                         passe</p>
+                        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Form-checker"
+                            target="_blank">Lien vers GitHub</a></p>
         `;
 
         technosH1.textContent = `Mes technos`;
@@ -449,57 +458,65 @@ const translatePage = function (id) {
         projectsH1.textContent = `My projects`;
         portefolioCaption.textContent = "Portfolio, made with love";
         document.getElementById('portfolio-p-container').innerHTML = `
-        <p>Created from scratch by myself</p>
-<p>Nonetheless, this portfolio remains a project that is close to my heart and one of the showcases of my front-end skills</p>
-<p>All the images have been compressed, a sitemap has been set up, validated by W3C... in short, I have left nothing to chance</p>
-<p>But I am open to any feedback</p>
+        <p>Made from A to Z by myself</p>
+<p>Very imperfect, heavy, and to be reshaped for sure</p>
+<p>But in the meantime, I put my heart and a lot of care into it with the tools available to me at the time of its creation (so a little indulgence, for heaven's sake!)</p>
+<p>All images have been compressed, a sitemap has been implemented, validated by W3C... in short, I tried not to leave anything to chance</p>
+<p>I've already learned a lot from it, and I remain open to any feedback</p>
         `;
         bubbleCaption.textContent = "Bubble popper";
 
         document.getElementById('bubble-p-container').innerHTML = `
         <p>One of my very first projects, it's all in the title</p>
-<p>Developed in collaboration with my 9-year-old sister (please note, any negative criticism is therefore at your own risk!)</p>
-<p>This mini-game was created entirely in CSS/JS</p>
-<p>DOM manipulation, timer, random animations, particle effects... Why not give it a try?</p>
-<p><a href="https://nathan-simonnet.github.io/" target="_blank" id="bubble-popper-link">Click here to try it out</a></p>
-        `
+        <p>Developed in collaboration with my 9-year-old younger sister (attention, all negative criticism is therefore at your own risk!)</p>
+        <p>This mini-game was created entirely in CSS/JS</p>
+        <p>DOM manipulation, timer, random animations, particle effects... Why not give it a try?</p>
+        <p class="click-to-test"><a href="https://nathan-simonnet.github.io/" target="_blank" id="bubble-popper-link">Click here to test</a></p>
+         `
         dbCaption.textContent = "Displaying a user database";
         document.getElementById('db-p-container').innerHTML = `
-        <p>Using an API to generate the display of a fictional user database</p>
-<p>The result (coming online soon) being multiple cards displayed in a responsive manner</p>
-<p>Also, the ability to sort and filter users by name, age, and status</p>
+        <p>Using an API to generate the display of a database of fictional users</p>
+        <p>The result being multiple cards displayed in a responsive manner</p>
+        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/user-database-displayer/" target="_blank">Link to GitHub</a></p>
+        
         `
         yogaCaption.textContent = "Yoga routine";
         document.getElementById('yoga-p-container').innerHTML = `
-        <p>One of my favorite OOP projects</p>
-<p>Coming online soon, this application allows you to choose different poses and execution times</p>
-<p>Once the routine is started, a new page appears, scrolling through the images according to the desired time</p>
-<p>And finally, an end screen with the option to start over</p>
+        <p>Route management with React</p>
+        <p>Choosing different poses and
+            different execution times, local storage...</p>
+        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Yoga-routine_React/" target="_blank">Link to GitHub</a></p>        
         `;
         passwordCaption.textContent = "Password generator";
         document.getElementById('password-p-container').innerHTML = `
-<p>Generate a password according to different parameters</p>
-<p>The length and composition (lowercase, uppercase, numbers, and/or symbols)</p>
-<p>Bonus: The password is copied to the clipboard with a single click</p>
-        `;
-        mealCaption.textContent = "Recipe generator";
+        <p>A classic, but executed with care</p>
+        <p>Handling choices in both CSS and JS</p>
+        <p>Copy with one click</p>
+        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Password-maker" target="_blank">Link to GitHub</a></p>
+         `;
+        mealCaption.textContent = "Meal fetcher";
         document.getElementById('meal-p-container').innerHTML = `
-        <p>Using TheMealDB API, displaying recipes based on the desired ingredients</p>
-        <p>Displayed in multiple cards, sorted, and responsive</p>
+        <p>Using TheMealDB API, displaying recipes based on desired ingredients</p>
+        <p>Displayed in multiple cards, ordered and "responsive"</p>
+        <p>Light mode and dark mode available at any time</p>
+        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Fetch-my-meal/" target="_blank">Link to GitHub</a></p>
+        
         `;
         quizzCaption.textContent = "Quiz app";
         document.getElementById('quizz-p-container').innerHTML = `
-        <p>JavaScript quiz displayed through OOP</p>
-<p>Simply modify a JSON file to edit or add questions/answers</p>
-<p>Coming soon on GitHub</p>
+        <p>Quiz on Javascript/React</p>
+        <p>Simply modify a JSON file to edit or add questions/answers</p>
+        <p>Score management, and color-coded based on the response</p>
+        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/quizz-react-routes" target="_blank">Link to GitHub</a></p>        
                     `;
 
         formCaption.textContent = "Form checking";
         document.getElementById('form-p-container').innerHTML = `
-        <p>A fairly typical form, requiring certain parameters before validation</p>
-<p>If everything is validated, datas are sent through a simulated POST method, and immediately deleted</p>
-<p>Functions, regex, and some animations to quickly assess the "strength" of the password</p>
-        `;
+        <p>A fairly standard form, requiring certain parameters before validation</p>
+        <p>If everything is validated, the data is sent via a simulated POST method, then immediately deleted</p>
+        <p>Functions, regex, and some animations to quickly assess the "strength" of the password</p>
+        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Form-checker" target="_blank">Link to GitHub</a></p>
+         `;
         technosH1.textContent = `My main techos`;
         spanInfosTechnos.textContent = "Click for more informations";
 

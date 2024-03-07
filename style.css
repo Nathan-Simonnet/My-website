@@ -612,6 +612,9 @@ h1 {
         & p {
             transition: 0.3s;
             display: none;
+            font-size: 22px;
+            padding-left: 12px;
+            padding-right: 12px;
         }
     }
 }
