@@ -266,7 +266,6 @@ const translatePage = function (id) {
     const portefolioCaption = document.getElementById('portfolio-caption');
     const bubbleCaption = document.getElementById('bubble-caption');
     const dbCaption = document.getElementById('db-caption');
-    const yogaCaption = document.getElementById('yoga-caption');
     const passwordCaption = document.getElementById('password-caption');
     const mealCaption = document.getElementById('meal-caption');
     const quizzCaption = document.getElementById('quizz-caption')
@@ -329,14 +328,6 @@ const translatePage = function (id) {
                     <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/user-database-displayer/"
                             target="_blank">Lien vers GitHub</a></p>
                              `;
-        yogaCaption.textContent = "Yoga routine";
-        document.getElementById('yoga-p-container').innerHTML = `
-        <p>Gestions de routes avec React</p>
-                    <p>Choix différentes postures et
-                        différents temps d'execution, local storage...</p>
-                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Yoga-routine_React/"
-                            target="_blank">Lien vers GitHub</a></p>
-        `;
         passwordCaption.textContent = "Générateur de mot de passe";
         document.getElementById('password-p-container').innerHTML = `
         <p>Un classique, mais éxécuté avec soins</p>
@@ -480,13 +471,6 @@ const translatePage = function (id) {
         <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/user-database-displayer/" target="_blank">Link to GitHub</a></p>
         
         `
-        yogaCaption.textContent = "Yoga routine";
-        document.getElementById('yoga-p-container').innerHTML = `
-        <p>Route management with React</p>
-        <p>Choosing different poses and
-            different execution times, local storage...</p>
-        <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Yoga-routine_React/" target="_blank">Link to GitHub</a></p>        
-        `;
         passwordCaption.textContent = "Password generator";
         document.getElementById('password-p-container').innerHTML = `
         <p>A classic, but executed with care</p>
