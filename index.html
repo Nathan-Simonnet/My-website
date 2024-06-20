@@ -2,45 +2,32 @@
 <html lang='en'>
 
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5HWT4M9N');</script>
-    <!-- End Google Tag Manager -->
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta name="description"
-        content="Portfolio de Nathan Simonnet, développeur web HTML, CSS, JavaScript, React, PHP, MySQL">
+    <meta name="description" content="Portfolio de Nathan Simonnet, développeur web HTML, CSS, JavaScript, React, node JS">
     <link rel='stylesheet' href='style.css'>
     <link rel="icon" href="/portfolio-doc/Icon-logo-NS.png">
     <title>Nathan Simonnet - Développeur Web</title>
 </head>
 
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HWT4M9N" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
     <header>
         <nav>
             <div class="flags-container">
-                <div class="flag-container actual-language" id="fra">
+                <div tabindex="0" class="flag-container actual-language" id="fra">
                     <img loading="lazy" src="/portfolio-doc/Flags/flag-france.png" height="30" alt="France flag">
                 </div>
-                <div class="flag-container" id="eng">
+                <div tabindex="0" class="flag-container" id="eng">
                     <img loading="lazy" src="/portfolio-doc/Flags/flag-united-kingdom.png" height="30"
                         alt="United Kingdom flag">
                 </div>
             </div>
             <ul>
-                <li class="li-anchor"><a href="#projects-section" id="project-anchor">Projets</a></li>
-                <li class="li-anchor"><a href="#technos-section" id="technos-anchor">Technos</a></li>
-                <li class="li-anchor"><a href="#about-me_section" id="about-me-anchor">À propos de moi</a></li>
-                <li class="li-anchor"><a href="#contact-section" id="contact-anchor">Contact</a></li>
+                <li class="li-anchor"><a tabindex="0" href="#projects-section" id="project-anchor">Projets</a></li>
+                <li class="li-anchor"><a tabindex="0" href="#technos-section" id="technos-anchor">Technos</a></li>
+                <li class="li-anchor"><a tabindex="0" href="#about-me_section" id="about-me-anchor">À propos de moi</a></li>
+                <li class="li-anchor"><a tabindex="0" href="#contact-section" id="contact-anchor">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -56,34 +43,93 @@
             <span class="after" id="lineSpan1"></span>
         </div>
         <div class="chantier">
-            <img src="/portfolio-doc/logo-construction.png" alt="panneau de chantier logo" height="40">
+            <img src="/portfolio-doc/logo-construction.webp" alt="panneau de chantier logo" height="40">
             <p>Plus de fonctionnalités à venir...</p>
         </div>
 
         <div id="projects-container" class="projects-container">
-            <div class="project-figure-and-p-container">
+            <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="portfolio-app-figure">
-                    <figcaption id="portfolio-caption">Portfolio fait avec amour</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/portfolio-app.png" width="230"
+                    <figcaption id="portfolio-caption">Kasa - site de locations d'appartments</figcaption>
+                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/kasa-app.webp" width="230"
                         height="250" alt="portfolio app" id="portfolio-app-img">
                 </figure>
 
                 <div class="project-p-container" id="portfolio-p-container">
-                    <p>Fait de A à Z par mes soins</p>
-                    <p>Très imparfait, lourd, et a refaire, évidement</p>
-                    <p>Mais en attendant j'y ai mis du coeur et beaucoup de soins avec les outils qui m'été disponible
-                        au moment de sa création (alors un peu dindulgence que diable!)</p>
-                    <p>Les images ont toutes étaient compressés, un sitemap mise en place, validé par W3C... bref,
-                        j'ai tenté de ne rien laissé au hasard</p>
-                    <p>J'en déjà ai tiré beaucoups de leçons, et je reste ouvert à tout retours</p>
+                    <p>Application React</p>
+                    <p>BrowserRouter, useStates, useEffects, useNavigation...</p>
+                    <p>Gestion de 4 pages, dont une page avec un paramètre en fonction de l'id</p>
+                    <p>Et finalement gestion de la page d'erreur et redirections</p>
+                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Kasa"
+                        target="_blank">Lien vers GitHub</a></p>
                 </div>
 
             </div>
-
-            <div class="project-figure-and-p-container">
+            <div tabindex="0" class="project-figure-and-p-container">
+                <figure class="project-figure" id="quizz-app-figure">
+                    <figcaption id="quizz-caption">Quizz</figcaption>
+                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/quizz-app.webp" width="230"
+                        height="250" alt="quizz app" id="quizz-app-img">
+                </figure>
+                <div class="project-p-container" id="quizz-p-container">
+                    <p>Quizz sur Javascript/React</p>
+                    <p>Il suffira de modifier un fichier Json, afin de modifier ou rajouter des questions/réponses
+                    </p>
+                    <p>Gestion du score, et code couleur selon la réponse</p>
+                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/quizz-react-routes"
+                            target="_blank">Lien vers GitHub</a></p>
+                </div>
+            </div>
+            <div tabindex="0" class="project-figure-and-p-container">
+                <figure class="project-figure" id="db-app-figure">
+                    <figcaption id="db-caption">Portfolio d'architecte</figcaption>
+                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/architecte-app.webp" width="230"
+                        height="250" alt="Portfiolio d'architecte" id="db-app-img">
+                </figure>
+                <div class="project-p-container" id="db-p-container">
+                    <p>Gestion d'API, CRUD, fenêtres modales.
+                    </p>
+                    <p>Récupéreration dynamique des données des travaux via l’API (SQlight), ajout d'options de tri des projets par catégorie, Intégration et gestion de la page de connexion, ajoute de 2 fenêtres modales pour gérer les projets (ajout, modifications, suppressions)
+                    </p>
+                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Portfolio-architecte-sophie-bluel"
+                            target="_blank">Lien vers GitHub</a></p>
+                </div>
+            </div>
+            <div tabindex="0" class="project-figure-and-p-container">
+                <figure class="project-figure" id="meal-app-figure">
+                    <figcaption id="meal-caption">Générateur de recettes</figcaption>
+                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/meal-fetcher.webp" width="230"
+                        height="250" alt="meal fetcher app" id="meal-app-img">
+                </figure>
+                <div class="project-p-container" id="meal-p-container">
+                    <p>Utilisant l'API de TheMealDB, affichage de recettes selon les ingrédients désiré</p>
+                    <p>Affichés en plusieurs cartes, ordonnées et "responsive"</p>
+                    <p>Lightmode et darkmode disponible a tout moment</p>
+                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Fetch-my-meal/"
+                            target="_blank">Lien vers GitHub</a></p>
+                </div>
+            </div>
+            <div tabindex="0" class="project-figure-and-p-container">
+                <figure class="project-figure" id="form-app-figure">
+                    <figcaption id="form-caption">Form checking</figcaption>
+                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/form-app.webp" width="230"
+                        height="250" alt="form app" id="form-app-img">
+                </figure>
+                <div class="project-p-container" id="form-p-container">
+                    <p>Un formulaire assez classique, exigeant certain paramètres avant validation</p>
+                    <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis
+                        aussitôt
+                        supprimées</p>
+                    <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de
+                        passe</p>
+                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Form-checker"
+                            target="_blank">Lien vers GitHub</a></p>
+                </div>
+            </div>
+            <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="bubble-app-figure">
                     <figcaption id="bubble-caption">Bubble Popper!</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/bubble-app.png" width="230"
+                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/bubble-app.webp" width="230"
                         height="250" alt="Bubble Popper app" id="bubble-app-img">
                 </figure>
 
@@ -94,90 +140,12 @@
                     <p>Ce mini jeu a été créé entièrement en CSS/JS</p>
                     <p>Gestion du DOM, timer, animations aléatoires, effets de particules... Pourquoi ne pas essayer?
                     </p>
-                    <p class="click-to-test"><a href="https://nathan-simonnet.github.io/" target="_blank"
+                    <p class="click-to-test"><a tabindex="0" href="https://nathan-simonnet.github.io/" target="_blank"
                             id="bubble-popper-link">Cliquez
                             ici pour tester</a></p>
                 </div>
             </div>
-            <div class="project-figure-and-p-container">
-                <figure class="project-figure" id="meal-app-figure">
-                    <figcaption id="meal-caption">Générateur de recettes</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/meal-fetcher.png" width="230"
-                        height="250" alt="meal fetcher app" id="meal-app-img">
-                </figure>
-                <div class="project-p-container" id="meal-p-container">
-                    <p>Utilisant l'API de TheMealDB, affichage de recettes selon les ingrédients désiré</p>
-                    <p>Affichés en plusieurs cartes, ordonnées et "responsive"</p>
-                    <p>Lightmode et darkmode disponible a tout moment</p>
-                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Fetch-my-meal/"
-                            target="_blank">Lien vers GitHub</a></p>
-                </div>
-            </div>
-            <div class="project-figure-and-p-container">
-                <figure class="project-figure" id="quizz-app-figure">
-                    <figcaption id="quizz-caption">Quizz</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/quizz-app.png" width="230"
-                        height="250" alt="quizz app" id="quizz-app-img">
-                </figure>
-                <div class="project-p-container" id="quizz-p-container">
-                    <p>Quizz sur Javascript/React</p>
-                    <p>Il suffira de modifier un fichier Json, afin de modifier ou rajouter des questions/réponses
-                    </p>
-                    <p>Gestion du score, et code couleur selon la réponse</p>
-                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/quizz-react-routes"
-                            target="_blank">Lien vers GitHub</a></p>
-                </div>
-            </div>
-
-            <div class="project-figure-and-p-container">
-                <figure class="project-figure" id="form-app-figure">
-                    <figcaption id="form-caption">Form checking</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/form-app.png" width="230"
-                        height="250" alt="form app" id="form-app-img">
-                </figure>
-                <div class="project-p-container" id="form-p-container">
-                    <p>Un formulaire assez classique, exigeant certain paramètres avant validation</p>
-                    <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis
-                        aussitôt
-                        supprimées</p>
-                    <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de
-                        passe</p>
-                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Form-checker"
-                            target="_blank">Lien vers GitHub</a></p>
-                </div>
-            </div>
-
-            <div class="project-figure-and-p-container">
-                <figure class="project-figure" id="db-app-figure">
-                    <figcaption id="db-caption">Affichage d'une database d'utilisateurs</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/user-app.png" width="230"
-                        height="250" alt="databe app" id="db-app-img">
-                </figure>
-                <div class="project-p-container" id="db-p-container">
-                    <p>Utilisation d'une API pour générer l'affichage d'une base de données d'utilisateurs fictifs
-                    </p>
-                    <p>Le résultat étant plusieurs cartes affiché de manière responsive</p>
-                    <p>Également la possibilité de trier et filtrer les utilisateurs par nom, âge et statut</p>
-                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/user-database-displayer/"
-                            target="_blank">Lien vers GitHub</a></p>
-                </div>
-
-            </div>
-
-            <div class="project-figure-and-p-container">
-                <figure class="project-figure" id="password-app-figure">
-                    <figcaption id="password-caption">Générateur de mot de passe</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/password-maker.png" width="230"
-                        height="250" alt="password generator app" id="password-app-img">
-                </figure>
-                <div class="project-p-container" id="password-p-container">
-                    <p>Un classique, mais éxécuté avec soins</p>
-                    <p>Gestions des choix tant en CSS qu'en JS</p>
-                    <p>Copié en un clique</p>
-                    <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Password-maker"
-                            target="_blank">Lien vers GitHub</a></p>
-                </div>
-            </div>
+            
         </div>
 
     </section>
@@ -193,7 +161,7 @@
                 plus d'informations</span>
 
             <div class="techno-and-p-container">
-                <div class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/css_logo.png" height="80"
+                <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/css_logo.webp" height="80"
                         class="img-techno" alt="CSS logo" id="CSS">
                 </div>
                 <div class="p-techno-container" id="p-CSS">
@@ -211,9 +179,8 @@
             </div>
             <div class="techno-and-p-container">
 
-                <div class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/js_logo.png" height="80"
+                <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/js_logo.webp" height="80"
                         class="img-techno" alt="js logo" id="JS">
-
                 </div>
                 <div class="p-techno-container" id="p-JS">
                     <p>La pierre angualire du developpement web, pratique régulièrement depuis 2022</p>
@@ -222,29 +189,28 @@
                         hauts (mais, React prends de plus en plus de place..)
                     </p>
                     <p>
-                        Je pratique également typescript, ainsi que du JS en strict mode, afin de garantir une plus
+                        Je pratique également typescript, et de plus en plus de JS en strict mode, afin de garantir une plus
                         grande stabilité et pereinitée des projets plus complexe a maintenir.
                     </p>
                 </div>
             </div>
 
             <div class="techno-and-p-container">
-                <div class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/react_logo.png"
+                <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/react_logo.webp"
                         height="80" class="img-techno" alt="wing logo" id="REACT">
                 </div>
                 <div class="p-techno-container" id="p-REACT">
-                    <p>React = the next step!</p>
-                    <p>12H de formations à mon actif</p>
-                    <p>Plusieurs projets déjà élaborés (Ceasar cipher encryption, yoga routine,worldview...)</p>
+                    <p>Routes, useStates, links... Encore beaucoup à apprendre, mais je suis officielement à l'aise avec React</p>
+                    <p>Plusieurs projets déjà élaborés (Application de yoga, worldview, Quizz, application de location d'appartments...)</p>
                     <p>En plus de creer de nouveaux projets, je me plais a reprendre d'ancien projets, et les
                         remodeliser en utilisant React</p>
                     <p>N'en déplaise à Javascript, c'est mon nouvel amour... (parait-il que les algorithme de google
-                        partagent mon avis) </p>
+                        partagent mon avis)</p>
                 </div>
             </div>
 
             <div class="techno-and-p-container">
-                <div class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/node_logo.png"
+                <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/node_logo.webp"
                         height="80" class="img-techno" alt="Typescript logo" id="TS">
                 </div>
 
@@ -257,34 +223,6 @@
                         gestion de base de données, restez connectez !</p>
                 </div>
             </div>
-
-            <!-- <div class="techno-and-p-container">
-                <div class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/php_logo.png" height="80"
-                        class="img-techno" alt="php logo" id="PHP">
-                </div>
-                <div class="p-techno-container" id="p-PHP">
-                    <p>La même idée que pour node, s'entrainer un peu, afin de pouvoir vite monter en compétence le jour
-                        ou c'est LE language qui m'aidera sur un projet précis</p>
-                    <p>Le chemin sera long, mais il faut ce qu'il faut, et je suis prêt!</p>
-                    <p>Et une fois de plus l'idée n'est pas de se disperser, mais bien d'élargir un peu ma palette de
-                        connaissance de ce mileu a l'apprentissage... inifnie</p>
-                </div>
-            </div>
-
-            <div class="techno-and-p-container">
-
-                <div class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/logo-mysql-170x115.png"
-                        height="80" class="img-techno" alt="mySQL logo" id="MYSQL">
-                </div>
-                <div class="p-techno-container" id="p-MYSQL">
-                    <p>La suite logique de PHP est MySql, et nous y voilà</p>
-                    <p>Je suis divers tutoriels en parallèle de PHP, afin d'aller, petit à petit, encore plus loin</p>
-                    <p>D'abord, j'ai un désir de comprendre, puis de tester, puis d'optimiser, voilà le tronc commun a
-                        tout
-                        ces langages</p>
-                </div>
-            </div> -->
-
         </div>
     </section>
     <!-- <hr> -->
@@ -310,7 +248,7 @@
             </div>
             <div class="links-container" id="CV-container">
                 <a class="contact-a"
-                    href="https://www.canva.com/design/DAFseeebq80/AaGd2y-f-w-4OqR8HnmcKw/edit?utm_content=DAFseeebq80&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                    tabindex="0" href="https://www.canva.com/design/DAGIrdKFVww/bP1isTiuFPL5PnXyv-VPhA/edit?utm_content=DAGIrdKFVww&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                     target="_blank"><span class="contact-span" id="CV-span">Mon CV</span></a>
             </div>
         </div>
@@ -323,7 +261,7 @@
             <span class="after"></span>
         </div>
         <div class="links-container">
-            <a class="contact-a" id="mail-a" href="mailto:nathan.simonnet@gmail.com"><span id="mail-span"
+            <a class="contact-a" id="mail-a" tabindex="0" href="#contact"><span id="mail-span"
                     class="contact-span">
                     nathan.simonnet@gmail.com</span></a>
         </div>
@@ -331,14 +269,14 @@
 
     <hr>
     <footer class="card">
-        <a href="https://github.com/Nathan-Simonnet" target="_blank"><img loading="lazy"
-                src="/portfolio-doc/Links/git-logo.png" alt="Logo lien profil github"></a>
-        <a href="https://www.linkedin.com/in/simonnet-nathan/" target="_blank"><img loading="lazy"
-                src="/portfolio-doc/Links/linkedin-logo.png" alt="Logo lien profil linkedin"></a>
-        <a href="https://www.facebook.com/nathan.simonnet.9/" target="_blank"><img loading="lazy"
-                src="/portfolio-doc/Links/facebook-log.png" alt="Logo lien profil facebook"></a>
+        <a tabindex="0" href="https://github.com/Nathan-Simonnet" target="_blank"><img loading="lazy"
+                src="/portfolio-doc/Links/git-logo.webp" alt="Logo lien profil github"></a>
+        <a tabindex="0" href="https://www.linkedin.com/in/simonnet-nathan/" target="_blank"><img loading="lazy"
+                src="/portfolio-doc/Links/linkedin-logo.webp" alt="Logo lien profil linkedin"></a>
+        <a tabindex="0" href="https://www.facebook.com/nathan.simonnet.9/" target="_blank"><img loading="lazy"
+                src="/portfolio-doc/Links/facebook-log.webp" alt="Logo lien profil facebook"></a>
     </footer>
-    <script src='script.js'></script>
+    <script src='script.min.js'></script>
 </body>
 
 </html>
