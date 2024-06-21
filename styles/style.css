@@ -251,10 +251,6 @@ h1 {
   min-height: 1.6rem;
   margin-bottom: 2rem;
 }
-#welcome-section a span {
-  height: 2.6rem;
-  width: 7rem;
-}
 
 /* <-- JS */
 @keyframes horizontalBarSpanAnim {
@@ -402,6 +398,10 @@ h1 {
   margin-bottom: 2rem;
 }
 
+#span-infos-technos {
+  font-size: 1rem;
+}
+
 @keyframes shiningAnim {
   0% {
     background: linear-gradient(45deg, red 0%, rgba(0, 0, 0, 0.348) 20%);
@@ -487,7 +487,7 @@ h1 {
   display: block;
   background: rgba(0, 0, 0, 0.348);
   position: absolute;
-  top: -1rem;
+  top: -44px;
   left: 0%;
   border-radius: 15px;
 }
@@ -504,15 +504,6 @@ h1 {
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  /* & .p-techno-container {
-      & p {
-          transition: 0.3s;
-          display: none;
-          font-size: 22px;
-          padding-left: 12px;
-          padding-right: 12px;
-      }
-  } */
 }
 .techno-and-p-container .techno-container {
   margin: 12px;
@@ -528,7 +519,6 @@ h1 {
 /* -------------------- */
 /* Modal */
 /* -------------------- */
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .modal {
   text-align: left;
   top: 25%;
@@ -643,31 +633,71 @@ footer img {
   #technos-container {
     margin-top: 2rem;
   }
-  #span-infos-technos {
-    top: -2rem;
-    font-size: 1rem;
-    margin: 24px;
-  }
-  .project-figure-and-p-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .project-figure-and-p-container .project-p-container {
-    display: flex;
-    justify-content: baseline;
-    align-items: baseline;
+  .project-figure-and-p-container.project-clicked {
+    height: auto;
     flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding: 0;
+  }
+  .project-figure-and-p-container.project-clicked .project-p-container {
     width: 100%;
   }
+  .project-figure-and-p-container.project-clicked .project-p-container p {
+    display: flex;
+  }
 }
-@media (max-width: 530px) {
+@media (max-width: 550px) {
   header {
-    font-size: 0.8rem;
+    height: auto;
+    padding-top: 24px;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  header nav ul li {
+    margin-top: 12px;
+    background-color: rgba(0, 0, 0, 0.7490196078);
+    border-radius: 6px;
+    border: 1px solid var(--bordeaux);
+  }
+  .scrolled-up {
+    top: -800px;
   }
   section {
     min-height: 0;
+  }
+  #welcome-section {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 200px;
+  }
+  #welcome-section h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    text-align: center;
+    transition: 0.1s;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  #welcome-section p {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(167, 10, 39);
+    text-shadow: 0 0 5px rgba(5, 5, 5, 0.688);
+    transition: 0.1s;
+    min-height: 1.6rem;
+    margin-bottom: 2rem;
   }
   #project-container div {
     margin: 0;
@@ -678,7 +708,7 @@ footer img {
     height: 200px;
   }
 }
-@media (max-width: 405px) {
+@media (max-width: 415px) {
   .li-anchor {
     margin-right: 0.5rem;
   }

@@ -277,13 +277,6 @@ h1 {
         min-height: 1.6rem;
         margin-bottom: 2rem;
     }
-
-    & a {
-        & span {
-            height: 2.6rem;
-            width: 7rem;
-        }
-    }
 }
 
 /* <-- JS */
@@ -405,7 +398,7 @@ h1 {
     flex-direction: row;
     background: rgba(0, 0, 0, 0.626);
     backdrop-filter: blur(12px);
-    padding:24px;
+    padding: 24px;
 
     & figure {
 
@@ -417,7 +410,7 @@ h1 {
     & .project-p-container {
         & p {
             display: flex;
-           
+
         }
     }
 
@@ -456,6 +449,10 @@ h1 {
 /* =============================== */
 #technos-title-container {
     margin-bottom: 2rem;
+}
+
+#span-infos-technos {
+    font-size: 1rem;
 }
 
 @keyframes shiningAnim {
@@ -563,12 +560,11 @@ h1 {
     position: relative;
 
     & span {
-
         font-size: 1.4rem;
         display: block;
         background: rgba(0, 0, 0, 0.348);
         position: absolute;
-        top: -1rem;
+        top: -44px;
         left: 0%;
         border-radius: 15px;
     }
@@ -600,23 +596,11 @@ h1 {
     & .scrolledTransition {
         animation: animRandomTechno 1.6s ease-in-out 0.3s forwards;
     }
-
-    /* & .p-techno-container {
-        & p {
-            transition: 0.3s;
-            display: none;
-            font-size: 22px;
-            padding-left: 12px;
-            padding-right: 12px;
-        }
-    } */
 }
-
 
 /* -------------------- */
 /* Modal */
 /* -------------------- */
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .modal {
     text-align: left;
     top: 25%;
@@ -628,7 +612,7 @@ h1 {
 
     border: 1px solid var(--bordeaux);
     background: rgba(0, 0, 0, 0.626);
-    color:white ;
+    color: white;
     backdrop-filter: blur(12px);
     /* scrollbar-width: thin;
     scrollbar-color: #ffff #36635b; */
@@ -638,8 +622,8 @@ h1 {
 
     font-size: 1.725rem;
     max-width: 100%;
-    margin-bottom:24px;
-    
+    margin-bottom: 24px;
+
     color: var(--bordeaux);
     text-shadow: 0px 0px 2px #ffffff7a;
 
@@ -762,37 +746,103 @@ footer {
     #technos-container {
         margin-top: 2rem;
     }
-
-    #span-infos-technos {
-        top: -2rem;
-        font-size: 1rem;
-        margin: 24px;
-    }
-
-    .project-figure-and-p-container {
-
-        display: flex;
-        flex-direction: row;
+   
+    .project-figure-and-p-container.project-clicked {
+        height: auto;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
+        padding: 0;
     
         & .project-p-container {
-            display: flex;
-            justify-content: baseline;
-            align-items: baseline;
-            flex-direction: column;
             width: 100%;
+            & p {
+                display: flex;
+            }
         }
+    
     }
+    
+
+    // .project-figure-and-p-container {
+
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     align-items: center;
+
+    //     & .project-p-container {
+    //         display: flex;
+    //         justify-content: baseline;
+    //         align-items: baseline;
+    //         flex-direction: column;
+    //         width: 100%;
+    //     }
+    // }
 }
 
-@media (max-width:530px) {
+@media (max-width:550px) {
     header {
-        font-size: 0.8rem;
+        height: auto;
+        padding-top: 24px;
+
+        & nav {
+            & ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+
+                & li {
+                    margin-top: 12px;
+                    background-color: #000000bf;
+                    border-radius: 6px;
+                    border: 1px solid var(--bordeaux);
+                }
+            }
+        }
+    }
+
+    .scrolled-up {
+        top: -800px;
     }
 
     section {
         min-height: 0;
+    }
+
+    #welcome-section {
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 200px;
+    
+        & h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            font-size: 2.4rem;
+            text-align: center;
+            transition: 0.1s;
+            height: auto;
+            margin: 0;
+            padding: 0;
+    
+        }
+    
+        & p {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: rgb(167, 10, 39);
+            text-shadow: 0 0 5px rgba(5, 5, 5, 0.688);
+            transition: 0.1s;
+            min-height: 1.6rem;
+            margin-bottom: 2rem;
+        }
     }
 
     #project-container div {
@@ -806,7 +856,7 @@ footer {
     }
 }
 
-@media (max-width:405px) {
+@media (max-width:415px) {
 
     .li-anchor {
         margin-right: 0.5rem;

@@ -3,7 +3,7 @@
 
 const particlesContainer = document.querySelector('.particles-container')
 
-for (let i = 0; i < 80; i++) {
+for (let i = 0; i < 60; i++) {
     const circleContainer = document.createElement('div');
     circleContainer.classList.add('circle-container')
     particlesContainer.appendChild(circleContainer)
