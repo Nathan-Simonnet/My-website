@@ -6,12 +6,15 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name="description" content="Portfolio de Nathan Simonnet, développeur web HTML, CSS, JavaScript, React, node JS">
-    <link rel='stylesheet' href='style.css'>
     <link rel="icon" href="/portfolio-doc/Icon-logo-NS.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" defer>
+    <link rel='stylesheet' href='style.min.css'>
     <title>Nathan Simonnet - Développeur Web</title>
 </head>
 
 <body>
+
+    <div class="particles-container"></div>
     <header>
         <nav>
             <div class="flags-container">
@@ -162,11 +165,13 @@
 
             <div class="techno-and-p-container">
                 <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/css_logo.webp" height="80"
-                        class="img-techno" alt="CSS logo" id="CSS">
+                        class="img-techno" alt="CSS logo">
                 </div>
-                <div class="p-techno-container" id="p-CSS">
-                    <p>Une pratique régulière de plus de 4h par semaines depuis 2022</p>
-                    <p>Et plus de 40h de formations en HTML / CSS via différents médias</p>
+                <dialog class="p-techno-container modal"  id="p-CSS">
+                    
+                      <i class="fa-solid fa-xmark modal-close" data-modal-id="css" tabindex="0"></i>
+                    <p>Une pratique régulière depuis 2022</p>
+                    <p>Plus de 30 projets, ainsi que de nombreuses formations en HTML / CSS via différents médias / organismes</p>
                     <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI.
                     </p>
                     <p>Maintenant que je suis à l'aise avec CSS, je me plais à créer des projets en utilisant pleinement
@@ -175,14 +180,16 @@
                     </p>
                     <p>Enfin concernant HTML, l'apprentissage des outils et méthodes de référencement via la sémantique,
                         et l'utilisation d'IA et applications tiers.</p>
-                </div>
+                </dialog>
             </div>
             <div class="techno-and-p-container">
 
                 <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/js_logo.webp" height="80"
-                        class="img-techno" alt="js logo" id="JS">
+                        class="img-techno" alt="js logo" >
                 </div>
-                <div class="p-techno-container" id="p-JS">
+                <dialog class="p-techno-container modal" id="p-JS">
+                    
+                      <i class="fa-solid fa-xmark modal-close"  data-modal-id="js" tabindex="0"></i>
                     <p>La pierre angualire du developpement web, pratique régulièrement depuis 2022</p>
                     <p>Plus de 30H de formations, plus des cours d'algorithmie, ainsi que des challenges variés</p>
                     <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les projets plus
@@ -192,36 +199,40 @@
                         Je pratique également typescript, et de plus en plus de JS en strict mode, afin de garantir une plus
                         grande stabilité et pereinitée des projets plus complexe a maintenir.
                     </p>
-                </div>
+                </dialog>
             </div>
 
             <div class="techno-and-p-container">
                 <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/react_logo.webp"
-                        height="80" class="img-techno" alt="wing logo" id="REACT">
+                        height="80" class="img-techno" alt="wing logo">
                 </div>
-                <div class="p-techno-container" id="p-REACT">
+                <dialog class="p-techno-container modal" id="p-REACT">
+                    
+                      <i class="fa-solid fa-xmark modal-close"  data-modal-id="react" tabindex="0"></i>
                     <p>Routes, useStates, links... Encore beaucoup à apprendre, mais je suis officielement à l'aise avec React</p>
                     <p>Plusieurs projets déjà élaborés (Application de yoga, worldview, Quizz, application de location d'appartments...)</p>
                     <p>En plus de creer de nouveaux projets, je me plais a reprendre d'ancien projets, et les
                         remodeliser en utilisant React</p>
                     <p>N'en déplaise à Javascript, c'est mon nouvel amour... (parait-il que les algorithme de google
                         partagent mon avis)</p>
-                </div>
+                </dialog>
             </div>
 
             <div class="techno-and-p-container">
                 <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/node_logo.webp"
-                        height="80" class="img-techno" alt="Typescript logo" id="TS">
+                        height="80" class="img-techno" alt="Typescript logo">
                 </div>
 
-                <div class="p-techno-container" id="p-TS">
+                <dialog class="p-techno-container modal" id="p-NODEJS">
+                    
+                      <i class="fa-solid fa-xmark modal-close"  data-modal-id="nodejs" tabindex="0"></i>
                     <p>Node JS, express, mongodb, mongoose... et bien d'autres librairies associés</p>
                     <p>Si le front est bien sure encore a perfectionner, il est normal de s'interesser au "back", afin
                         de mieux saisir les interactions entre les deux, et ainsi commencer dès maintenant a être plus
                         polyvalent</p>
                     <p>Des projets sont encore en cours afin de progresser sur l'utilisations des routes express, et la
                         gestion de base de données, restez connectez !</p>
-                </div>
+                </dialog>
             </div>
         </div>
     </section>
@@ -269,14 +280,15 @@
 
     <hr>
     <footer class="card">
-        <a tabindex="0" href="https://github.com/Nathan-Simonnet" target="_blank"><img loading="lazy"
+        <a tabindex="0" href="https://github.com/Nathan-Simonnet" class="links-socials" target="_blank"><img loading="lazy"
                 src="/portfolio-doc/Links/git-logo.webp" alt="Logo lien profil github"></a>
-        <a tabindex="0" href="https://www.linkedin.com/in/simonnet-nathan/" target="_blank"><img loading="lazy"
+        <a tabindex="0" href="https://www.linkedin.com/in/simonnet-nathan/" class="links-socials" target="_blank"><img loading="lazy"
                 src="/portfolio-doc/Links/linkedin-logo.webp" alt="Logo lien profil linkedin"></a>
-        <a tabindex="0" href="https://www.facebook.com/nathan.simonnet.9/" target="_blank"><img loading="lazy"
+        <a tabindex="0" href="https://www.facebook.com/nathan.simonnet.9/" class="links-socials" target="_blank"><img loading="lazy"
                 src="/portfolio-doc/Links/facebook-log.webp" alt="Logo lien profil facebook"></a>
     </footer>
     <script src='script.min.js'></script>
+    <link rel='stylesheet' href='styles/particles.min.css'>
 </body>
 
 </html>

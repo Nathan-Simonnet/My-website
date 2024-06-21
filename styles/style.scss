@@ -6,7 +6,8 @@
 :root {
     --bordeaux: #a3152f;
     --gris: grey;
-    --wheat: #e1d1b3;
+    --wheat: #f2efe8;
+    /* --wheat: #e1d1b3; */
 }
 
 * {
@@ -41,7 +42,7 @@ header {
     position: fixed;
     width: 100%;
     color: #fff;
-    height: 4em;
+    height: 4rem;
 
     display: flex;
     justify-content: center;
@@ -62,10 +63,10 @@ header {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin-left: 1em;
+            margin-left: 1rem;
 
             & .flag-container {
-                margin-right: 1em;
+                margin-right: 1rem;
 
                 & img {
                     width: 50px;
@@ -94,14 +95,14 @@ header {
                 list-style-type: none;
                 padding: 2px;
                 margin: 2px;
-                margin-right: 1em;
+                margin-right: 1rem;
                 transition: 0.1s;
 
-                font-size: 1.4em;
+                font-size: 1.4rem;
 
                 & a:hover {
                     color: var(--bordeaux);
-                    /* font-size: 1.1em; */
+                    /* font-size: 1.1rem; */
                     font-weight: bold;
                     text-shadow: 0 0 5px rgba(5, 5, 5, 0.53);
                 }
@@ -180,16 +181,16 @@ section {
     display: flex;
     flex-direction: column;
 
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 2em;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
 }
 
 h1 {
     position: relative;
     display: inline-block;
     margin: 1em 0 1em 0;
-    font-size: 2.8em;
+    font-size: 2.8rem;
 }
 
 @keyframes h1AfterAnimation {
@@ -217,8 +218,8 @@ h1 {
     justify-content: center;
     align-items: center;
     /* border: 4px solid green; */
-    height: 3em;
-    width: 8em;
+    height: 3rem;
+    width: 8rem;
 }
 
 .contact-span {
@@ -228,7 +229,7 @@ h1 {
 
     cursor: pointer;
 
-    font-size: 1em;
+    font-size: 1rem;
     background: linear-gradient(135deg, rgba(160, 10, 37, 0.695), rgba(160, 10, 37, 0.364));
     border: 1px solid rgba(163, 21, 47, 0.422);
     transition: 0.3s;
@@ -255,7 +256,7 @@ h1 {
         justify-content: center;
         align-items: center;
 
-        font-size: 2.4em;
+        font-size: 2.4rem;
         text-align: center;
         transition: 0.1s;
         height: auto;
@@ -268,19 +269,19 @@ h1 {
         position: relative;
         padding: 0;
         margin: 0;
-        font-size: 1.8em;
+        font-size: 1.8rem;
         font-weight: bold;
         color: rgb(167, 10, 39);
         text-shadow: 0 0 5px rgba(5, 5, 5, 0.688);
         transition: 0.1s;
-        min-height: 1.6em;
-        margin-bottom: 2em;
+        min-height: 1.6rem;
+        margin-bottom: 2rem;
     }
 
     & a {
         & span {
-            height: 2.6em;
-            width: 7em;
+            height: 2.6rem;
+            width: 7rem;
         }
     }
 }
@@ -365,7 +366,7 @@ h1 {
         & figcaption {
             padding: 2px;
             font-weight: bold;
-            font-size: 1.4em;
+            font-size: 1.4rem;
         }
 
         & img {
@@ -385,6 +386,7 @@ h1 {
         justify-content: baseline;
         align-items: baseline;
         flex-direction: column;
+        width: 40%;
 
         & p {
             margin: 12px;
@@ -403,6 +405,7 @@ h1 {
     flex-direction: row;
     background: rgba(0, 0, 0, 0.626);
     backdrop-filter: blur(12px);
+    padding:24px;
 
     & figure {
 
@@ -414,6 +417,7 @@ h1 {
     & .project-p-container {
         & p {
             display: flex;
+           
         }
     }
 
@@ -423,7 +427,7 @@ h1 {
     content: "\2716";
     transform: rotateX(180deg);
 
-    font-size: 2em;
+    font-size: 2rem;
     position: absolute;
     background: rgba(0, 0, 0, 0.788);
     border-radius: 10px;
@@ -451,9 +455,8 @@ h1 {
 /*  TECHNOS */
 /* =============================== */
 #technos-title-container {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
-
 
 @keyframes shiningAnim {
     0% {
@@ -550,16 +553,6 @@ h1 {
 
 }
 
-@keyframes animRandomTechno {
-    0% {
-        transform: rotateX(0deg);
-    }
-
-    100% {
-        transform: rotateX(360deg);
-    }
-}
-
 #technos-container {
     height: auto;
     display: flex;
@@ -571,11 +564,11 @@ h1 {
 
     & span {
 
-        font-size: 1.4em;
+        font-size: 1.4rem;
         display: block;
         background: rgba(0, 0, 0, 0.348);
         position: absolute;
-        top: -1em;
+        top: -1rem;
         left: 0%;
         border-radius: 15px;
     }
@@ -586,9 +579,9 @@ h1 {
 }
 
 .techno-and-p-container {
-    position: relative;
-    width: 9em;
-    height: 9em;
+    margin: 24px;
+    width: 9rem;
+    height: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -608,7 +601,7 @@ h1 {
         animation: animRandomTechno 1.6s ease-in-out 0.3s forwards;
     }
 
-    & .p-techno-container {
+    /* & .p-techno-container {
         & p {
             transition: 0.3s;
             display: none;
@@ -616,46 +609,43 @@ h1 {
             padding-left: 12px;
             padding-right: 12px;
         }
-    }
+    } */
 }
 
-#technos-container.techno-clicked {
-    min-height: 50vh;
-}
 
-.techno-and-p-container.techno-clicked {
-    position: absolute;
-    z-index: 2;
-    justify-content: start;
-    width: 100%;
-    height: 22em;
+/* -------------------- */
+/* Modal */
+/* -------------------- */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.modal {
+    text-align: left;
+    top: 25%;
+    left: 12.5%;
+    width: 75%;
+    padding: 24px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+
+    border: 1px solid var(--bordeaux);
     background: rgba(0, 0, 0, 0.626);
+    color:white ;
     backdrop-filter: blur(12px);
+    /* scrollbar-width: thin;
+    scrollbar-color: #ffff #36635b; */
+}
+
+.modal-close {
+
+    font-size: 1.725rem;
+    max-width: 100%;
+    margin-bottom:24px;
+    
+    color: var(--bordeaux);
+    text-shadow: 0px 0px 2px #ffffff7a;
+
     cursor: pointer;
-
-    & p {
-        z-index: 2;
-        display: block;
-        background: rgba(0, 0, 0, 0.845);
-    }
 }
 
-.techno-and-p-container.techno-clicked::after {
-    content: "\2716";
-
-    font-size: 2em;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.788);
-    top: 0%;
-    left: 0%;
-    padding: 8px;
-    width: 25px;
-    height: 25px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /* =============================== */
 /* PROFIL */
@@ -677,20 +667,20 @@ h1 {
         }
 
         & #bio-container {
-            margin-top: 1em;
+            margin-top: 1rem;
         }
 
         & p {
-            font-size: 1.4em;
-            margin-bottom: 1em;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
         }
 
         & div.links-container {
-            margin-top: 4em;
+            margin-top: 4rem;
 
             & span {
-                height: 3em;
-                width: 8em;
+                height: 3rem;
+                width: 8rem;
             }
         }
     }
@@ -702,14 +692,14 @@ h1 {
 /* =============================== */
 
 #contact-section {
-    min-height: 16em;
+    min-height: 16rem;
 
     & div.links-container {
 
         & span,
         a {
-            width: 16em;
-            height: 3em;
+            width: 16rem;
+            height: 3rem;
         }
     }
 }
@@ -726,13 +716,23 @@ footer {
     & img {
         width: 40px;
         height: 40px;
-        margin: 0.5em 1em;
+        margin: 0.5em 1rem;
     }
 }
 
 /* =============================== */
 /* media-querries */
 /* =============================== */
+
+@media (max-width:900px) {
+    .modal {
+        top: 25%;
+        left: 2%;
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
 
 @media (max-width:700px) {
 
@@ -753,31 +753,42 @@ footer {
             }
 
             & ul {
-                margin: 1em 20px 1em 1em;
-                font-size: 0.9em;
+                margin: 1em 20px 1em 1rem;
+                font-size: 0.9rem;
             }
         }
     }
 
     #technos-container {
-        margin-top: 2em;
+        margin-top: 2rem;
     }
 
     #span-infos-technos {
-        top: -2em;
-        font-size: 1em;
+        top: -2rem;
+        font-size: 1rem;
+        margin: 24px;
     }
 
-    .project-figure-and-p-container.project-clicked {
-        flex-direction: column;
+    .project-figure-and-p-container {
+
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+    
+        & .project-p-container {
+            display: flex;
+            justify-content: baseline;
+            align-items: baseline;
+            flex-direction: column;
+            width: 100%;
+        }
     }
 }
 
 @media (max-width:530px) {
     header {
-        font-size: 0.8em;
+        font-size: 0.8rem;
     }
 
     section {
@@ -798,6 +809,6 @@ footer {
 @media (max-width:405px) {
 
     .li-anchor {
-        margin-right: 0.5em;
+        margin-right: 0.5rem;
     }
 }

@@ -1,3 +1,18 @@
+// Particle effects
+// =======================
+
+const particlesContainer = document.querySelector('.particles-container')
+
+for (let i = 0; i < 80; i++) {
+    const circleContainer = document.createElement('div');
+    circleContainer.classList.add('circle-container')
+    particlesContainer.appendChild(circleContainer)
+
+    const circle = document.createElement('div');
+    circle.classList.add('circle')
+    circleContainer.appendChild(circle)
+}
+
 // =================
 // Header
 // ==================
@@ -126,7 +141,7 @@ window.addEventListener('scroll', (e) => {
         pointer(4);
     } else if (magicScrollValue > 0.70) {
         pointer(3);
-    } else if (magicScrollValue > 0.50) {
+    } else if (magicScrollValue > 0.55) {
         pointer(2);
     } else if (magicScrollValue > 0.10) {
         pointer(1);
@@ -139,26 +154,28 @@ window.addEventListener('scroll', (e) => {
 
 document.querySelectorAll('.project-figure-and-p-container').forEach((projectContainer) => {
     // Allow keyboard using
-    projectContainer.addEventListener('keydown', (e) => { 
-    if (e.key === 'Enter') { 
-    e.target.click(); } 
-    }); 
+    projectContainer.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.target.click();
+        }
+    });
 
+    //When clicked,  Hide all other projects
     projectContainer.addEventListener('click', () => {
         projectContainer.classList.toggle("project-clicked");
 
-        projectContainer.addEventListener('keydown', (e) => { 
-        if (e.key === 'Escape') { 
-        e.target.click(); 
-        } 
-        }); 
+        projectContainer.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') { e.target.click(); }
+        });
 
         document.querySelectorAll('.project-figure-and-p-container').forEach((otherProjectContainer) => {
             if (otherProjectContainer != projectContainer) {
                 otherProjectContainer.classList.toggle('other-projects')
             }
         });
-        projectContainer.scrollIntoView();
+
+        // When clicked, autofocus the window to the center of the project
+        projectContainer.scrollIntoView({ block: 'center' })
     });
 });
 
@@ -166,96 +183,42 @@ document.querySelectorAll('.project-figure-and-p-container').forEach((projectCon
 // Technos 
 // ========================
 // ------------------------
-// Technos animation
-// ------------------------
-
-let technoIndex = 0;
-document.querySelectorAll('.techno-container').forEach((technos, index) => {
-    technos.addEventListener('keydown', (e) => { 
-    if (e.key === 'Enter') { 
-    e.target.click(); 
-    technos.addEventListener('keydown', (e) => { 
-        if (e.key === 'Escape') { 
-        e.target.click(); 
-        } 
-        }); 
-    } 
-    }); 
-    const uniqueIndex = "techno" + (index + 1);
-    technos.setAttribute('id', uniqueIndex);
-    technoIndex++;
-});
-
-const technosAnimation = function (e) {
-
-    let arrayTechnos = [];
-
-    const technosShuffler = function () {
-
-        for (let i = 1; i < technoIndex + 1; i++) {
-            arrayTechnos.push(i);
-        }
-        for (let i = 0; i < 100; i++) {
-            const randyTheRando2 = Math.floor(Math.random() * technoIndex);
-            const randyTheRando3 = Math.floor(Math.random() * technoIndex);
-            [arrayTechnos[randyTheRando2], arrayTechnos[randyTheRando3]] = [arrayTechnos[randyTheRando3], arrayTechnos[randyTheRando2]];
-        }
-    }
-
-    technosShuffler();
-
-    let arrayIndex = 0;
-    const technosFlipper = function () {
-
-        setTimeout(() => {
-            const temporarySelector = document.getElementById('techno' + arrayTechnos[arrayIndex]);
-            temporarySelector.classList.add("scrolledTransition");
-
-            setTimeout(() => {
-                temporarySelector.classList.remove("scrolledTransition");
-                arrayIndex++;
-
-                if (arrayIndex == arrayTechnos.length) {
-                    arrayIndex = 0
-                }
-                technosFlipper();
-            }, 3000)
-        }, 1000)
-    }
-    technosFlipper();
-}
-
-technosAnimation();
-
-// ------------------------
 // Technos Displayer
 // ------------------------
 
 const spanInfosTechnos = document.getElementById('span-infos-technos');
 
-document.getElementById('technos-section').addEventListener('mouseover', (e) => {
-    spanInfosTechnos.classList.add('shiningAnim')
+document.getElementById('technos-section').addEventListener('mouseover', () => {
+    spanInfosTechnos.classList.add('shiningAnim');
 });
-document.getElementById('technos-section').addEventListener('mouseout', (e) => {
-    spanInfosTechnos.classList.remove('shiningAnim')
+document.getElementById('technos-section').addEventListener('mouseout', () => {
+    spanInfosTechnos.classList.remove('shiningAnim');
 });
 
+
 document.querySelectorAll('.techno-and-p-container').forEach((techno) => {
+    const modal = techno.children[1];
+    // Allow keyboard using
+    techno.addEventListener('keydown', (e) => {
+     e.key === 'Enter'? e.target.click(): "";
+    });
+    // Toggle to open and close modal
     techno.addEventListener('click', () => {
+        // Onclick, delete the info tooltip until refreshing the page
         document.getElementById('span-infos-technos').style.display = "none";
-        techno.classList.toggle("techno-clicked");
-        document.getElementById('technos-container').classList.toggle("techno-clicked");
+        
+        modal.open ? modal.close() : modal.showModal();
     });
 });
 
 // =======================
 // Contact me
 // =======================
-
+// Automatically copie the mail onclick
 document.getElementById('mail-span').addEventListener('click', (span) => {
     navigator.clipboard.writeText(span.target.textContent);
-   lang == "fr"? span.target.textContent = "copié!" : span.target.textContent = "copy!"
-    setTimeout(() => {span.target.textContent = "nathan.simonnet@gmail.com"}, 2000);
+    lang == "fr" ? span.target.textContent = "copié!" : span.target.textContent = "copy!"
+    setTimeout(() => { span.target.textContent = "nathan.simonnet@gmail.com" }, 2000);
 });
 
 // ========================
@@ -338,29 +301,32 @@ const translatePage = function (id) {
         spanInfosTechnos.textContent = "Cliquez pour plus d'informations";
 
         document.getElementById('p-CSS').innerHTML = `
-        <p>Une pratique régulière de plus de 4h par semaines depuis 2022</p>
-        <p>Et plus de 40h de formations en HTML / CSS via différents médias</p>
-        <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI.
-        </p>
+         <i class="fa-solid fa-xmark modal-close"  tabindex="0"></i>
+        <p>Une pratique régulière depuis 2022</p>
+        <p>Plus de 30 projets, ainsi que de nombreuses formations en HTML / CSS via différents médias / organismes</p>
+        <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI.</p>
         <p>Maintenant que je suis à l'aise avec CSS, je me plais à créer des projets en utilisant pleinement
-            différentes librairies (tailwind et Animate.CSS notament), rendant le code bien plus léger, et
-            l'exprience de programation plus fluide (des projets tout chauds sortis du fours arrivent...).</p>
+         différentes librairies (tailwind notament), rendant le code plus léger, et
+        l'exprience de programation plus fluide (des projets tout chauds sortis du fours arrivent...).</p>
         <p>Enfin concernant HTML, l'apprentissage des outils et méthodes de référencement via la sémantique,
         et l'utilisation d'IA et applications tiers.</p>
         `;
         document.getElementById('p-JS').innerHTML = `
+         <i class="fa-solid fa-xmark modal-close"  tabindex="0"></i>
         <p>La pierre angualire du developpement web, pratique régulièrement depuis 2022</p>
         <p>Plus de 30H de formations, plus des cours d'algorithmie, ainsi que des challenges variés.</p>
         <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les projets plushauts (mais, React prends de plus en plus de place..).</p>
         <p>Je pratique également typescript, et de plus en plus du JS en strict mode, afin de garantir une plus grande stabilité et pereinitée des projets plus complexe a maintenir.</p>
         `;
         document.getElementById('p-REACT').innerHTML = `
+         <i class="fa-solid fa-xmark modal-close"  tabindex="0"></i>
        <p>Routes, useStates, links... Encore beaucoup à apprendre, mais je suis officielement à l'aise avec React</p>
         <p>Plusieurs projets déjà élaborés (Application de yoga, worldview, Quizz, application de location d'appartments...)</p>
         <p>En plus de creer de nouveaux projets, je me plais a reprendre d'ancien projets, et les remodeliser en utilisant React</p>
         <p>N'en déplaise à Javascript, c'est mon nouvel amour... (parait-il que les algorithme de google partagent mon avis)</p>
         `;
-        document.getElementById('p-TS').innerHTML = `
+        document.getElementById('p-NODEJS').innerHTML = `
+         <i class="fa-solid fa-xmark modal-close"  tabindex="0"></i>
         <p>Node JS, express, mongodb, mongoose... et bien d'autres librairies associés</p>
         <p>Si le front est bien sure encore a perfectionner, il est normal de s'interesser au "back", afin de mieux saisir les interactions entre les deux, et ainsi commencer dès maintenant a être plus polyvalent</p>
         <p>Des projets sont encore en cours afin de progresser sur l'utilisations des routes express, et la gestion de base de données, restez connectez !</p>
@@ -442,25 +408,29 @@ const translatePage = function (id) {
         spanInfosTechnos.textContent = "Click for more informations";
 
         document.getElementById('p-CSS').innerHTML = `
-        <p>Regular practice of over 4 hours per week since 2022</p>
-        <p>And over 40 hours of training in HTML / CSS through various media</p>
+         <i class="fa-solid fa-xmark modal-close"  data-modal-id="nodejs" tabindex="0"></i>
+        <p>Regular practice since 2022</p>
+        <p>More than 30 projects, and many training in HTML / CSS through various medias</p>
         <p>This practice is accompanied by everything surrounding UX / UI design.</p>
-        <p>Now that I'm comfortable with CSS, I enjoy creating projects using various libraries (especially Tailwind and Animate.CSS), making the code much lighter, and the programming experience smoother (some fresh projects are coming out of the oven...)</p>
+        <p>Now that i am fully comfortable with CSS, and i ma not against using libraries (especially Tailwind), making the code much lighter, and the programming experience smoother (some fresh projects are coming out of the oven...)</p>
         <p>Finally, regarding HTML, learning tools and methods of referencing through semantics, and the use of AI</p>
         `;
         document.getElementById('p-JS').innerHTML = `
+         <i class="fa-solid fa-xmark modal-close"  data-modal-id="nodejs" tabindex="0"></i>
         <p>The cornerstone of web development, regularly practiced since 2022</p>
         <p>Over 30 hours of training, along with algorithm courses, and various challenges</p>
         <p>Javascript is currently my favorite language, and used in all projects above (although, React is taking more and more space..)</p>
         <p>I also practice TypeScript, as well as JS in strict mode, to ensure greater stability and longevity of more complex projects to maintain. </p>  `;
         document.getElementById('p-REACT').innerHTML = `
+         <i class="fa-solid fa-xmark modal-close"  data-modal-id="nodejs" tabindex="0"></i>
        <p>Routes, useStates, links... Still a lot to learn, but I am officially comfortable with React</p>
         <p>Several projects already developed (Yoga application, worldview, Quiz, apartment rental application...)</p>
         <p>In addition to creating new projects, I enjoy revisiting old projects and remodeling them using React</p>
         <p>Sorry, Javascript, but it's my new love... (it seems that Google's algorithms share my opinion)</p>
 
          `;
-        document.getElementById('p-TS').innerHTML = `
+        document.getElementById('p-NODEJS').innerHTML = `
+         <i class="fa-solid fa-xmark modal-close"  data-modal-id="nodejs" tabindex="0"></i>
         <p>Node.js, Express, MongoDB, Mongoose... and many other associated libraries</p>
         <p>While the front end still needs improvement, it's natural to take an interest in the "back end" in order to better understand the interactions between the two, and thus start becoming more versatile from now on</p>
         <p>Projects are still ongoing to improve the use of Express routes and database management, stay tuned!</p> `
