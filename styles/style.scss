@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Jost-light";
-    src: url(portfolio-doc/Jost/static/Jost-Light.ttf);
+    src: url(assets/Jost/static/Jost-Light.ttf);
 }
 
 :root {
@@ -24,7 +24,7 @@ html {
 
 body {
     font-family: "Jost-light", 'trebuchet MS';
-    background: url(/portfolio-doc/black-desk.jpg) center/cover fixed;
+    background: url(/assets/black-desk.jpg) center/cover fixed;
 
     color: #eae2d3;
     display: flex;
@@ -575,7 +575,7 @@ h1 {
 }
 
 .techno-and-p-container {
-    margin: 24px;
+    // margin: 24px;
     width: 9rem;
     height: 9rem;
     display: flex;
@@ -583,6 +583,7 @@ h1 {
     align-items: center;
     flex-direction: column;
 
+    border-radius: 50%;
     cursor: pointer;
 
     & .techno-container {
@@ -597,6 +598,33 @@ h1 {
         animation: animRandomTechno 1.6s ease-in-out 0.3s forwards;
     }
 }
+
+.outer-layer,
+.middle-layer,
+.inner-layer{
+    border-radius: 50%;
+    // border: 1px solid #ffffff00;
+}
+
+.middle-layer{
+    border: 2px solid #ffffff00;
+}
+
+.outer-layer:hover{
+    box-shadow: 0px 0px 6px #e4c4c9c9;
+}
+.middle-layer:hover{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #a3152fc9;
+
+}
+.inner-layer:hover{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 2px #e4c4c9c9;
+}
+
 
 /* -------------------- */
 /* Modal */

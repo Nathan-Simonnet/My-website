@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Jost-light";
-  src: url(portfolio-doc/Jost/static/Jost-Light.ttf);
+  src: url(assets/Jost/static/Jost-Light.ttf);
 }
 :root {
   --bordeaux: #a3152f;
@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: "Jost-light", "trebuchet MS";
-  background: url(/portfolio-doc/black-desk.jpg) center/cover fixed;
+  background: url(/assets/black-desk.jpg) center/cover fixed;
   color: #eae2d3;
   display: flex;
   justify-content: center;
@@ -496,13 +496,13 @@ h1 {
 }
 
 .techno-and-p-container {
-  margin: 24px;
   width: 9rem;
   height: 9rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 50%;
   cursor: pointer;
 }
 .techno-and-p-container .techno-container {
@@ -514,6 +514,32 @@ h1 {
 }
 .techno-and-p-container .scrolledTransition {
   animation: animRandomTechno 1.6s ease-in-out 0.3s forwards;
+}
+
+.outer-layer,
+.middle-layer,
+.inner-layer {
+  border-radius: 50%;
+}
+
+.middle-layer {
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.outer-layer:hover {
+  box-shadow: 0px 0px 6px rgba(228, 196, 201, 0.7882352941);
+}
+
+.middle-layer:hover {
+  height: 100%;
+  width: 100%;
+  border: 2px solid rgba(163, 21, 47, 0.7882352941);
+}
+
+.inner-layer:hover {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 2px rgba(228, 196, 201, 0.7882352941);
 }
 
 /* -------------------- */

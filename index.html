@@ -5,10 +5,11 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta name="description" content="Portfolio de Nathan Simonnet, développeur web HTML, CSS, JavaScript, React, node JS">
-    <link rel="icon" href="/portfolio-doc/Icon-logo-NS.png">
+    <meta name="description"
+        content="Portfolio de Nathan Simonnet, développeur web HTML, CSS, JavaScript, React, node JS">
+    <link rel="icon" href="/assets/Icon-logo-NS.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" defer>
-    <link rel='stylesheet' href='style.min.css'>
+    <link rel='stylesheet' href='styles/style.css'>
     <title>Nathan Simonnet - Développeur Web</title>
 </head>
 
@@ -19,17 +20,18 @@
         <nav>
             <div class="flags-container">
                 <div tabindex="0" class="flag-container actual-language" id="fra">
-                    <img loading="lazy" src="/portfolio-doc/Flags/flag-france.png" height="30" alt="France flag">
+                    <img loading="lazy" src="/assets/Flags/flag-france.png" height="30" alt="France flag">
                 </div>
                 <div tabindex="0" class="flag-container" id="eng">
-                    <img loading="lazy" src="/portfolio-doc/Flags/flag-united-kingdom.png" height="30"
+                    <img loading="lazy" src="/assets/Flags/flag-united-kingdom.png" height="30"
                         alt="United Kingdom flag">
                 </div>
             </div>
             <ul class="nav-links">
                 <li class="li-anchor"><a tabindex="0" href="#projects-section" id="project-anchor">Projets</a></li>
                 <li class="li-anchor"><a tabindex="0" href="#technos-section" id="technos-anchor">Technos</a></li>
-                <li class="li-anchor"><a tabindex="0" href="#about-me_section" id="about-me-anchor">À propos de moi</a></li>
+                <li class="li-anchor"><a tabindex="0" href="#about-me_section" id="about-me-anchor">À propos de moi</a>
+                </li>
                 <li class="li-anchor"><a tabindex="0" href="#contact-section" id="contact-anchor">Contact</a></li>
             </ul>
         </nav>
@@ -46,7 +48,7 @@
             <span class="after" id="lineSpan1"></span>
         </div>
         <div class="chantier">
-            <img src="/portfolio-doc/logo-construction.webp" alt="panneau de chantier logo" height="40">
+            <img src="/assets/logo-construction.webp" alt="panneau de chantier logo" height="40">
             <p>Plus de fonctionnalités à venir...</p>
         </div>
 
@@ -54,8 +56,8 @@
             <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="portfolio-app-figure">
                     <figcaption id="portfolio-caption">Kasa - site de locations d'appartments</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/kasa-app.webp" width="230"
-                        height="250" alt="portfolio app" id="portfolio-app-img">
+                    <img class="project-img" loading="lazy" src="/assets/app/kasa-app.webp" width="230" height="250"
+                        alt="portfolio app" id="portfolio-app-img">
                 </figure>
 
                 <div class="project-p-container" id="portfolio-p-container">
@@ -64,45 +66,49 @@
                     <p>Gestion de 4 pages, dont une page avec un paramètre en fonction de l'id</p>
                     <p>Et finalement gestion de la page d'erreur et redirections</p>
                     <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Kasa"
-                        target="_blank">Lien vers GitHub</a></p>
+                            target="_blank">Lien vers GitHub</a></p>
                 </div>
 
             </div>
             <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="quizz-app-figure">
                     <figcaption id="quizz-caption">Quizz</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/quizz-app.webp" width="230"
-                        height="250" alt="quizz app" id="quizz-app-img">
+                    <img class="project-img" loading="lazy" src="/assets/app/quizz-app.webp" width="230" height="250"
+                        alt="quizz app" id="quizz-app-img">
                 </figure>
                 <div class="project-p-container" id="quizz-p-container">
                     <p>Quizz sur Javascript/React</p>
                     <p>Il suffira de modifier un fichier Json, afin de modifier ou rajouter des questions/réponses
                     </p>
                     <p>Gestion du score, et code couleur selon la réponse</p>
-                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/quizz-react-routes"
-                            target="_blank">Lien vers GitHub</a></p>
+                    <p class="click-to-test"><a tabindex="0"
+                            href="https://github.com/Nathan-Simonnet/quizz-react-routes" target="_blank">Lien vers
+                            GitHub</a></p>
                 </div>
             </div>
             <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="db-app-figure">
                     <figcaption id="db-caption">Portfolio d'architecte</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/architecte-app.webp" width="230"
+                    <img class="project-img" loading="lazy" src="/assets/app/architecte-app.webp" width="230"
                         height="250" alt="Portfiolio d'architecte" id="db-app-img">
                 </figure>
                 <div class="project-p-container" id="db-p-container">
                     <p>Gestion d'API, CRUD, fenêtres modales.
                     </p>
-                    <p>Récupéreration dynamique des données des travaux via l’API (SQlight), ajout d'options de tri des projets par catégorie, Intégration et gestion de la page de connexion, ajoute de 2 fenêtres modales pour gérer les projets (ajout, modifications, suppressions)
+                    <p>Récupéreration dynamique des données des travaux via l’API (SQlight), ajout d'options de tri des
+                        projets par catégorie, Intégration et gestion de la page de connexion, ajoute de 2 fenêtres
+                        modales pour gérer les projets (ajout, modifications, suppressions)
                     </p>
-                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Portfolio-architecte-sophie-bluel"
+                    <p class="click-to-test"><a tabindex="0"
+                            href="https://github.com/Nathan-Simonnet/Portfolio-architecte-sophie-bluel"
                             target="_blank">Lien vers GitHub</a></p>
                 </div>
             </div>
             <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="meal-app-figure">
                     <figcaption id="meal-caption">Générateur de recettes</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/meal-fetcher.webp" width="230"
-                        height="250" alt="meal fetcher app" id="meal-app-img">
+                    <img class="project-img" loading="lazy" src="/assets/app/meal-fetcher.webp" width="230" height="250"
+                        alt="meal fetcher app" id="meal-app-img">
                 </figure>
                 <div class="project-p-container" id="meal-p-container">
                     <p>Utilisant l'API de TheMealDB, affichage de recettes selon les ingrédients désiré</p>
@@ -115,13 +121,15 @@
             <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="form-app-figure">
                     <figcaption id="form-caption">Form checking</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/form-app.webp" width="230"
-                        height="250" alt="form app" id="form-app-img">
+                    <img class="project-img" loading="lazy" src="/assets/app/form-app.webp" width="230" height="250"
+                        alt="form app" id="form-app-img">
                 </figure>
                 <div class="project-p-container" id="form-p-container">
                     <p>Un formulaire assez classique, exigeant certain paramètres avant validation</p>
-                    <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis aussitôt supprimées</p>
-                    <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de passe</p>
+                    <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis aussitôt
+                        supprimées</p>
+                    <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de passe
+                    </p>
                     <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Form-checker"
                             target="_blank">Lien vers GitHub</a></p>
                 </div>
@@ -129,8 +137,8 @@
             <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="bubble-app-figure">
                     <figcaption id="bubble-caption">Bubble Popper!</figcaption>
-                    <img class="project-img" loading="lazy" src="/portfolio-doc/app/bubble-app.webp" width="230"
-                        height="250" alt="Bubble Popper app" id="bubble-app-img">
+                    <img class="project-img" loading="lazy" src="/assets/app/bubble-app.webp" width="230" height="250"
+                        alt="Bubble Popper app" id="bubble-app-img">
                 </figure>
 
                 <div class="project-p-container" id="bubble-p-container">
@@ -145,7 +153,7 @@
                             ici pour tester</a></p>
                 </div>
             </div>
-            
+
         </div>
 
     </section>
@@ -159,72 +167,114 @@
 
             <span id="span-infos-technos">Cliquez pour
                 plus d'informations</span>
+          
+            <div class="outer-layer">
+                <div class="middle-layer">
+                    <div class="inner-layer">
+                        <div class="techno-and-p-container">
+                            <div tabindex="0" class="techno-container"> <img loading="lazy"
+                                    src="/assets/Tecnhos/css_logo.webp" height="80" class="img-techno" alt="CSS logo">
+                            </div>
+                            <dialog class="p-techno-container modal" id="p-CSS">
 
-            <div class="techno-and-p-container">
-                <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/css_logo.webp" height="80"
-                        class="img-techno" alt="CSS logo">
+                                <i class="fa-solid fa-xmark modal-close" data-modal-id="css" tabindex="0"></i>
+                                <p>Une pratique régulière depuis 2022</p>
+                                <p>Plus de 30 projets, ainsi que de nombreuses formations en HTML / CSS via différents
+                                    médias / organismes</p>
+                                <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI.
+                                </p>
+                                <p>Maintenant que je suis à l'aise avec CSS, je me plais à créer des projets en
+                                    utilisant pleinement
+                                    différentes librairies (tailwind et Animate.CSS notamment), rendant le code bien
+                                    plus léger, et
+                                    l'expérience de programmation plus fluide (des projets tout chauds sortis du four
+                                    arrivent...).
+                                </p>
+                                <p> Enfin concernant HTML, l'apprentissage des outils et méthodes de référencement via
+                                    la sémantique,
+                                    et l'utilisation d'IA et applications tiers .</p>
+                            </dialog>
+                        </div>
+                    </div>
                 </div>
-                <dialog class="p-techno-container modal"  id="p-CSS">
-                    
-                      <i class="fa-solid fa-xmark modal-close" data-modal-id="css" tabindex="0"></i>
-                      <p>Une pratique régulière depuis 2022</p>
-                      <p>Plus de 30 projets, ainsi que de nombreuses formations en HTML / CSS via différents médias / organismes</p>
-                      <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI.
-                      </p>
-                      <p>Maintenant que je suis à l'aise avec CSS, je me plais à créer des projets en utilisant pleinement
-                          différentes librairies (tailwind et Animate.CSS notamment), rendant le code bien plus léger, et
-                          l'expérience de programmation plus fluide (des projets tout chauds sortis du four arrivent...).
-                      </p>
-                      <p> Enfin concernant HTML, l'apprentissage des outils et méthodes de référencement via la sémantique,
-                          et l'utilisation d'IA et applications tiers .</p>
-                </dialog>
-            </div>
-            <div class="techno-and-p-container">
-
-                <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/js_logo.webp" height="80"
-                        class="img-techno" alt="js logo" >
-                </div>
-                <dialog class="p-techno-container modal" id="p-JS">
-                    
-                      <i class="fa-solid fa-xmark modal-close"  data-modal-id="js" tabindex="0"></i>
-                      <p>La pierre angulaire du développement web, pratique régulièrement depuis 2022</p>
-                      <p>Plus de 30H de formations, plus des cours d'algorithmie, ainsi que des challenges variés</p>
-                      <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les projets plus
-                          hauts (mais, React prend de plus en plus de place..)</p>
-                      <p>Je pratique également typescript, et de plus en plus de JS en strict mode, afin de garantir une plus
-                          grande stabilité et pérennité des projets plus complexe à maintenir.</p>
-                </dialog>
             </div>
 
-            <div class="techno-and-p-container">
-                <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/react_logo.webp"
-                        height="80" class="img-techno" alt="wing logo">
+            <div class="outer-layer">
+                <div class="middle-layer">
+                    <div class="inner-layer">
+                        <div class="techno-and-p-container">
+
+                            <div tabindex="0" class="techno-container"> <img loading="lazy"
+                                    src="/assets/Tecnhos/js_logo.webp" height="80" class="img-techno" alt="js logo">
+                            </div>
+                            <dialog class="p-techno-container modal" id="p-JS">
+
+                                <i class="fa-solid fa-xmark modal-close" data-modal-id="js" tabindex="0"></i>
+                                <p>La pierre angulaire du développement web, pratique régulièrement depuis 2022</p>
+                                <p>Plus de 30H de formations, plus des cours d'algorithmie, ainsi que des challenges
+                                    variés</p>
+                                <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les
+                                    projets plus
+                                    hauts (mais, React prend de plus en plus de place..)</p>
+                                <p>Je pratique également typescript, et de plus en plus de JS en strict mode, afin de
+                                    garantir une plus
+                                    grande stabilité et pérennité des projets plus complexe à maintenir.</p>
+                            </dialog>
+                        </div>
+                    </div>
                 </div>
-                <dialog class="p-techno-container modal" id="p-REACT">
-                    
-                      <i class="fa-solid fa-xmark modal-close"  data-modal-id="react" tabindex="0"></i>
-                    <p>Routes, useStates, links... Encore beaucoup à apprendre, mais je suis officiellement à l'aise avec React</p>
-                    <p>Plusieurs projets déjà élaborés (Application de yoga, worldview, Quizz, application de location d'appartements...)</p>
-                    <p>En plus de créer de nouveaux projets, je me plais à reprendre d'anciens projets, et les modéliser à nouveau en utilisant React</p>
-                    <p>N'en déplaise à JavaScript, c'est mon nouvel amour... (parait-il que les algorithmes de Google partagent mon avis)</p>
-                </dialog>
             </div>
 
-            <div class="techno-and-p-container">
-                <div tabindex="0" class="techno-container"> <img loading="lazy" src="/portfolio-doc/Tecnhos/node_logo.webp"
-                        height="80" class="img-techno" alt="Typescript logo">
-                </div>
+            <div class="outer-layer">
+                <div class="middle-layer">
+                    <div class="inner-layer">
+                        <div class="techno-and-p-container">
+                            <div tabindex="0" class="techno-container"> <img loading="lazy"
+                                    src="/assets/Tecnhos/react_logo.webp" height="80" class="img-techno"
+                                    alt="wing logo">
+                            </div>
+                            <dialog class="p-techno-container modal" id="p-REACT">
 
-                <dialog class="p-techno-container modal" id="p-NODEJS">
-                    
-                      <i class="fa-solid fa-xmark modal-close"  data-modal-id="nodejs" tabindex="0"></i>
-                      <p>Node JS, express, mongodb, mongoose... et bien d'autres librairies associées</p>
-                      <p>Si le front est bien sûr encore à perfectionner, il est normal de s'intéresser au "back", afin
-                        de mieux saisir les interactions entre les deux, et ainsi commencer dès maintenant à être plus
-                        polyvalent</p>
-                      <p>Des projets sont encore en cours dans le but de progresser sur l'utilisation des routes express, et la
-                        gestion de base de données, restez connecté !</p>
-                </dialog>
+                                <i class="fa-solid fa-xmark modal-close" data-modal-id="react" tabindex="0"></i>
+                                <p>Routes, useStates, links... Encore beaucoup à apprendre, mais je suis officiellement
+                                    à l'aise avec React</p>
+                                <p>Plusieurs projets déjà élaborés (Application de yoga, worldview, Quizz, application
+                                    de location d'appartements...)</p>
+                                <p>En plus de créer de nouveaux projets, je me plais à reprendre d'anciens projets, et
+                                    les modéliser à nouveau en utilisant React</p>
+                                <p>N'en déplaise à JavaScript, c'est mon nouvel amour... (parait-il que les algorithmes
+                                    de Google partagent mon avis)</p>
+                            </dialog>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="outer-layer">
+                <div class="middle-layer">
+                    <div class="inner-layer">
+                        <div class="techno-and-p-container">
+                            <div tabindex="0" class="techno-container"> <img loading="lazy"
+                                    src="/assets/Tecnhos/node_logo.webp" height="80" class="img-techno"
+                                    alt="Typescript logo">
+                            </div>
+
+                            <dialog class="p-techno-container modal" id="p-NODEJS">
+
+                                <i class="fa-solid fa-xmark modal-close" data-modal-id="nodejs" tabindex="0"></i>
+                                <p>Node JS, express, mongodb, mongoose... et bien d'autres librairies associées</p>
+                                <p>Si le front est bien sûr encore à perfectionner, il est normal de s'intéresser au
+                                    "back", afin
+                                    de mieux saisir les interactions entre les deux, et ainsi commencer dès maintenant à
+                                    être plus
+                                    polyvalent</p>
+                                <p>Des projets sont encore en cours dans le but de progresser sur l'utilisation des
+                                    routes express, et la
+                                    gestion de base de données, restez connecté !</p>
+                            </dialog>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -237,7 +287,7 @@
         </div>
         <div class="container">
             <div>
-                <img loading="lazy" src="/portfolio-doc/Photo id.jpg" height="200" alt="">
+                <img loading="lazy" src="/assets/Photo id.jpg" height="200" alt="">
             </div>
             <div id="bio-container">
                 <p id="profil-p1">Ancien maître nageur, je m'exerce à la programmation depuis 2022.</p>
@@ -250,9 +300,9 @@
                 <p id="profil-p4">L'objectif maintenant, full stack! A suivre...</p>
             </div>
             <div class="links-container" id="CV-container">
-                <a class="contact-a"
-                    tabindex="0" href="https://www.canva.com/design/DAGIrdKFVww/bP1isTiuFPL5PnXyv-VPhA/edit"
-                    target="_blank"><span class="contact-span" id="CV-span">Mon CV</span></a>
+                <a class="contact-a" tabindex="0"
+                    href="https://www.canva.com/design/DAGIrdKFVww/bP1isTiuFPL5PnXyv-VPhA/edit" target="_blank"><span
+                        class="contact-span" id="CV-span">Mon CV</span></a>
             </div>
         </div>
     </section>
@@ -264,20 +314,19 @@
             <span class="after"></span>
         </div>
         <div class="links-container">
-            <a class="contact-a" id="mail-a" tabindex="0" href="#contact"><span id="mail-span"
-                    class="contact-span">
+            <a class="contact-a" id="mail-a" tabindex="0" href="#contact"><span id="mail-span" class="contact-span">
                     nathan.simonnet@gmail.com</span></a>
         </div>
     </section>
 
     <hr>
     <footer class="card">
-        <a tabindex="0" href="https://github.com/Nathan-Simonnet" class="links-socials" target="_blank"><img loading="lazy"
-                src="/portfolio-doc/Links/git-logo.webp" alt="Logo lien profil github"></a>
-        <a tabindex="0" href="https://www.linkedin.com/in/simonnet-nathan/" class="links-socials" target="_blank"><img loading="lazy"
-                src="/portfolio-doc/Links/linkedin-logo.webp" alt="Logo lien profil linkedin"></a>
-        <a tabindex="0" href="https://www.facebook.com/nathan.simonnet.9/" class="links-socials" target="_blank"><img loading="lazy"
-                src="/portfolio-doc/Links/facebook-log.webp" alt="Logo lien profil facebook"></a>
+        <a tabindex="0" href="https://github.com/Nathan-Simonnet" class="links-socials" target="_blank"><img
+                loading="lazy" src="/assets/Links/git-logo.webp" alt="Logo lien profil github"></a>
+        <a tabindex="0" href="https://www.linkedin.com/in/simonnet-nathan/" class="links-socials" target="_blank"><img
+                loading="lazy" src="/assets/Links/linkedin-logo.webp" alt="Logo lien profil linkedin"></a>
+        <a tabindex="0" href="https://www.facebook.com/nathan.simonnet.9/" class="links-socials" target="_blank"><img
+                loading="lazy" src="/assets/Links/facebook-log.webp" alt="Logo lien profil facebook"></a>
     </footer>
     <script src='script.min.js'></script>
     <link rel='stylesheet' href='styles/particles.min.css'>
