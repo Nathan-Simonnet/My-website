@@ -200,13 +200,13 @@ document.querySelectorAll('.techno-and-p-container').forEach((techno) => {
     const modal = techno.children[1];
     // Allow keyboard using
     techno.addEventListener('keydown', (e) => {
-     e.key === 'Enter'? e.target.click(): "";
+        e.key === 'Enter' ? e.target.click() : "";
     });
     // Toggle to open and close modal
     techno.addEventListener('click', () => {
         // Onclick, delete the info tooltip until refreshing the page
         document.getElementById('span-infos-technos').style.display = "none";
-        
+
         modal.open ? modal.close() : modal.showModal();
     });
 });
@@ -291,8 +291,8 @@ const translatePage = function (id) {
         document.getElementById('form-caption').textContent = "Form checking";
         document.getElementById('form-p-container').innerHTML = `
         <p>Un formulaire assez classique, exigeant certain paramètres avant validation</p>
-        <p>Simulation de méthode POST aussitôt supprimées si tout est validé</p>
-        <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot depasse</p>
+        <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis aussitôt supprimées</p>
+        <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de passe</p>
         <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Form-checker"
         target="_blank">Lien vers GitHub</a></p>
         `;
@@ -306,30 +306,31 @@ const translatePage = function (id) {
         <p>Plus de 30 projets, ainsi que de nombreuses formations en HTML / CSS via différents médias / organismes</p>
         <p>Cette pratique s'accompagne de tout ce qui gravite autours du design UX / UI.</p>
         <p>Maintenant que je suis à l'aise avec CSS, je me plais à créer des projets en utilisant pleinement
-         différentes librairies (tailwind notament), rendant le code plus léger, et
-        l'exprience de programation plus fluide (des projets tout chauds sortis du fours arrivent...).</p>
-        <p>Enfin concernant HTML, l'apprentissage des outils et méthodes de référencement via la sémantique,
-        et l'utilisation d'IA et applications tiers.</p>
+        différentes librairies (tailwind et Animate.CSS notamment), rendant le code bien plus léger, et
+        l'expérience de programmation plus fluide (des projets tout chauds sortis du four arrivent...).</p>
+        <p> Enfin concernant HTML, l'apprentissage des outils et méthodes de référencement via la sémantique, et l'utilisation d'IA et applications tiers .</p>
         `;
         document.getElementById('p-JS').innerHTML = `
          <i class="fa-solid fa-xmark modal-close"  tabindex="0"></i>
-        <p>La pierre angualire du developpement web, pratique régulièrement depuis 2022</p>
-        <p>Plus de 30H de formations, plus des cours d'algorithmie, ainsi que des challenges variés.</p>
-        <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les projets plushauts (mais, React prends de plus en plus de place..).</p>
-        <p>Je pratique également typescript, et de plus en plus du JS en strict mode, afin de garantir une plus grande stabilité et pereinitée des projets plus complexe a maintenir.</p>
+        <p>La pierre angulaire du développement web, pratique régulièrement depuis 2022</p>
+        <p>Plus de 30H de formations, plus des cours d'algorithmie, ainsi que des challenges variés</p>
+        <p>Javascript est mon langage préféré à l'heure actuelle, et utilisé dans tous les projets plus
+        hauts (mais, React prend de plus en plus de place..)</p>
+        <p>Je pratique également typescript, et de plus en plus de JS en strict mode, afin de garantir une plus
+        grande stabilité et pérennité des projets plus complexe à maintenir.</p>
         `;
         document.getElementById('p-REACT').innerHTML = `
-         <i class="fa-solid fa-xmark modal-close"  tabindex="0"></i>
-       <p>Routes, useStates, links... Encore beaucoup à apprendre, mais je suis officielement à l'aise avec React</p>
-        <p>Plusieurs projets déjà élaborés (Application de yoga, worldview, Quizz, application de location d'appartments...)</p>
-        <p>En plus de creer de nouveaux projets, je me plais a reprendre d'ancien projets, et les remodeliser en utilisant React</p>
-        <p>N'en déplaise à Javascript, c'est mon nouvel amour... (parait-il que les algorithme de google partagent mon avis)</p>
+        <i class="fa-solid fa-xmark modal-close"  tabindex="0"></i>
+        <p>Routes, useStates, links... Encore beaucoup à apprendre, mais je suis officiellement à l'aise avec React</p>
+        <p>Plusieurs projets déjà élaborés (Application de yoga, worldview, Quizz, application de location d'appartements...)</p>
+        <p>En plus de créer de nouveaux projets, je me plais à reprendre d'anciens projets, et les modéliser à nouveau en utilisant React</p>
+        <p>N'en déplaise à JavaScript, c'est mon nouvel amour... (parait-il que les algorithmes de Google partagent mon avis)</p>
         `;
         document.getElementById('p-NODEJS').innerHTML = `
          <i class="fa-solid fa-xmark modal-close"  tabindex="0"></i>
-        <p>Node JS, express, mongodb, mongoose... et bien d'autres librairies associés</p>
-        <p>Si le front est bien sure encore a perfectionner, il est normal de s'interesser au "back", afin de mieux saisir les interactions entre les deux, et ainsi commencer dès maintenant a être plus polyvalent</p>
-        <p>Des projets sont encore en cours afin de progresser sur l'utilisations des routes express, et la gestion de base de données, restez connectez !</p>
+        <p>Node JS, express, mongodb, mongoose... et bien d'autres librairies associées</p>
+        <p>Si le front est bien sûr encore à perfectionner, il est normal de s'intéresser au "back", afin de mieux saisir les interactions entre les deux, et ainsi commencer dès maintenant à être plus polyvalent</p>
+        <p>Des projets sont encore en cours dans le but de progresser sur l'utilisation des routes express, et la gestion de base de données, restez connecté !</p>
         `;
 
         document.getElementById('about-me-h1').textContent = `A propos de moi`;
