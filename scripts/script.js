@@ -233,7 +233,7 @@ const translatePage = function (id) {
 
     if (id == "fra") {
         lang = "fr";
-        document.querySelector('.chantier>p').textContent = "Plus de fonctionnalités à venir..."
+        // document.querySelector('.chantier>p').textContent = "Plus de fonctionnalités à venir..."
         document.getElementById('project-anchor').textContent = "Projets"
         document.getElementById('technos-anchor').textContent = "Technos"
         document.getElementById('about-me-anchor').textContent = "À propos de moi"
@@ -287,6 +287,15 @@ const translatePage = function (id) {
         <p>Gestion du score, et code couleur selon la réponse</p>
         <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/quizz-react-routes"
         target="_blank">Lien vers GitHub</a></p>
+        `;
+        document.getElementById('parallax-p-container').innerHTML = `
+        <p>Un petit effet qui attire toujours l'œil.</p>
+        <p>Simple, mais responsive, et exécuté avec soins à la main en CSS/JS.</p>
+        <p>Un des nooombreux petits projets qui permettent de s'entrainer et polir son arsenal, tout en prenant plaisir à élaborer sa création.</p>
+        <p class="click-to-test"><a tabindex="0" href="http://parallax-jungle.go.yo.fr/"
+        target="_blank">Lien vers le site</a></p>
+        <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Parallax-jungle"
+        target="_blank">Lien vers Github</a></p>
         `;
         document.getElementById('form-caption').textContent = "Form checking";
         document.getElementById('form-p-container').innerHTML = `
@@ -343,7 +352,7 @@ const translatePage = function (id) {
     } else {
         lang = "en";
 
-        document.querySelector('.chantier>p').textContent = "More features to come..."
+        // document.querySelector('.chantier>p').textContent = "More features to come..."
 
         document.getElementById('project-anchor').textContent = "Projects"
         document.getElementById('technos-anchor').textContent = "Technos"
@@ -397,7 +406,13 @@ const translatePage = function (id) {
         <p>Score management, and color-coded based on the response</p>
         <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/quizz-react-routes" target="_blank">Link to GitHub</a></p>        
         `;
-
+        document.getElementById('parallax-p-container').innerHTML = `
+        <p>An effect that always catches the eye</p>
+        <p>Simple, yet responsive, and hand-crafted with care in CSS/JS</p>
+        <p>One of the many small projects that allow practice, refine toolkits, while enjoying the process of creation</p>
+        <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Kasa" target="_blank">Link to the site</a></p>
+        <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Parallax-jungle" target="_blank">Lien vers Github</a></p>
+        `;
         document.getElementById('form-caption').textContent = "Form checking";
         document.getElementById('form-p-container').innerHTML = `
         <p>A fairly standard form, requiring certain parameters before validation</p>

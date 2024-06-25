@@ -321,6 +321,7 @@ h1 {
   cursor: pointer;
 }
 .project-figure-and-p-container figure figcaption {
+  margin: 12px;
   padding: 2px;
   font-weight: bold;
   font-size: 1.4rem;
