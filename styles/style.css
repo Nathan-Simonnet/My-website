@@ -347,6 +347,12 @@ h1 {
   font-weight: bold;
   display: none;
 }
+.project-figure-and-p-container .project-p-container p.click-to-test {
+  text-decoration: underline;
+}
+.project-figure-and-p-container .project-p-container p.click-to-test:hover {
+  letter-spacing: 1px;
+}
 
 .project-figure-and-p-container.project-clicked {
   width: 100%;
@@ -388,7 +394,7 @@ h1 {
   pointer-events: none;
 }
 
-#bubble-popper-link:hover {
+.clikc-to-test {
   text-decoration: underline;
 }
 
