@@ -65,7 +65,7 @@ setTimeout(() => {
 // ===================
 // nav anim 
 // ===================
-
+// If scroll up reach first section, nav show up
 let lastScroll = 0;
 const header = document.querySelector('header');
 const aHovered = document.querySelectorAll('nav li a');
@@ -79,7 +79,7 @@ window.addEventListener('scroll', () => {
         });
     }
 
-    else if (lastScroll >= scrollY) {
+    else if (lastScroll >= scrollY && lastScroll < 900) {
         header.classList.add("scrolled-up")
         header.classList.remove("scrolled-down")
         header.classList.remove("scroll-zero")
@@ -97,7 +97,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ========================
-// h1 anim 
+// h1 underline anim 
 // ========================
 document.querySelectorAll('.after').forEach((span, index) => {
     const uniqueIndex = "lineSpan" + (index + 1)
@@ -106,10 +106,11 @@ document.querySelectorAll('.after').forEach((span, index) => {
 
 let playOnce = true;
 
+// If the screen is near a new h1, launch the animation
 window.addEventListener('scroll', (e) => {
 
+    // Track where the screen is scrolling
     let magicScrollValue = ((window.scrollY + innerHeight) / document.body.offsetHeight);
-    // console.log(magicScrollValue)
 
     const pointer = function (index) {
         const pointed = document.getElementById('lineSpan' + index);
