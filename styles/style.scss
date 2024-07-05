@@ -6,8 +6,7 @@
 :root {
     --bordeaux: #a3152f;
     --gris: grey;
-    --wheat: #f2efe8;
-    /* --wheat: #e1d1b3; */
+    --wheat: #f6f5f4;
 }
 
 * {
@@ -738,10 +737,13 @@ h1 {
 /* =============================== */
 footer {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 
+   .footer-links_container{
+    margin: 24px 0 12px 0;
     img {
         width: 40px;
         height: 40px;
@@ -750,6 +752,11 @@ footer {
         &:hover {
             transform: scale(1.2);
         }
+    }
+   }
+
+    .last-update{
+        margin: 12px 0 24px 0;
     }
 }
 

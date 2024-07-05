@@ -79,7 +79,7 @@ window.addEventListener('scroll', () => {
         });
     }
 
-    else if (lastScroll >= scrollY && lastScroll < 900) {
+    else if (lastScroll >= scrollY && lastScroll < 1200) {
         header.classList.add("scrolled-up")
         header.classList.remove("scrolled-down")
         header.classList.remove("scroll-zero")
@@ -247,12 +247,13 @@ const translatePage = function (id) {
         contactH1.textContent = "Me contacter";
 
         document.getElementById('projects-h1').textContent = `Quelques projets`;
-        document.getElementById('portfolio-caption').textContent = "Kasa - site de locations d'appartments";
-        document.getElementById('portfolio-p-container').innerHTML = `
+        document.getElementById('kasa-caption').textContent = "Kasa - site de locations d'appartments";
+        document.getElementById('kasa-p-container').innerHTML = `
        <p>Application React</p>
         <p>BrowserRouter, useStates, useEffects, useNavigation...</p>
         <p>Gestion de 4 pages, dont une page avec un paramètre en fonction de l'id</p>
         <p>Et finalement gestion de la page d'erreur et redirections</p>
+        <p class="click-to-test"><a tabindex="0" href="https://kasa-rent.netlify.app" target="_blank">Lien vers le site</a></p>
         <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Kasa"
         target="_blank">Lien vers GitHub</a></p>
         `;
@@ -266,18 +267,28 @@ const translatePage = function (id) {
         <p class="click-to-test"><a href="https://nathan-simonnet.github.io/" 
         target="_blank"id="bubble-popper-link">Cliquezici pour tester</a></p>
         `;
-        document.getElementById('db-caption').textContent = "Portfolio d'architecte";
-        document.getElementById('db-p-container').innerHTML = `
+        document.getElementById('portfolio_architect-caption').textContent = "Portfolio d'architecte";
+        document.getElementById('portfolio_architect-p-container').innerHTML = `
        <p>Gestion d'API, CRUD, fenêtres modales.</p>
         <p>Récupéreration dynamique des données des travaux via l’API (SQlight), ajout d'options de tri des projets par catégorie, Intégration et gestion de la page de connexion, ajoute de 2 fenêtres modales pour gérer les projets (ajout, modifications, suppressions)</p>
         <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Portfolio-architecte-sophie-bluel"
         target="_blank">Lien vers GitHub</a></p>
+        `;
+        document.getElementById('worldview-caption').textContent = "Worldview";
+        document.getElementById('worldview-p-container').innerHTML = `
+        <p>Utilisant l'API de REST countries, affichage de pays selon différents paramètres possibles.</p>
+        <p>Drapeaux, Capitale, population, et localisation.</p>
+        <p>Trie par ordre croissant, décroissant, ou alphabétique</p>
+        <p>Toujours affichés en plusieurs cartes, ordonnées et "responsive".</p>
+        <p class="click-to-test"><a tabindex="0" href="http://www.worldview.rf.gd/?i=1" target="_blank">Lien vers le site</a></p>
+        <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Worldview" target="_blank">Lien vers GitHub</a></p>
         `;
         document.getElementById('meal-caption').textContent = "Générateur de recettes";
         document.getElementById('meal-p-container').innerHTML = `
         <p>Utilisant l'API de TheMealDB, affichage de recettes selon les ingrédients désiré</p>
         <p>Affichés en plusieurs cartes, ordonnées et "responsive"</p>
         <p>Lightmode et darkmode disponible a tout moment</p>
+        <p class="click-to-test"><a tabindex="0" href="https://fetch-my-meal.000webhostapp.com/" target="_blank">Lien vers le site</a></p>
         <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Fetch-my-meal/"
         target="_blank">Lien vers GitHub</a></p>
         `;
@@ -286,6 +297,7 @@ const translatePage = function (id) {
         <p>Quizz sur Javascript/React</p>
         <p>Il suffira de modifier un fichier Json, afin de modifier ou rajouter des questions/réponses</p>
         <p>Gestion du score, et code couleur selon la réponse</p>
+        <p class="click-to-test"><a tabindex="0" href="http://www.quiz-js.rf.gd/?i=1" target="_blank">Lien vers le site</a></p>
         <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/quizz-react-routes"
         target="_blank">Lien vers GitHub</a></p>
         `;
@@ -368,17 +380,17 @@ const translatePage = function (id) {
         contactH1.textContent = "Contact me";
 
         document.getElementById('projects-h1').textContent = `Some projects`;
-        document.getElementById('portfolio-caption').textContent = "Kasa - apartment rental site";
-        document.getElementById('portfolio-p-container').innerHTML = `
+        document.getElementById('kasa-caption').textContent = "Kasa - apartment rental site";
+        document.getElementById('kasa-p-container').innerHTML = `
         <p>React Application</p>
         <p>BrowserRouter, useStates, useEffects, useNavigation...</p>
         <p>Management of 4 pages, including one page with a parameter based on the ID</p>
         <p>And finally, error page management and redirections</p>
+        <p class="click-to-test"><a tabindex="0" href="https://kasa-rent.netlify.app" target="_blank">Link to website</a></p>
         <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Kasa"
         target="_blank">Link to GitHub</a></p>
         `;
         document.getElementById('bubble-caption').textContent = "Bubble popper";
-
         document.getElementById('bubble-p-container').innerHTML = `
         <p>One of my very first projects, it's all in the title</p>
         <p>Developed in collaboration with my 9-year-old younger sister (attention, all negative criticism is therefore at your own risk!)</p>
@@ -386,8 +398,8 @@ const translatePage = function (id) {
         <p>DOM manipulation, timer, random animations, particle effects... Why not give it a try?</p>
         <p class="click-to-test"><a href="https://nathan-simonnet.github.io/" target="_blank" id="bubble-popper-link">Click here to test</a></p>
          `;
-        document.getElementById('db-caption').textContent = "Architect portfolio";
-        document.getElementById('db-p-container').innerHTML = `
+        document.getElementById('portfolio_architect-caption').textContent = "Architect portfolio";
+        document.getElementById('portfolio_architect-p-container').innerHTML = `
         <p>API management, CRUD, modal windows.</p>
         <p>Dynamic data retrieval of projects via the API (SQLite), addition of project sorting options by category, integration and management of the login page, addition of 2 modal windows to manage projects (add, edit, delete)</p>
         <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Portfolio-architecte-sophie-bluel"
@@ -398,13 +410,25 @@ const translatePage = function (id) {
         <p>Using TheMealDB API, displaying recipes based on desired ingredients</p>
         <p>Displayed in multiple cards, ordered and "responsive"</p>
         <p>Light mode and dark mode available at any time</p>
+        <p class="click-to-test"><a tabindex="0" href="https://fetch-my-meal.000webhostapp.com/" target="_blank">Link to website</a></p>
         <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/Fetch-my-meal/" target="_blank">Link to GitHub</a></p>
+        `;
+        document.getElementById('worldview-caption').textContent = "Worldview";
+        document.getElementById('worldview-p-container').innerHTML = `
+        <p>Using the REST countries API, display countries according to different possible parameters.</p>
+        <p>Flags, Capital, Population, and Location.</p>
+        <p>Sort in ascending, descending, or alphabetical order.</p>
+        <p>Always displayed in multiple cards, ordered and responsive.</p>
+        <p class="click-to-test"><a tabindex="0" href="http://www.worldview.rf.gd/?i=1" target="_blank">Link to the website</a></p>
+        <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Worldview" target="_blank">Link to GitHub</a></p>
         `;
         document.getElementById('quizz-caption').textContent = "Quiz app";
         document.getElementById('quizz-p-container').innerHTML = `
         <p>Quiz on Javascript/React</p>
         <p>Simply modify a JSON file to edit or add questions/answers</p>
         <p>Score management, and color-coded based on the response</p>
+        <p class="click-to-test"><a tabindex="0"
+                            href="http://www.quiz-js.rf.gd/?i=1" target="_blank">Link to website</a></p>
         <p class="click-to-test"><a href="https://github.com/Nathan-Simonnet/quizz-react-routes" target="_blank">Link to GitHub</a></p>        
         `;
         document.getElementById('parallax-p-container').innerHTML = `
@@ -437,15 +461,15 @@ const translatePage = function (id) {
         <p>The cornerstone of web development, regularly practiced since 2022</p>
         <p>Over 30 hours of training, along with algorithm courses, and various challenges</p>
         <p>Javascript is currently my favorite language, and used in all projects above (although, React is taking more and more space..)</p>
-        <p>I also practice TypeScript, as well as JS in strict mode, to ensure greater stability and longevity of more complex projects to maintain. </p>  `;
+        <p>I also practice TypeScript, as well as JS in strict mode, to ensure greater stability and longevity of more complex projects to maintain. </p>  
+        `;
         document.getElementById('p-REACT').innerHTML = `
          <i class="fa-solid fa-xmark modal-close"  data-modal-id="nodejs" tabindex="0"></i>
        <p>Routes, useStates, links... Still a lot to learn, but I am officially comfortable with React</p>
         <p>Several projects already developed (Yoga application, worldview, Quiz, apartment rental application...)</p>
         <p>In addition to creating new projects, I enjoy revisiting old projects and remodeling them using React</p>
         <p>Sorry, Javascript, but it's my new love... (it seems that Google's algorithms share my opinion)</p>
-
-         `;
+        `;
         document.getElementById('p-NODEJS').innerHTML = `
          <i class="fa-solid fa-xmark modal-close"  data-modal-id="nodejs" tabindex="0"></i>
         <p>Node.js, Express, MongoDB, Mongoose... and many other associated libraries</p>
@@ -463,7 +487,7 @@ const translatePage = function (id) {
 }
 
 document.querySelectorAll('.flag-container').forEach((flag) => {
-    flag.addEventListener('click', (e) => {
+    flag.addEventListener('click', () => {
         stopIt = true;
         spanInfosTechnos.style.display = "block"
         setTimeout(() => { stopIt = false; }, 10)

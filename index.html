@@ -54,30 +54,31 @@
         </div> -->
 
         <div id="projects-container" class="projects-container">
-
             <div tabindex="0" class="project-figure-and-p-container">
-                <figure class="project-figure" id="portfolio-app-figure">
-                    <figcaption id="portfolio-caption">Kasa - site de locations d'appartments</figcaption>
+                <figure class="project-figure" id="kasa-app-figure">
+                    <figcaption id="kasa-caption">Kasa - site de locations d'appartments</figcaption>
                     <img class="project-img" loading="lazy" src="/assets/app/kasa-app.webp" width="230" height="250"
-                        alt="portfolio app" id="portfolio-app-img">
+                        alt="kasa app" id="kasa-app-img">
                 </figure>
-
-                <div class="project-p-container" id="portfolio-p-container">
+                <div class="project-p-container" id="kasa-p-container">
                     <p>Application React</p>
                     <p>BrowserRouter, useStates, useEffects, useNavigation...</p>
                     <p>Gestion de 4 pages, dont une page avec un paramètre en fonction de l'id.</p>
                     <p>Et finalement gestion de la page d'erreur et redirections.</p>
+                    <p class="click-to-test"><a tabindex="0" href="https://kasa-rent.netlify.app" target="_blank">Lien
+                            vers le site</a></p>
                     <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Kasa"
                             target="_blank">Lien vers GitHub</a></p>
+
                 </div>
             </div>
             <div tabindex="0" class="project-figure-and-p-container">
-                <figure class="project-figure" id="db-app-figure">
-                    <figcaption id="db-caption">Portfolio d'architecte</figcaption>
+                <figure class="project-figure" id="portfolio_architect-app-figure">
+                    <figcaption id="portfolio_architect-caption">Portfolio d'architecte</figcaption>
                     <img class="project-img" loading="lazy" src="/assets/app/architecte-app.webp" width="230"
-                        height="250" alt="Portfiolio d'architecte" id="db-app-img">
+                        height="250" alt="Portfiolio d'architecte" id="portfolio_architect-app-img">
                 </figure>
-                <div class="project-p-container" id="db-p-container">
+                <div class="project-p-container" id="portfolio_architect-p-container">
                     <p>Gestion d'API, CRUD, fenêtres modales.
                     </p>
                     <p>Récupéreration dynamique des données des travaux via l’API (SQlight), ajout d'options de tri des
@@ -100,6 +101,8 @@
                     <p>Il suffira de modifier un fichier Json, afin de modifier ou rajouter des questions/réponses.
                     </p>
                     <p>Gestion du score, et code couleur selon la réponse.</p>
+                    <p class="click-to-test"><a tabindex="0" href="http://www.quiz-js.rf.gd/?i=1" target="_blank">Lien
+                            vers le site</a></p>
                     <p class="click-to-test"><a tabindex="0"
                             href="https://github.com/Nathan-Simonnet/quizz-react-routes" target="_blank">Lien vers
                             GitHub</a></p>
@@ -115,11 +118,29 @@
                     <p>Utilisant l'API de TheMealDB, affichage de recettes selon les ingrédients désiré.</p>
                     <p>Affichés en plusieurs cartes, ordonnées et "responsive".</p>
                     <p>Lightmode et darkmode disponible a tout moment.</p>
+                    <p class="click-to-test"><a tabindex="0" href="https://fetch-my-meal.000webhostapp.com/"
+                            target="_blank">Lien vers le site</a></p>
                     <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Fetch-my-meal/"
                             target="_blank">Lien vers GitHub</a></p>
                 </div>
             </div>
-
+            <div tabindex="0" class="project-figure-and-p-container">
+                <figure class="project-figure" id="worldview-app-figure">
+                    <figcaption id="worldview-caption">Worldview</figcaption>
+                    <img class="project-img" loading="lazy" src="/assets/app/worldview-app.webp" width="230"
+                        height="250" alt="worldview app" id="worldview-app-img">
+                </figure>
+                <div class="project-p-container" id="worldview-p-container">
+                    <p>Utilisant l'API de REST countries, affichage de pays selon différents paramètres possibles.</p>
+                    <p>Drapeaux, Capitale, population, et localisation.</p>
+                    <p>Trie par ordre croissant, décroissant, ou alphabétique</p>
+                    <p>Toujours affichés en plusieurs cartes, ordonnées et "responsive".</p>
+                    <p class="click-to-test"><a tabindex="0" href="http://www.worldview.rf.gd/?i=1" target="_blank">Lien
+                            vers le site</a></p>
+                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Worldview"
+                            target="_blank">Lien vers GitHub</a></p>
+                </div>
+            </div>
             <div tabindex="0" class="project-figure-and-p-container">
                 <figure class="project-figure" id="parallax-app-figure">
                     <figcaption id="parallax-caption">Parallax jungle</figcaption>
@@ -136,24 +157,6 @@
                             target="_blank">Lien vers le site</a></p>
                     <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Parallax-jungle"
                             target="_blank">Lien vers Github</a></p>
-                </div>
-            </div>
-
-            <div tabindex="0" class="project-figure-and-p-container">
-                <figure class="project-figure" id="form-app-figure">
-                    <figcaption id="form-caption">Form checking</figcaption>
-                    <img class="project-img" loading="lazy" src="/assets/app/form-app.webp" width="230" height="250"
-                        alt="form app" id="form-app-img">
-                </figure>
-                <div class="project-p-container" id="form-p-container">
-                    <p>Un formulaire assez classique, exigeant certain paramètres avant validation.</p>
-                    <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis aussitôt
-                        supprimées.</p>
-                    <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de
-                        passe.
-                    </p>
-                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Form-checker"
-                            target="_blank">Lien vers GitHub</a></p>
                 </div>
             </div>
             <div tabindex="0" class="project-figure-and-p-container">
@@ -175,7 +178,23 @@
                             ici pour tester</a></p>
                 </div>
             </div>
-
+            <div tabindex="0" class="project-figure-and-p-container">
+                <figure class="project-figure" id="form-app-figure">
+                    <figcaption id="form-caption">Form checking</figcaption>
+                    <img class="project-img" loading="lazy" src="/assets/app/form-app.webp" width="230" height="250"
+                        alt="form app" id="form-app-img">
+                </figure>
+                <div class="project-p-container" id="form-p-container">
+                    <p>Un formulaire assez classique, exigeant certain paramètres avant validation.</p>
+                    <p>Si tout est validé, les données sont envoyées via une simulation de méthode POST, puis aussitôt
+                        supprimées.</p>
+                    <p>Fonctions, regexp, et quelques animations afin d'évaluer rapidement la "solidité" du mot de
+                        passe.
+                    </p>
+                    <p class="click-to-test"><a tabindex="0" href="https://github.com/Nathan-Simonnet/Form-checker"
+                            target="_blank">Lien vers GitHub</a></p>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -343,12 +362,19 @@
 
     <hr>
     <footer class="card">
-        <a tabindex="0" href="https://github.com/Nathan-Simonnet" class="links-socials" target="_blank"><img
-                loading="lazy" src="/assets/Links/git-logo.webp" alt="Logo lien profil github"></a>
-        <a tabindex="0" href="https://www.linkedin.com/in/simonnet-nathan/" class="links-socials" target="_blank"><img
-                loading="lazy" src="/assets/Links/linkedin-logo.webp" alt="Logo lien profil linkedin"></a>
-        <a tabindex="0" href="https://www.facebook.com/nathan.simonnet.9/" class="links-socials" target="_blank"><img
-                loading="lazy" src="/assets/Links/facebook-log.webp" alt="Logo lien profil facebook"></a>
+        <div class="footer-links_container">
+            <a tabindex="0" href="https://github.com/Nathan-Simonnet" class="links-socials" target="_blank"><img
+                    loading="lazy" src="/assets/Links/git-logo.webp" alt="Logo lien profil github"></a>
+            <a tabindex="0" href="https://www.linkedin.com/in/simonnet-nathan/" class="links-socials"
+                target="_blank"><img loading="lazy" src="/assets/Links/linkedin-logo.webp"
+                    alt="Logo lien profil linkedin"></a>
+            <a tabindex="0" href="https://www.facebook.com/nathan.simonnet.9/" class="links-socials"
+                target="_blank"><img loading="lazy" src="/assets/Links/facebook-log.webp"
+                    alt="Logo lien profil facebook"></a>
+        </div>
+        <div class="last-update">
+            <p>Last update 07/2024</p>
+        </div>
     </footer>
     <script src='script.min.js'></script>
     <!-- <script src='scripts/script.js'></script> -->
